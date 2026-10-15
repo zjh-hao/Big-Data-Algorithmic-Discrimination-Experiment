@@ -1,0 +1,54 @@
+# Local environment and credentials
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+*.pem
+*.key
+*.log
+.tools/
+
+# Original/record-level data and model caches remain local
+/data/raw/*.csv
+/data/raw/*.zip
+/data/raw/*.parquet
+/data/processed/
+models/
+
+# Publish aggregate evidence, not runtime completion/checkpoint markers
+/results/**
+!/results/metrics.csv
+!/results/summary.csv
+!/results/paired_intervals.csv
+!/results/feature_importance.csv
+!/results/data_audit.json
+!/results/verification.json
+!/results/extensions/
+!/results/extensions/paired_intervals.csv
+!/results/extensions/verification.json
+!/results/extensions/objective/
+!/results/extensions/objective/metrics.csv
+!/results/extensions/objective/summary_all_bases.csv
+!/results/extensions/feedback/
+!/results/extensions/feedback/test_metrics.csv
+!/results/extensions/feedback/diagnostic_metrics.csv
+!/results/extensions/feedback/stream_metrics.csv
+!/results/extensions/feedback/summary.csv
+
+/audit_extension/results/**
+!/audit_extension/results/metrics.csv
+!/audit_extension/results/metrics_A.csv
+!/audit_extension/results/metrics_B.csv
+!/audit_extension/results/metrics_C.csv
+!/audit_extension/results/metrics_C_shadow.csv
+!/audit_extension/results/paired_intervals.csv
+!/audit_extension/results/sampling_cells.csv
+!/audit_extension/results/sampling_summary.csv
+!/audit_extension/results/loss_summary.csv
+!/audit_extension/results/feedback_final.csv
+!/audit_extension/results/stream_metrics.csv
+!/audit_extension/results/verification.json
+
+# Downloadable third-party reference copies; original links are documented
+/references/

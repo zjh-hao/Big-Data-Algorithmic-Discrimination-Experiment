@@ -1,0 +1,22 @@
+{
+  "version": "3.0",
+  "threads": 4,
+  "risk_budget": 0.05,
+  "minimum_validation_approvals": 500,
+  "objective": {
+    "base_models": ["full", "r50_s17_biased", "r50_s29_biased", "r50_s43_biased", "r50_s61_biased", "r50_s89_biased"],
+    "fairness_tolerances": [0.10, 0.05, 0.02, 0.01],
+    "primary_tolerance": 0.02,
+    "threshold_grid_size_per_group": 512
+  },
+  "feedback": {
+    "seeds": [17, 29, 43, 61, 89],
+    "rounds": 5,
+    "initial_fraction": 0.2,
+    "initial_thin_good_retention": 0.5,
+    "exploration_probability": 0.10,
+    "branches": ["static", "selected_only", "explore_unweighted", "explore_ipw"],
+    "parameters": {"max_depth": 5, "n_estimators": 200}
+  },
+  "bootstrap_repetitions": 1000
+}

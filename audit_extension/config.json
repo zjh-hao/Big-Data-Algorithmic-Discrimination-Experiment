@@ -1,0 +1,15 @@
+{
+  "seeds": [17, 29, 43, 61, 89],
+  "retentions": [0.5, 0.25],
+  "parameters": {"max_depth": 5, "n_estimators": 200},
+  "risk_budget": 0.05,
+  "static_minimum": 500,
+  "feedback_minimum": 100,
+  "rounds": 5,
+  "initial_fraction": 0.2,
+  "epsilon": 0.1,
+  "losses": {"standard": [1, 0], "cost5": [5, 0], "opportunity1": [1, 1], "opportunity4": [1, 4], "combined": [5, 1]},
+  "modes": ["external", "observed", "frozen"],
+  "acquisitions": ["selected", "explore_ipw"],
+  "bootstrap": 1000
+}

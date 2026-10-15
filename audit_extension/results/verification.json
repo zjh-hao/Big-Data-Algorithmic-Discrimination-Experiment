@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "checks": 9768,
+  "unique_policies": 520,
+  "scope": "Saved input provenance, role/visibility replay, weights, validation thresholds, test metrics; not proof of real-world validity."
+}
