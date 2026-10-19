@@ -1,0 +1,298 @@
+{
+  "primary_full": {
+    "business": {
+      "model": "full",
+      "status": "PASS",
+      "feasible": true,
+      "epsilon": null,
+      "delta": null,
+      "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+      "grid_counts": "[514, 514]",
+      "risk_feasible_candidates": 203355,
+      "gap_feasible_candidates": 203355,
+      "final_feasible_candidates": 203355,
+      "noharm_removed_candidates": 0,
+      "thresholds": "[0.12402524313870382, 0.12715736631029376]",
+      "indices": "[424, 393]",
+      "validation_approvals": 24958.0,
+      "validation_risk": 0.0499639394182226,
+      "validation_thick_frr": 0.1476088508208423,
+      "validation_thin_frr": 0.2006066455259892,
+      "validation_abs_frr_gap": 0.0529977947051469,
+      "n": 61503.0,
+      "approved_count": 49995.0,
+      "approval_rate": 0.8128871762353056,
+      "approved_risk": 0.0479447944794479,
+      "auc": 0.7673806104687605,
+      "thick_frr": 0.1431596478705686,
+      "thin_frr": 0.2014750482492417,
+      "abs_frr_gap": 0.0583154003786731,
+      "test_risk_violation": false,
+      "test_gap_violation": false,
+      "test_thin_noharm_violation": false,
+      "test_thick_noharm_violation": false,
+      "gap_slack": null,
+      "gap_changes_business": null,
+      "reason": null,
+      "noharm_changes_gap_only": null,
+      "thin_noharm_slack": null,
+      "thick_noharm_slack": null
+    },
+    "gap_e0.02": {
+      "model": "full",
+      "status": "PASS",
+      "feasible": true,
+      "epsilon": 0.02,
+      "delta": null,
+      "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+      "grid_counts": "[514, 514]",
+      "risk_feasible_candidates": 203355,
+      "gap_feasible_candidates": 8032,
+      "final_feasible_candidates": 8032,
+      "noharm_removed_candidates": 0,
+      "thresholds": "[0.11542677411580049, 0.14389387048358632]",
+      "indices": "[415, 413]",
+      "validation_approvals": 24871.0,
+      "validation_risk": 0.0499778858911985,
+      "validation_thick_frr": 0.1641684511063526,
+      "validation_thin_frr": 0.1640700399834551,
+      "validation_abs_frr_gap": 9.841112289743492e-05,
+      "n": 61503.0,
+      "approved_count": 49835.0,
+      "approval_rate": 0.8102856771214413,
+      "approved_risk": 0.0478779973913915,
+      "auc": 0.7673806104687605,
+      "thick_frr": 0.1605281941470378,
+      "thin_frr": 0.1614281775572098,
+      "abs_frr_gap": 0.0008999834101719,
+      "test_risk_violation": false,
+      "test_gap_violation": false,
+      "test_thin_noharm_violation": false,
+      "test_thick_noharm_violation": false,
+      "gap_slack": 0.0199015888771025,
+      "gap_changes_business": true,
+      "reason": null,
+      "noharm_changes_gap_only": null,
+      "thin_noharm_slack": null,
+      "thick_noharm_slack": null
+    },
+    "noharm_e0.02_d0.01": {
+      "model": "full",
+      "status": "INFEASIBLE",
+      "feasible": false,
+      "epsilon": 0.02,
+      "delta": 0.01,
+      "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+      "grid_counts": "[514, 514]",
+      "risk_feasible_candidates": 203355,
+      "gap_feasible_candidates": 8032,
+      "final_feasible_candidates": 0,
+      "noharm_removed_candidates": 8032,
+      "thresholds": null,
+      "indices": null,
+      "validation_approvals": null,
+      "validation_risk": null,
+      "validation_thick_frr": null,
+      "validation_thin_frr": null,
+      "validation_abs_frr_gap": null,
+      "n": null,
+      "approved_count": null,
+      "approval_rate": null,
+      "approved_risk": null,
+      "auc": null,
+      "thick_frr": null,
+      "thin_frr": null,
+      "abs_frr_gap": null,
+      "test_risk_violation": null,
+      "test_gap_violation": null,
+      "test_thin_noharm_violation": null,
+      "test_thick_noharm_violation": null,
+      "gap_slack": null,
+      "gap_changes_business": null,
+      "reason": "No candidate meets every constraint and minimum approvals",
+      "noharm_changes_gap_only": true,
+      "thin_noharm_slack": null,
+      "thick_noharm_slack": null
+    }
+  },
+  "biased": {
+    "thin_frr": {
+      "business": 0.1782740556934105,
+      "gap_e0.02": 0.16415770609318991,
+      "noharm_e0.02_d0.01": 0.1597509420090065
+    },
+    "thick_frr": {
+      "business": 0.15341898643825833,
+      "gap_e0.02": 0.15818225077325715,
+      "noharm_e0.02_d0.01": 0.15902926481084934
+    },
+    "abs_frr_gap": {
+      "business": 0.027839419910981638,
+      "gap_e0.02": 0.00895980597576226,
+      "noharm_e0.02_d0.01": 0.0056955949578730005
+    },
+    "approval_rate": {
+      "business": 0.8112937580280637,
+      "gap_e0.02": 0.8114726110921419,
+      "noharm_e0.02_d0.01": 0.8119549723861709
+    },
+    "approved_risk": {
+      "business": 0.047970181982393126,
+      "gap_e0.02": 0.04808790672512758,
+      "noharm_e0.02_d0.01": 0.04808607996395977
+    }
+  },
+  "ipw_full": [
+    {
+      "group": 0,
+      "naive_frr": 0.01633370638169828,
+      "ipw_frr": 0.14239258005913816,
+      "oracle_frr": 0.1431596478705686,
+      "ess_good": 18407.722215301234,
+      "coverage": 0.8458490897898162,
+      "max_weight": 10.0
+    },
+    {
+      "group": 1,
+      "naive_frr": 0.024880719767468678,
+      "ipw_frr": 0.20327752481537073,
+      "oracle_frr": 0.2014750482492417,
+      "ess_good": 5139.318243033885,
+      "coverage": 0.7908608527373744,
+      "max_weight": 10.0
+    }
+  ],
+  "risk_full": [
+    {
+      "exploration_rate": 0.0,
+      "regular_n": 49995.0,
+      "regular_risk": 0.0479447944794479,
+      "exploration_n": 0.0,
+      "exploration_risk": null,
+      "actual_n": 49995.0,
+      "actual_risk": 0.0479447944794479
+    },
+    {
+      "exploration_rate": 0.05,
+      "regular_n": 49995.0,
+      "regular_risk": 0.0479447944794479,
+      "exploration_n": 575.8,
+      "exploration_risk": 0.21839256305926882,
+      "actual_n": 50570.8,
+      "actual_risk": 0.04988647248122911
+    },
+    {
+      "exploration_rate": 0.1,
+      "regular_n": 49995.0,
+      "regular_risk": 0.0479447944794479,
+      "exploration_n": 1146.4,
+      "exploration_risk": 0.22038492253099112,
+      "actual_n": 51141.4,
+      "actual_risk": 0.05181308830649546
+    }
+  ],
+  "checks": 3707,
+  "policy_rows": 78,
+  "noharm_changed": 2,
+  "infeasible": 15,
+  "worst_subgroup": {
+    "model": "full",
+    "policy": "gap_e0.02",
+    "group": "comparison",
+    "income": "middle",
+    "n": 16954,
+    "normal_count": 15589,
+    "rejected_good": 2732,
+    "frr": 0.1752517801013535,
+    "frr_lo": 0.1693639557791502,
+    "frr_hi": 0.1812996146330017,
+    "frr_change": 0.0181538264160626,
+    "approval_rate": 0.7937949746372538,
+    "approved_count": 13458,
+    "approved_risk": 0.0446574528161688,
+    "status": "PASS"
+  },
+  "paired_full": [
+    {
+      "policy": "business",
+      "metric": "approval_rate",
+      "lo": 80.978,
+      "hi": 81.583,
+      "difference_lo": 0.0,
+      "difference_hi": 0.0
+    },
+    {
+      "policy": "business",
+      "metric": "approved_risk",
+      "lo": 4.62,
+      "hi": 4.976,
+      "difference_lo": 0.0,
+      "difference_hi": 0.0
+    },
+    {
+      "policy": "business",
+      "metric": "thick_frr",
+      "lo": 13.984,
+      "hi": 14.65,
+      "difference_lo": 0.0,
+      "difference_hi": 0.0
+    },
+    {
+      "policy": "business",
+      "metric": "thin_frr",
+      "lo": 19.56,
+      "hi": 20.792,
+      "difference_lo": 0.0,
+      "difference_hi": 0.0
+    },
+    {
+      "policy": "business",
+      "metric": "abs_frr_gap",
+      "lo": 5.121,
+      "hi": 6.578,
+      "difference_lo": 0.0,
+      "difference_hi": 0.0
+    },
+    {
+      "policy": "gap_e0.02",
+      "metric": "approval_rate",
+      "lo": 80.723,
+      "hi": 81.331,
+      "difference_lo": -0.377,
+      "difference_hi": -0.132
+    },
+    {
+      "policy": "gap_e0.02",
+      "metric": "approved_risk",
+      "lo": 4.614,
+      "hi": 4.969,
+      "difference_lo": -0.06,
+      "difference_hi": 0.045
+    },
+    {
+      "policy": "gap_e0.02",
+      "metric": "thick_frr",
+      "lo": 15.697,
+      "hi": 16.39,
+      "difference_lo": 1.603,
+      "difference_hi": 1.85
+    },
+    {
+      "policy": "gap_e0.02",
+      "metric": "thin_frr",
+      "lo": 15.615,
+      "hi": 16.736,
+      "difference_lo": -4.332,
+      "difference_hi": -3.69
+    },
+    {
+      "policy": "gap_e0.02",
+      "metric": "abs_frr_gap",
+      "lo": 0.011,
+      "hi": 0.839,
+      "difference_lo": -6.029,
+      "difference_hi": -4.617
+    }
+  ],
+  "elapsed_seconds": 132.74606800079346
+}

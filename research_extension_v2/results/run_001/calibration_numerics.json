@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "model": "full",
+      "mean_gradients": [
+        2.3025295608664715e-07,
+        8.643743681425883e-07
+      ],
+      "log_loss": 0.2435681453134216,
+      "passed": true,
+      "calibration": {
+        "slope": 1.0741554488538911,
+        "intercept": 0.15955713173267924
+      }
+    },
+    {
+      "model": "r50_s17_biased",
+      "mean_gradients": [
+        3.7576272732640223e-06,
+        -1.6604777162534954e-06
+      ],
+      "log_loss": 0.24684187877609595,
+      "passed": true,
+      "calibration": {
+        "slope": 0.9482496946255443,
+        "intercept": -0.3290911232067151
+      }
+    },
+    {
+      "model": "r50_s29_biased",
+      "mean_gradients": [
+        3.1407374631585594e-06,
+        -1.3893854405757293e-06
+      ],
+      "log_loss": 0.24671603880797774,
+      "passed": true,
+      "calibration": {
+        "slope": 0.9470101578840097,
+        "intercept": -0.32999147139616014
+      }
+    },
+    {
+      "model": "r50_s43_biased",
+      "mean_gradients": [
+        3.823207643386759e-06,
+        -1.6917203974134605e-06
+      ],
+      "log_loss": 0.24683841813535626,
+      "passed": true,
+      "calibration": {
+        "slope": 0.9475730912467907,
+        "intercept": -0.32976814065325893
+      }
+    },
+    {
+      "model": "r50_s61_biased",
+      "mean_gradients": [
+        -3.6165108109982813e-06,
+        -2.750509718159934e-07
+      ],
+      "log_loss": 0.24695893284588996,
+      "passed": true,
+      "calibration": {
+        "slope": 0.9441108755664451,
+        "intercept": -0.33921393079040196
+      }
+    },
+    {
+      "model": "r50_s89_biased",
+      "mean_gradients": [
+        3.2197035390120986e-05,
+        5.924305293549041e-05
+      ],
+      "log_loss": 0.2470947946281595,
+      "passed": true,
+      "calibration": {
+        "slope": 0.9429300882324422,
+        "intercept": -0.33870236860387626
+      }
+    }
+  ],
+  "bootstrap_intervals_all_finite": true,
+  "note": "Warnings preserved. Independent elementwise first-order optimality and finite-output checks; no retraining or changed scientific definitions."
+}

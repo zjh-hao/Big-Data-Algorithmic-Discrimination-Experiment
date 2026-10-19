@@ -1,0 +1,12 @@
+{
+  "cuts": [
+    117000.0,
+    180000.0
+  ],
+  "training_ids_sha256": "74c5559b975ce78d35557deedef0fb67eca1d04f849882331473e39ab532fc08",
+  "source": "full original training split only",
+  "quantiles": [
+    0.3333333333333333,
+    0.6666666666666666
+  ]
+}

@@ -1,0 +1,2299 @@
+{
+  "frozen_unix": 1792397993.3634958,
+  "policies": {
+    "full": {
+      "business": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": null,
+        "delta": null,
+        "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 203355,
+        "gap_feasible_candidates": 203355,
+        "final_feasible_candidates": 203355,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.12402524313870382,
+          0.12715736631029376
+        ],
+        "indices": [
+          424,
+          393
+        ],
+        "validation_approvals": 24958,
+        "validation_risk": 0.049963939418222615,
+        "validation_thick_frr": 0.1476088508208423,
+        "validation_thin_frr": 0.20060664552598928,
+        "validation_abs_frr_gap": 0.05299779470514698
+      },
+      "gap_e0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": null,
+        "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 203355,
+        "gap_feasible_candidates": 3993,
+        "final_feasible_candidates": 3993,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.11542677411580049,
+          0.14389387048358632
+        ],
+        "indices": [
+          415,
+          413
+        ],
+        "validation_approvals": 24871,
+        "validation_risk": 0.04997788589119859,
+        "validation_thick_frr": 0.1641684511063526,
+        "validation_thin_frr": 0.16407003998345515,
+        "validation_abs_frr_gap": 9.841112289743492e-05,
+        "gap_slack": 0.009901588877102565,
+        "gap_changes_business": true
+      },
+      "noharm_e0.01_d0.00": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.01,
+        "delta": 0.0,
+        "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 203355,
+        "gap_feasible_candidates": 3993,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 3993,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.01_d0.01": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.01,
+        "delta": 0.01,
+        "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 203355,
+        "gap_feasible_candidates": 3993,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 3993,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.01_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": 0.02,
+        "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 203355,
+        "gap_feasible_candidates": 3993,
+        "final_feasible_candidates": 15,
+        "noharm_removed_candidates": 3978,
+        "thresholds": [
+          0.11542677411580049,
+          0.14389387048358632
+        ],
+        "indices": [
+          415,
+          413
+        ],
+        "validation_approvals": 24871,
+        "validation_risk": 0.04997788589119859,
+        "validation_thick_frr": 0.1641684511063526,
+        "validation_thin_frr": 0.16407003998345515,
+        "validation_abs_frr_gap": 9.841112289743492e-05,
+        "gap_slack": 0.009901588877102565,
+        "thin_noharm_slack": 0.05653660554253412,
+        "thick_noharm_slack": 0.0034403997144897003,
+        "noharm_changes_gap_only": false
+      },
+      "gap_e0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": null,
+        "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 203355,
+        "gap_feasible_candidates": 8032,
+        "final_feasible_candidates": 8032,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.11542677411580049,
+          0.14389387048358632
+        ],
+        "indices": [
+          415,
+          413
+        ],
+        "validation_approvals": 24871,
+        "validation_risk": 0.04997788589119859,
+        "validation_thick_frr": 0.1641684511063526,
+        "validation_thin_frr": 0.16407003998345515,
+        "validation_abs_frr_gap": 9.841112289743492e-05,
+        "gap_slack": 0.019901588877102565,
+        "gap_changes_business": true
+      },
+      "noharm_e0.02_d0.00": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.02,
+        "delta": 0.0,
+        "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 203355,
+        "gap_feasible_candidates": 8032,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 8032,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.02_d0.01": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.02,
+        "delta": 0.01,
+        "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 203355,
+        "gap_feasible_candidates": 8032,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 8032,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.02_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": 0.02,
+        "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 203355,
+        "gap_feasible_candidates": 8032,
+        "final_feasible_candidates": 32,
+        "noharm_removed_candidates": 8000,
+        "thresholds": [
+          0.11542677411580049,
+          0.14389387048358632
+        ],
+        "indices": [
+          415,
+          413
+        ],
+        "validation_approvals": 24871,
+        "validation_risk": 0.04997788589119859,
+        "validation_thick_frr": 0.1641684511063526,
+        "validation_thin_frr": 0.16407003998345515,
+        "validation_abs_frr_gap": 9.841112289743492e-05,
+        "gap_slack": 0.019901588877102565,
+        "thin_noharm_slack": 0.05653660554253412,
+        "thick_noharm_slack": 0.0034403997144897003,
+        "noharm_changes_gap_only": false
+      },
+      "gap_e0.05": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": null,
+        "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 203355,
+        "gap_feasible_candidates": 20033,
+        "final_feasible_candidates": 20033,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.12200741991120771,
+          0.12802283616022023
+        ],
+        "indices": [
+          422,
+          394
+        ],
+        "validation_approvals": 24885,
+        "validation_risk": 0.049989953787422145,
+        "validation_thick_frr": 0.151415655484178,
+        "validation_thin_frr": 0.19922790569419546,
+        "validation_abs_frr_gap": 0.04781225021001745,
+        "gap_slack": 0.0021877497899825543,
+        "gap_changes_business": true
+      },
+      "noharm_e0.05_d0.00": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.05,
+        "delta": 0.0,
+        "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 203355,
+        "gap_feasible_candidates": 20033,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 20033,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.05_d0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.01,
+        "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 203355,
+        "gap_feasible_candidates": 20033,
+        "final_feasible_candidates": 25,
+        "noharm_removed_candidates": 20008,
+        "thresholds": [
+          0.12200741991120771,
+          0.12802283616022023
+        ],
+        "indices": [
+          422,
+          394
+        ],
+        "validation_approvals": 24885,
+        "validation_risk": 0.049989953787422145,
+        "validation_thick_frr": 0.151415655484178,
+        "validation_thin_frr": 0.19922790569419546,
+        "validation_abs_frr_gap": 0.04781225021001745,
+        "gap_slack": 0.0021877497899825543,
+        "thin_noharm_slack": 0.011378739831793827,
+        "thick_noharm_slack": 0.006193195336664292,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.05_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.02,
+        "candidate_fingerprint": "bebe3020a5a9319b2a5b74527b8425f598cb904d8a1ebb9e5bf0749dd6fb4aee",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 203355,
+        "gap_feasible_candidates": 20033,
+        "final_feasible_candidates": 146,
+        "noharm_removed_candidates": 19887,
+        "thresholds": [
+          0.12200741991120771,
+          0.12802283616022023
+        ],
+        "indices": [
+          422,
+          394
+        ],
+        "validation_approvals": 24885,
+        "validation_risk": 0.049989953787422145,
+        "validation_thick_frr": 0.151415655484178,
+        "validation_thin_frr": 0.19922790569419546,
+        "validation_abs_frr_gap": 0.04781225021001745,
+        "gap_slack": 0.0021877497899825543,
+        "thin_noharm_slack": 0.021378739831793808,
+        "thick_noharm_slack": 0.016193195336664273,
+        "noharm_changes_gap_only": false
+      }
+    },
+    "r50_s17_biased": {
+      "business": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": null,
+        "delta": null,
+        "candidate_fingerprint": "7065d8e9105d1949c7415dcb94dc5ef368619437f35abd8d73897acdd847525c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202709,
+        "gap_feasible_candidates": 202709,
+        "final_feasible_candidates": 202709,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.0997590208499885,
+          0.17522516136205268
+        ],
+        "indices": [
+          423,
+          392
+        ],
+        "validation_approvals": 24896,
+        "validation_risk": 0.049967866323907456,
+        "validation_thick_frr": 0.14932191291934338,
+        "validation_thin_frr": 0.2037777471391149,
+        "validation_abs_frr_gap": 0.054455834219771515
+      },
+      "gap_e0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": null,
+        "candidate_fingerprint": "7065d8e9105d1949c7415dcb94dc5ef368619437f35abd8d73897acdd847525c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202709,
+        "gap_feasible_candidates": 3959,
+        "final_feasible_candidates": 3959,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09509034395885513,
+          0.19224377265612852
+        ],
+        "indices": [
+          416,
+          409
+        ],
+        "validation_approvals": 24852,
+        "validation_risk": 0.049975857073877354,
+        "validation_thick_frr": 0.16236021889126817,
+        "validation_thin_frr": 0.1717909830415001,
+        "validation_abs_frr_gap": 0.009430764150231918,
+        "gap_slack": 0.0005692358497680818,
+        "gap_changes_business": true
+      },
+      "noharm_e0.01_d0.00": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.01,
+        "delta": 0.0,
+        "candidate_fingerprint": "7065d8e9105d1949c7415dcb94dc5ef368619437f35abd8d73897acdd847525c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202709,
+        "gap_feasible_candidates": 3959,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 3959,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.01_d0.01": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.01,
+        "delta": 0.01,
+        "candidate_fingerprint": "7065d8e9105d1949c7415dcb94dc5ef368619437f35abd8d73897acdd847525c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202709,
+        "gap_feasible_candidates": 3959,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 3959,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.01_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": 0.02,
+        "candidate_fingerprint": "7065d8e9105d1949c7415dcb94dc5ef368619437f35abd8d73897acdd847525c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202709,
+        "gap_feasible_candidates": 3959,
+        "final_feasible_candidates": 18,
+        "noharm_removed_candidates": 3941,
+        "thresholds": [
+          0.09509034395885513,
+          0.19224377265612852
+        ],
+        "indices": [
+          416,
+          409
+        ],
+        "validation_approvals": 24852,
+        "validation_risk": 0.049975857073877354,
+        "validation_thick_frr": 0.16236021889126817,
+        "validation_thin_frr": 0.1717909830415001,
+        "validation_abs_frr_gap": 0.009430764150231918,
+        "gap_slack": 0.0005692358497680818,
+        "thin_noharm_slack": 0.051986764097614796,
+        "thick_noharm_slack": 0.006961694028075199,
+        "noharm_changes_gap_only": false
+      },
+      "gap_e0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": null,
+        "candidate_fingerprint": "7065d8e9105d1949c7415dcb94dc5ef368619437f35abd8d73897acdd847525c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202709,
+        "gap_feasible_candidates": 7979,
+        "final_feasible_candidates": 7979,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09560159736870069,
+          0.19143355696622824
+        ],
+        "indices": [
+          417,
+          408
+        ],
+        "validation_approvals": 24880,
+        "validation_risk": 0.04995980707395498,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.17344547083965256,
+        "validation_abs_frr_gap": 0.012941069221760526,
+        "gap_slack": 0.007058930778239474,
+        "gap_changes_business": true
+      },
+      "noharm_e0.02_d0.00": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.02,
+        "delta": 0.0,
+        "candidate_fingerprint": "7065d8e9105d1949c7415dcb94dc5ef368619437f35abd8d73897acdd847525c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202709,
+        "gap_feasible_candidates": 7979,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 7979,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.02_d0.01": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.02,
+        "delta": 0.01,
+        "candidate_fingerprint": "7065d8e9105d1949c7415dcb94dc5ef368619437f35abd8d73897acdd847525c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202709,
+        "gap_feasible_candidates": 7979,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 7979,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.02_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": 0.02,
+        "candidate_fingerprint": "7065d8e9105d1949c7415dcb94dc5ef368619437f35abd8d73897acdd847525c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202709,
+        "gap_feasible_candidates": 7979,
+        "final_feasible_candidates": 42,
+        "noharm_removed_candidates": 7937,
+        "thresholds": [
+          0.09560159736870069,
+          0.19143355696622824
+        ],
+        "indices": [
+          417,
+          408
+        ],
+        "validation_approvals": 24880,
+        "validation_risk": 0.04995980707395498,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.17344547083965256,
+        "validation_abs_frr_gap": 0.012941069221760526,
+        "gap_slack": 0.007058930778239474,
+        "thin_noharm_slack": 0.050332276299462325,
+        "thick_noharm_slack": 0.008817511301451336,
+        "noharm_changes_gap_only": false
+      },
+      "gap_e0.05": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": null,
+        "candidate_fingerprint": "7065d8e9105d1949c7415dcb94dc5ef368619437f35abd8d73897acdd847525c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202709,
+        "gap_feasible_candidates": 20006,
+        "final_feasible_candidates": 20006,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09560159736870069,
+          0.19143355696622824
+        ],
+        "indices": [
+          417,
+          408
+        ],
+        "validation_approvals": 24880,
+        "validation_risk": 0.04995980707395498,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.17344547083965256,
+        "validation_abs_frr_gap": 0.012941069221760526,
+        "gap_slack": 0.03705893077823948,
+        "gap_changes_business": true
+      },
+      "noharm_e0.05_d0.00": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.05,
+        "delta": 0.0,
+        "candidate_fingerprint": "7065d8e9105d1949c7415dcb94dc5ef368619437f35abd8d73897acdd847525c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202709,
+        "gap_feasible_candidates": 20006,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 20006,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.05_d0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.01,
+        "candidate_fingerprint": "7065d8e9105d1949c7415dcb94dc5ef368619437f35abd8d73897acdd847525c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202709,
+        "gap_feasible_candidates": 20006,
+        "final_feasible_candidates": 35,
+        "noharm_removed_candidates": 19971,
+        "thresholds": [
+          0.09704129117903898,
+          0.18510470103288837
+        ],
+        "indices": [
+          419,
+          402
+        ],
+        "validation_approvals": 24875,
+        "validation_risk": 0.04992964824120603,
+        "validation_thick_frr": 0.1568879371877231,
+        "validation_thin_frr": 0.18447538949400244,
+        "validation_abs_frr_gap": 0.027587452306279348,
+        "gap_slack": 0.022412547693720655,
+        "thin_noharm_slack": 0.029302357645112465,
+        "thick_noharm_slack": 0.002433975731620297,
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.05_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.02,
+        "candidate_fingerprint": "7065d8e9105d1949c7415dcb94dc5ef368619437f35abd8d73897acdd847525c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202709,
+        "gap_feasible_candidates": 20006,
+        "final_feasible_candidates": 157,
+        "noharm_removed_candidates": 19849,
+        "thresholds": [
+          0.09560159736870069,
+          0.19143355696622824
+        ],
+        "indices": [
+          417,
+          408
+        ],
+        "validation_approvals": 24880,
+        "validation_risk": 0.04995980707395498,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.17344547083965256,
+        "validation_abs_frr_gap": 0.012941069221760526,
+        "gap_slack": 0.03705893077823948,
+        "thin_noharm_slack": 0.050332276299462325,
+        "thick_noharm_slack": 0.008817511301451336,
+        "noharm_changes_gap_only": false
+      }
+    },
+    "r50_s29_biased": {
+      "business": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": null,
+        "delta": null,
+        "candidate_fingerprint": "bd49d22a5101cce81047ec4781f36340e9b23adbf3f664460f9428f87fb90de9",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202896,
+        "gap_feasible_candidates": 202896,
+        "final_feasible_candidates": 202896,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.0948942735202047,
+          0.20392232551586847
+        ],
+        "indices": [
+          415,
+          419
+        ],
+        "validation_approvals": 24963,
+        "validation_risk": 0.04995393181909226,
+        "validation_thick_frr": 0.1634546752319772,
+        "validation_thin_frr": 0.15400523921136078,
+        "validation_abs_frr_gap": 0.00944943602061643
+      },
+      "gap_e0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": null,
+        "candidate_fingerprint": "bd49d22a5101cce81047ec4781f36340e9b23adbf3f664460f9428f87fb90de9",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202896,
+        "gap_feasible_candidates": 4024,
+        "final_feasible_candidates": 4024,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.0948942735202047,
+          0.20392232551586847
+        ],
+        "indices": [
+          415,
+          419
+        ],
+        "validation_approvals": 24963,
+        "validation_risk": 0.04995393181909226,
+        "validation_thick_frr": 0.1634546752319772,
+        "validation_thin_frr": 0.15400523921136078,
+        "validation_abs_frr_gap": 0.00944943602061643,
+        "gap_slack": 0.0005505639793835695,
+        "gap_changes_business": false
+      },
+      "noharm_e0.01_d0.00": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": 0.0,
+        "candidate_fingerprint": "bd49d22a5101cce81047ec4781f36340e9b23adbf3f664460f9428f87fb90de9",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202896,
+        "gap_feasible_candidates": 4024,
+        "final_feasible_candidates": 1,
+        "noharm_removed_candidates": 4023,
+        "thresholds": [
+          0.0948942735202047,
+          0.20392232551586847
+        ],
+        "indices": [
+          415,
+          419
+        ],
+        "validation_approvals": 24963,
+        "validation_risk": 0.04995393181909226,
+        "validation_thick_frr": 0.1634546752319772,
+        "validation_thin_frr": 0.15400523921136078,
+        "validation_abs_frr_gap": 0.00944943602061643,
+        "gap_slack": 0.0005505639793835695,
+        "thin_noharm_slack": 0.0,
+        "thick_noharm_slack": 0.0,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.01_d0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": 0.01,
+        "candidate_fingerprint": "bd49d22a5101cce81047ec4781f36340e9b23adbf3f664460f9428f87fb90de9",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202896,
+        "gap_feasible_candidates": 4024,
+        "final_feasible_candidates": 24,
+        "noharm_removed_candidates": 4000,
+        "thresholds": [
+          0.0948942735202047,
+          0.20392232551586847
+        ],
+        "indices": [
+          415,
+          419
+        ],
+        "validation_approvals": 24963,
+        "validation_risk": 0.04995393181909226,
+        "validation_thick_frr": 0.1634546752319772,
+        "validation_thin_frr": 0.15400523921136078,
+        "validation_abs_frr_gap": 0.00944943602061643,
+        "gap_slack": 0.0005505639793835695,
+        "thin_noharm_slack": 0.010000000000000009,
+        "thick_noharm_slack": 0.010000000000000009,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.01_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": 0.02,
+        "candidate_fingerprint": "bd49d22a5101cce81047ec4781f36340e9b23adbf3f664460f9428f87fb90de9",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202896,
+        "gap_feasible_candidates": 4024,
+        "final_feasible_candidates": 85,
+        "noharm_removed_candidates": 3939,
+        "thresholds": [
+          0.0948942735202047,
+          0.20392232551586847
+        ],
+        "indices": [
+          415,
+          419
+        ],
+        "validation_approvals": 24963,
+        "validation_risk": 0.04995393181909226,
+        "validation_thick_frr": 0.1634546752319772,
+        "validation_thin_frr": 0.15400523921136078,
+        "validation_abs_frr_gap": 0.00944943602061643,
+        "gap_slack": 0.0005505639793835695,
+        "thin_noharm_slack": 0.01999999999999999,
+        "thick_noharm_slack": 0.01999999999999999,
+        "noharm_changes_gap_only": false
+      },
+      "gap_e0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": null,
+        "candidate_fingerprint": "bd49d22a5101cce81047ec4781f36340e9b23adbf3f664460f9428f87fb90de9",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202896,
+        "gap_feasible_candidates": 8033,
+        "final_feasible_candidates": 8033,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.0948942735202047,
+          0.20392232551586847
+        ],
+        "indices": [
+          415,
+          419
+        ],
+        "validation_approvals": 24963,
+        "validation_risk": 0.04995393181909226,
+        "validation_thick_frr": 0.1634546752319772,
+        "validation_thin_frr": 0.15400523921136078,
+        "validation_abs_frr_gap": 0.00944943602061643,
+        "gap_slack": 0.01055056397938357,
+        "gap_changes_business": false
+      },
+      "noharm_e0.02_d0.00": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": 0.0,
+        "candidate_fingerprint": "bd49d22a5101cce81047ec4781f36340e9b23adbf3f664460f9428f87fb90de9",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202896,
+        "gap_feasible_candidates": 8033,
+        "final_feasible_candidates": 1,
+        "noharm_removed_candidates": 8032,
+        "thresholds": [
+          0.0948942735202047,
+          0.20392232551586847
+        ],
+        "indices": [
+          415,
+          419
+        ],
+        "validation_approvals": 24963,
+        "validation_risk": 0.04995393181909226,
+        "validation_thick_frr": 0.1634546752319772,
+        "validation_thin_frr": 0.15400523921136078,
+        "validation_abs_frr_gap": 0.00944943602061643,
+        "gap_slack": 0.01055056397938357,
+        "thin_noharm_slack": 0.0,
+        "thick_noharm_slack": 0.0,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.02_d0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": 0.01,
+        "candidate_fingerprint": "bd49d22a5101cce81047ec4781f36340e9b23adbf3f664460f9428f87fb90de9",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202896,
+        "gap_feasible_candidates": 8033,
+        "final_feasible_candidates": 46,
+        "noharm_removed_candidates": 7987,
+        "thresholds": [
+          0.0948942735202047,
+          0.20392232551586847
+        ],
+        "indices": [
+          415,
+          419
+        ],
+        "validation_approvals": 24963,
+        "validation_risk": 0.04995393181909226,
+        "validation_thick_frr": 0.1634546752319772,
+        "validation_thin_frr": 0.15400523921136078,
+        "validation_abs_frr_gap": 0.00944943602061643,
+        "gap_slack": 0.01055056397938357,
+        "thin_noharm_slack": 0.010000000000000009,
+        "thick_noharm_slack": 0.010000000000000009,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.02_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": 0.02,
+        "candidate_fingerprint": "bd49d22a5101cce81047ec4781f36340e9b23adbf3f664460f9428f87fb90de9",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202896,
+        "gap_feasible_candidates": 8033,
+        "final_feasible_candidates": 141,
+        "noharm_removed_candidates": 7892,
+        "thresholds": [
+          0.0948942735202047,
+          0.20392232551586847
+        ],
+        "indices": [
+          415,
+          419
+        ],
+        "validation_approvals": 24963,
+        "validation_risk": 0.04995393181909226,
+        "validation_thick_frr": 0.1634546752319772,
+        "validation_thin_frr": 0.15400523921136078,
+        "validation_abs_frr_gap": 0.00944943602061643,
+        "gap_slack": 0.01055056397938357,
+        "thin_noharm_slack": 0.01999999999999999,
+        "thick_noharm_slack": 0.01999999999999999,
+        "noharm_changes_gap_only": false
+      },
+      "gap_e0.05": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": null,
+        "candidate_fingerprint": "bd49d22a5101cce81047ec4781f36340e9b23adbf3f664460f9428f87fb90de9",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202896,
+        "gap_feasible_candidates": 20087,
+        "final_feasible_candidates": 20087,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.0948942735202047,
+          0.20392232551586847
+        ],
+        "indices": [
+          415,
+          419
+        ],
+        "validation_approvals": 24963,
+        "validation_risk": 0.04995393181909226,
+        "validation_thick_frr": 0.1634546752319772,
+        "validation_thin_frr": 0.15400523921136078,
+        "validation_abs_frr_gap": 0.00944943602061643,
+        "gap_slack": 0.04055056397938357,
+        "gap_changes_business": false
+      },
+      "noharm_e0.05_d0.00": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.0,
+        "candidate_fingerprint": "bd49d22a5101cce81047ec4781f36340e9b23adbf3f664460f9428f87fb90de9",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202896,
+        "gap_feasible_candidates": 20087,
+        "final_feasible_candidates": 1,
+        "noharm_removed_candidates": 20086,
+        "thresholds": [
+          0.0948942735202047,
+          0.20392232551586847
+        ],
+        "indices": [
+          415,
+          419
+        ],
+        "validation_approvals": 24963,
+        "validation_risk": 0.04995393181909226,
+        "validation_thick_frr": 0.1634546752319772,
+        "validation_thin_frr": 0.15400523921136078,
+        "validation_abs_frr_gap": 0.00944943602061643,
+        "gap_slack": 0.04055056397938357,
+        "thin_noharm_slack": 0.0,
+        "thick_noharm_slack": 0.0,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.05_d0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.01,
+        "candidate_fingerprint": "bd49d22a5101cce81047ec4781f36340e9b23adbf3f664460f9428f87fb90de9",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202896,
+        "gap_feasible_candidates": 20087,
+        "final_feasible_candidates": 58,
+        "noharm_removed_candidates": 20029,
+        "thresholds": [
+          0.0948942735202047,
+          0.20392232551586847
+        ],
+        "indices": [
+          415,
+          419
+        ],
+        "validation_approvals": 24963,
+        "validation_risk": 0.04995393181909226,
+        "validation_thick_frr": 0.1634546752319772,
+        "validation_thin_frr": 0.15400523921136078,
+        "validation_abs_frr_gap": 0.00944943602061643,
+        "gap_slack": 0.04055056397938357,
+        "thin_noharm_slack": 0.010000000000000009,
+        "thick_noharm_slack": 0.010000000000000009,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.05_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.02,
+        "candidate_fingerprint": "bd49d22a5101cce81047ec4781f36340e9b23adbf3f664460f9428f87fb90de9",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202896,
+        "gap_feasible_candidates": 20087,
+        "final_feasible_candidates": 235,
+        "noharm_removed_candidates": 19852,
+        "thresholds": [
+          0.0948942735202047,
+          0.20392232551586847
+        ],
+        "indices": [
+          415,
+          419
+        ],
+        "validation_approvals": 24963,
+        "validation_risk": 0.04995393181909226,
+        "validation_thick_frr": 0.1634546752319772,
+        "validation_thin_frr": 0.15400523921136078,
+        "validation_abs_frr_gap": 0.00944943602061643,
+        "gap_slack": 0.04055056397938357,
+        "thin_noharm_slack": 0.01999999999999999,
+        "thick_noharm_slack": 0.01999999999999999,
+        "noharm_changes_gap_only": false
+      }
+    },
+    "r50_s43_biased": {
+      "business": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": null,
+        "delta": null,
+        "candidate_fingerprint": "e2c17aca54015aa6b899f3ef841abb76a460c76d6daeae6549941d7cc073a24c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202518,
+        "gap_feasible_candidates": 202518,
+        "final_feasible_candidates": 202518,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09595706180918243,
+          0.19548264126345677
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24940,
+        "validation_risk": 0.04995990376904571,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.16558665379842818,
+        "validation_abs_frr_gap": 0.005082252180536151
+      },
+      "gap_e0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": null,
+        "candidate_fingerprint": "e2c17aca54015aa6b899f3ef841abb76a460c76d6daeae6549941d7cc073a24c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202518,
+        "gap_feasible_candidates": 4000,
+        "final_feasible_candidates": 4000,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09595706180918243,
+          0.19548264126345677
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24940,
+        "validation_risk": 0.04995990376904571,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.16558665379842818,
+        "validation_abs_frr_gap": 0.005082252180536151,
+        "gap_slack": 0.004917747819463849,
+        "gap_changes_business": false
+      },
+      "noharm_e0.01_d0.00": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": 0.0,
+        "candidate_fingerprint": "e2c17aca54015aa6b899f3ef841abb76a460c76d6daeae6549941d7cc073a24c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202518,
+        "gap_feasible_candidates": 4000,
+        "final_feasible_candidates": 1,
+        "noharm_removed_candidates": 3999,
+        "thresholds": [
+          0.09595706180918243,
+          0.19548264126345677
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24940,
+        "validation_risk": 0.04995990376904571,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.16558665379842818,
+        "validation_abs_frr_gap": 0.005082252180536151,
+        "gap_slack": 0.004917747819463849,
+        "thin_noharm_slack": 0.0,
+        "thick_noharm_slack": 0.0,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.01_d0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": 0.01,
+        "candidate_fingerprint": "e2c17aca54015aa6b899f3ef841abb76a460c76d6daeae6549941d7cc073a24c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202518,
+        "gap_feasible_candidates": 4000,
+        "final_feasible_candidates": 36,
+        "noharm_removed_candidates": 3964,
+        "thresholds": [
+          0.09595706180918243,
+          0.19548264126345677
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24940,
+        "validation_risk": 0.04995990376904571,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.16558665379842818,
+        "validation_abs_frr_gap": 0.005082252180536151,
+        "gap_slack": 0.004917747819463849,
+        "thin_noharm_slack": 0.010000000000000009,
+        "thick_noharm_slack": 0.010000000000000009,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.01_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": 0.02,
+        "candidate_fingerprint": "e2c17aca54015aa6b899f3ef841abb76a460c76d6daeae6549941d7cc073a24c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202518,
+        "gap_feasible_candidates": 4000,
+        "final_feasible_candidates": 90,
+        "noharm_removed_candidates": 3910,
+        "thresholds": [
+          0.09595706180918243,
+          0.19548264126345677
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24940,
+        "validation_risk": 0.04995990376904571,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.16558665379842818,
+        "validation_abs_frr_gap": 0.005082252180536151,
+        "gap_slack": 0.004917747819463849,
+        "thin_noharm_slack": 0.01999999999999999,
+        "thick_noharm_slack": 0.01999999999999999,
+        "noharm_changes_gap_only": false
+      },
+      "gap_e0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": null,
+        "candidate_fingerprint": "e2c17aca54015aa6b899f3ef841abb76a460c76d6daeae6549941d7cc073a24c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202518,
+        "gap_feasible_candidates": 8006,
+        "final_feasible_candidates": 8006,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09595706180918243,
+          0.19548264126345677
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24940,
+        "validation_risk": 0.04995990376904571,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.16558665379842818,
+        "validation_abs_frr_gap": 0.005082252180536151,
+        "gap_slack": 0.01491774781946385,
+        "gap_changes_business": false
+      },
+      "noharm_e0.02_d0.00": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": 0.0,
+        "candidate_fingerprint": "e2c17aca54015aa6b899f3ef841abb76a460c76d6daeae6549941d7cc073a24c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202518,
+        "gap_feasible_candidates": 8006,
+        "final_feasible_candidates": 1,
+        "noharm_removed_candidates": 8005,
+        "thresholds": [
+          0.09595706180918243,
+          0.19548264126345677
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24940,
+        "validation_risk": 0.04995990376904571,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.16558665379842818,
+        "validation_abs_frr_gap": 0.005082252180536151,
+        "gap_slack": 0.01491774781946385,
+        "thin_noharm_slack": 0.0,
+        "thick_noharm_slack": 0.0,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.02_d0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": 0.01,
+        "candidate_fingerprint": "e2c17aca54015aa6b899f3ef841abb76a460c76d6daeae6549941d7cc073a24c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202518,
+        "gap_feasible_candidates": 8006,
+        "final_feasible_candidates": 44,
+        "noharm_removed_candidates": 7962,
+        "thresholds": [
+          0.09595706180918243,
+          0.19548264126345677
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24940,
+        "validation_risk": 0.04995990376904571,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.16558665379842818,
+        "validation_abs_frr_gap": 0.005082252180536151,
+        "gap_slack": 0.01491774781946385,
+        "thin_noharm_slack": 0.010000000000000009,
+        "thick_noharm_slack": 0.010000000000000009,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.02_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": 0.02,
+        "candidate_fingerprint": "e2c17aca54015aa6b899f3ef841abb76a460c76d6daeae6549941d7cc073a24c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202518,
+        "gap_feasible_candidates": 8006,
+        "final_feasible_candidates": 160,
+        "noharm_removed_candidates": 7846,
+        "thresholds": [
+          0.09595706180918243,
+          0.19548264126345677
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24940,
+        "validation_risk": 0.04995990376904571,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.16558665379842818,
+        "validation_abs_frr_gap": 0.005082252180536151,
+        "gap_slack": 0.01491774781946385,
+        "thin_noharm_slack": 0.01999999999999999,
+        "thick_noharm_slack": 0.01999999999999999,
+        "noharm_changes_gap_only": false
+      },
+      "gap_e0.05": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": null,
+        "candidate_fingerprint": "e2c17aca54015aa6b899f3ef841abb76a460c76d6daeae6549941d7cc073a24c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202518,
+        "gap_feasible_candidates": 20003,
+        "final_feasible_candidates": 20003,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09595706180918243,
+          0.19548264126345677
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24940,
+        "validation_risk": 0.04995990376904571,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.16558665379842818,
+        "validation_abs_frr_gap": 0.005082252180536151,
+        "gap_slack": 0.04491774781946385,
+        "gap_changes_business": false
+      },
+      "noharm_e0.05_d0.00": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.0,
+        "candidate_fingerprint": "e2c17aca54015aa6b899f3ef841abb76a460c76d6daeae6549941d7cc073a24c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202518,
+        "gap_feasible_candidates": 20003,
+        "final_feasible_candidates": 1,
+        "noharm_removed_candidates": 20002,
+        "thresholds": [
+          0.09595706180918243,
+          0.19548264126345677
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24940,
+        "validation_risk": 0.04995990376904571,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.16558665379842818,
+        "validation_abs_frr_gap": 0.005082252180536151,
+        "gap_slack": 0.04491774781946385,
+        "thin_noharm_slack": 0.0,
+        "thick_noharm_slack": 0.0,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.05_d0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.01,
+        "candidate_fingerprint": "e2c17aca54015aa6b899f3ef841abb76a460c76d6daeae6549941d7cc073a24c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202518,
+        "gap_feasible_candidates": 20003,
+        "final_feasible_candidates": 44,
+        "noharm_removed_candidates": 19959,
+        "thresholds": [
+          0.09595706180918243,
+          0.19548264126345677
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24940,
+        "validation_risk": 0.04995990376904571,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.16558665379842818,
+        "validation_abs_frr_gap": 0.005082252180536151,
+        "gap_slack": 0.04491774781946385,
+        "thin_noharm_slack": 0.010000000000000009,
+        "thick_noharm_slack": 0.010000000000000009,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.05_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.02,
+        "candidate_fingerprint": "e2c17aca54015aa6b899f3ef841abb76a460c76d6daeae6549941d7cc073a24c",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202518,
+        "gap_feasible_candidates": 20003,
+        "final_feasible_candidates": 202,
+        "noharm_removed_candidates": 19801,
+        "thresholds": [
+          0.09595706180918243,
+          0.19548264126345677
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24940,
+        "validation_risk": 0.04995990376904571,
+        "validation_thick_frr": 0.16050440161789203,
+        "validation_thin_frr": 0.16558665379842818,
+        "validation_abs_frr_gap": 0.005082252180536151,
+        "gap_slack": 0.04491774781946385,
+        "thin_noharm_slack": 0.01999999999999999,
+        "thick_noharm_slack": 0.01999999999999999,
+        "noharm_changes_gap_only": false
+      }
+    },
+    "r50_s61_biased": {
+      "business": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": null,
+        "delta": null,
+        "candidate_fingerprint": "e8c4c58f236da6dae01cbcc781b032041911795c9b1914ee5645eccca3eeefef",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202748,
+        "gap_feasible_candidates": 202748,
+        "final_feasible_candidates": 202748,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.10062708574424625,
+          0.17654596953259458
+        ],
+        "indices": [
+          424,
+          393
+        ],
+        "validation_approvals": 24956,
+        "validation_risk": 0.049967943580702036,
+        "validation_thick_frr": 0.14727575541280036,
+        "validation_thin_frr": 0.20184751137460366,
+        "validation_abs_frr_gap": 0.0545717559618033
+      },
+      "gap_e0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": null,
+        "candidate_fingerprint": "e8c4c58f236da6dae01cbcc781b032041911795c9b1914ee5645eccca3eeefef",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202748,
+        "gap_feasible_candidates": 3991,
+        "final_feasible_candidates": 3991,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09593257444728204,
+          0.19490729100911575
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24944,
+        "validation_risk": 0.049951892238614494,
+        "validation_thick_frr": 0.16012372115155837,
+        "validation_thin_frr": 0.1661381497311457,
+        "validation_abs_frr_gap": 0.006014428579587339,
+        "gap_slack": 0.0039855714204126615,
+        "gap_changes_business": true
+      },
+      "noharm_e0.01_d0.00": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.01,
+        "delta": 0.0,
+        "candidate_fingerprint": "e8c4c58f236da6dae01cbcc781b032041911795c9b1914ee5645eccca3eeefef",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202748,
+        "gap_feasible_candidates": 3991,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 3991,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.01_d0.01": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.01,
+        "delta": 0.01,
+        "candidate_fingerprint": "e8c4c58f236da6dae01cbcc781b032041911795c9b1914ee5645eccca3eeefef",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202748,
+        "gap_feasible_candidates": 3991,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 3991,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.01_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": 0.02,
+        "candidate_fingerprint": "e8c4c58f236da6dae01cbcc781b032041911795c9b1914ee5645eccca3eeefef",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202748,
+        "gap_feasible_candidates": 3991,
+        "final_feasible_candidates": 22,
+        "noharm_removed_candidates": 3969,
+        "thresholds": [
+          0.09593257444728204,
+          0.19490729100911575
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24944,
+        "validation_risk": 0.049951892238614494,
+        "validation_thick_frr": 0.16012372115155837,
+        "validation_thin_frr": 0.1661381497311457,
+        "validation_abs_frr_gap": 0.006014428579587339,
+        "gap_slack": 0.0039855714204126615,
+        "thin_noharm_slack": 0.05570936164345794,
+        "thick_noharm_slack": 0.007152034261241974,
+        "noharm_changes_gap_only": false
+      },
+      "gap_e0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": null,
+        "candidate_fingerprint": "e8c4c58f236da6dae01cbcc781b032041911795c9b1914ee5645eccca3eeefef",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202748,
+        "gap_feasible_candidates": 7993,
+        "final_feasible_candidates": 7993,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09593257444728204,
+          0.19490729100911575
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24944,
+        "validation_risk": 0.049951892238614494,
+        "validation_thick_frr": 0.16012372115155837,
+        "validation_thin_frr": 0.1661381497311457,
+        "validation_abs_frr_gap": 0.006014428579587339,
+        "gap_slack": 0.013985571420412662,
+        "gap_changes_business": true
+      },
+      "noharm_e0.02_d0.00": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.02,
+        "delta": 0.0,
+        "candidate_fingerprint": "e8c4c58f236da6dae01cbcc781b032041911795c9b1914ee5645eccca3eeefef",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202748,
+        "gap_feasible_candidates": 7993,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 7993,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.02_d0.01": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.02,
+        "delta": 0.01,
+        "candidate_fingerprint": "e8c4c58f236da6dae01cbcc781b032041911795c9b1914ee5645eccca3eeefef",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202748,
+        "gap_feasible_candidates": 7993,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 7993,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.02_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": 0.02,
+        "candidate_fingerprint": "e8c4c58f236da6dae01cbcc781b032041911795c9b1914ee5645eccca3eeefef",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202748,
+        "gap_feasible_candidates": 7993,
+        "final_feasible_candidates": 49,
+        "noharm_removed_candidates": 7944,
+        "thresholds": [
+          0.09593257444728204,
+          0.19490729100911575
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24944,
+        "validation_risk": 0.049951892238614494,
+        "validation_thick_frr": 0.16012372115155837,
+        "validation_thin_frr": 0.1661381497311457,
+        "validation_abs_frr_gap": 0.006014428579587339,
+        "gap_slack": 0.013985571420412662,
+        "thin_noharm_slack": 0.05570936164345794,
+        "thick_noharm_slack": 0.007152034261241974,
+        "noharm_changes_gap_only": false
+      },
+      "gap_e0.05": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": null,
+        "candidate_fingerprint": "e8c4c58f236da6dae01cbcc781b032041911795c9b1914ee5645eccca3eeefef",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202748,
+        "gap_feasible_candidates": 20038,
+        "final_feasible_candidates": 20038,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09593257444728204,
+          0.19490729100911575
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24944,
+        "validation_risk": 0.049951892238614494,
+        "validation_thick_frr": 0.16012372115155837,
+        "validation_thin_frr": 0.1661381497311457,
+        "validation_abs_frr_gap": 0.006014428579587339,
+        "gap_slack": 0.043985571420412664,
+        "gap_changes_business": true
+      },
+      "noharm_e0.05_d0.00": {
+        "status": "INFEASIBLE",
+        "feasible": false,
+        "epsilon": 0.05,
+        "delta": 0.0,
+        "candidate_fingerprint": "e8c4c58f236da6dae01cbcc781b032041911795c9b1914ee5645eccca3eeefef",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202748,
+        "gap_feasible_candidates": 20038,
+        "final_feasible_candidates": 0,
+        "noharm_removed_candidates": 20038,
+        "thresholds": null,
+        "reason": "No candidate meets every constraint and minimum approvals",
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.05_d0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.01,
+        "candidate_fingerprint": "e8c4c58f236da6dae01cbcc781b032041911795c9b1914ee5645eccca3eeefef",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202748,
+        "gap_feasible_candidates": 20038,
+        "final_feasible_candidates": 32,
+        "noharm_removed_candidates": 20006,
+        "thresholds": [
+          0.09812093400225247,
+          0.18496546417293874
+        ],
+        "indices": [
+          420,
+          402
+        ],
+        "validation_approvals": 24920,
+        "validation_risk": 0.049959871589085075,
+        "validation_thick_frr": 0.15469902450630502,
+        "validation_thin_frr": 0.18502688542671997,
+        "validation_abs_frr_gap": 0.03032786092041495,
+        "gap_slack": 0.019672139079585052,
+        "thin_noharm_slack": 0.026820625947883703,
+        "thick_noharm_slack": 0.0025767309064953503,
+        "noharm_changes_gap_only": true
+      },
+      "noharm_e0.05_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.02,
+        "candidate_fingerprint": "e8c4c58f236da6dae01cbcc781b032041911795c9b1914ee5645eccca3eeefef",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202748,
+        "gap_feasible_candidates": 20038,
+        "final_feasible_candidates": 161,
+        "noharm_removed_candidates": 19877,
+        "thresholds": [
+          0.09593257444728204,
+          0.19490729100911575
+        ],
+        "indices": [
+          417,
+          412
+        ],
+        "validation_approvals": 24944,
+        "validation_risk": 0.049951892238614494,
+        "validation_thick_frr": 0.16012372115155837,
+        "validation_thin_frr": 0.1661381497311457,
+        "validation_abs_frr_gap": 0.006014428579587339,
+        "gap_slack": 0.043985571420412664,
+        "thin_noharm_slack": 0.05570936164345794,
+        "thick_noharm_slack": 0.007152034261241974,
+        "noharm_changes_gap_only": false
+      }
+    },
+    "r50_s89_biased": {
+      "business": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": null,
+        "delta": null,
+        "candidate_fingerprint": "4efd4af4fc655d76131ac9c5817a7cc909cb00f6e72ed7af184179b4721968a3",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202244,
+        "gap_feasible_candidates": 202244,
+        "final_feasible_candidates": 202244,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09470456911516272,
+          0.19717644225254102
+        ],
+        "indices": [
+          415,
+          414
+        ],
+        "validation_approvals": 24887,
+        "validation_risk": 0.049985936432675696,
+        "validation_thick_frr": 0.16402569593147753,
+        "validation_thin_frr": 0.16241555218530268,
+        "validation_abs_frr_gap": 0.0016101437461748525
+      },
+      "gap_e0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": null,
+        "candidate_fingerprint": "4efd4af4fc655d76131ac9c5817a7cc909cb00f6e72ed7af184179b4721968a3",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202244,
+        "gap_feasible_candidates": 3998,
+        "final_feasible_candidates": 3998,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09470456911516272,
+          0.19717644225254102
+        ],
+        "indices": [
+          415,
+          414
+        ],
+        "validation_approvals": 24887,
+        "validation_risk": 0.049985936432675696,
+        "validation_thick_frr": 0.16402569593147753,
+        "validation_thin_frr": 0.16241555218530268,
+        "validation_abs_frr_gap": 0.0016101437461748525,
+        "gap_slack": 0.008389856253825148,
+        "gap_changes_business": false
+      },
+      "noharm_e0.01_d0.00": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": 0.0,
+        "candidate_fingerprint": "4efd4af4fc655d76131ac9c5817a7cc909cb00f6e72ed7af184179b4721968a3",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202244,
+        "gap_feasible_candidates": 3998,
+        "final_feasible_candidates": 1,
+        "noharm_removed_candidates": 3997,
+        "thresholds": [
+          0.09470456911516272,
+          0.19717644225254102
+        ],
+        "indices": [
+          415,
+          414
+        ],
+        "validation_approvals": 24887,
+        "validation_risk": 0.049985936432675696,
+        "validation_thick_frr": 0.16402569593147753,
+        "validation_thin_frr": 0.16241555218530268,
+        "validation_abs_frr_gap": 0.0016101437461748525,
+        "gap_slack": 0.008389856253825148,
+        "thin_noharm_slack": 0.0,
+        "thick_noharm_slack": 0.0,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.01_d0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": 0.01,
+        "candidate_fingerprint": "4efd4af4fc655d76131ac9c5817a7cc909cb00f6e72ed7af184179b4721968a3",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202244,
+        "gap_feasible_candidates": 3998,
+        "final_feasible_candidates": 37,
+        "noharm_removed_candidates": 3961,
+        "thresholds": [
+          0.09470456911516272,
+          0.19717644225254102
+        ],
+        "indices": [
+          415,
+          414
+        ],
+        "validation_approvals": 24887,
+        "validation_risk": 0.049985936432675696,
+        "validation_thick_frr": 0.16402569593147753,
+        "validation_thin_frr": 0.16241555218530268,
+        "validation_abs_frr_gap": 0.0016101437461748525,
+        "gap_slack": 0.008389856253825148,
+        "thin_noharm_slack": 0.010000000000000009,
+        "thick_noharm_slack": 0.010000000000000009,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.01_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.01,
+        "delta": 0.02,
+        "candidate_fingerprint": "4efd4af4fc655d76131ac9c5817a7cc909cb00f6e72ed7af184179b4721968a3",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202244,
+        "gap_feasible_candidates": 3998,
+        "final_feasible_candidates": 90,
+        "noharm_removed_candidates": 3908,
+        "thresholds": [
+          0.09470456911516272,
+          0.19717644225254102
+        ],
+        "indices": [
+          415,
+          414
+        ],
+        "validation_approvals": 24887,
+        "validation_risk": 0.049985936432675696,
+        "validation_thick_frr": 0.16402569593147753,
+        "validation_thin_frr": 0.16241555218530268,
+        "validation_abs_frr_gap": 0.0016101437461748525,
+        "gap_slack": 0.008389856253825148,
+        "thin_noharm_slack": 0.01999999999999999,
+        "thick_noharm_slack": 0.01999999999999999,
+        "noharm_changes_gap_only": false
+      },
+      "gap_e0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": null,
+        "candidate_fingerprint": "4efd4af4fc655d76131ac9c5817a7cc909cb00f6e72ed7af184179b4721968a3",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202244,
+        "gap_feasible_candidates": 7986,
+        "final_feasible_candidates": 7986,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09470456911516272,
+          0.19717644225254102
+        ],
+        "indices": [
+          415,
+          414
+        ],
+        "validation_approvals": 24887,
+        "validation_risk": 0.049985936432675696,
+        "validation_thick_frr": 0.16402569593147753,
+        "validation_thin_frr": 0.16241555218530268,
+        "validation_abs_frr_gap": 0.0016101437461748525,
+        "gap_slack": 0.018389856253825148,
+        "gap_changes_business": false
+      },
+      "noharm_e0.02_d0.00": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": 0.0,
+        "candidate_fingerprint": "4efd4af4fc655d76131ac9c5817a7cc909cb00f6e72ed7af184179b4721968a3",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202244,
+        "gap_feasible_candidates": 7986,
+        "final_feasible_candidates": 1,
+        "noharm_removed_candidates": 7985,
+        "thresholds": [
+          0.09470456911516272,
+          0.19717644225254102
+        ],
+        "indices": [
+          415,
+          414
+        ],
+        "validation_approvals": 24887,
+        "validation_risk": 0.049985936432675696,
+        "validation_thick_frr": 0.16402569593147753,
+        "validation_thin_frr": 0.16241555218530268,
+        "validation_abs_frr_gap": 0.0016101437461748525,
+        "gap_slack": 0.018389856253825148,
+        "thin_noharm_slack": 0.0,
+        "thick_noharm_slack": 0.0,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.02_d0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": 0.01,
+        "candidate_fingerprint": "4efd4af4fc655d76131ac9c5817a7cc909cb00f6e72ed7af184179b4721968a3",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202244,
+        "gap_feasible_candidates": 7986,
+        "final_feasible_candidates": 54,
+        "noharm_removed_candidates": 7932,
+        "thresholds": [
+          0.09470456911516272,
+          0.19717644225254102
+        ],
+        "indices": [
+          415,
+          414
+        ],
+        "validation_approvals": 24887,
+        "validation_risk": 0.049985936432675696,
+        "validation_thick_frr": 0.16402569593147753,
+        "validation_thin_frr": 0.16241555218530268,
+        "validation_abs_frr_gap": 0.0016101437461748525,
+        "gap_slack": 0.018389856253825148,
+        "thin_noharm_slack": 0.010000000000000009,
+        "thick_noharm_slack": 0.010000000000000009,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.02_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.02,
+        "delta": 0.02,
+        "candidate_fingerprint": "4efd4af4fc655d76131ac9c5817a7cc909cb00f6e72ed7af184179b4721968a3",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202244,
+        "gap_feasible_candidates": 7986,
+        "final_feasible_candidates": 154,
+        "noharm_removed_candidates": 7832,
+        "thresholds": [
+          0.09470456911516272,
+          0.19717644225254102
+        ],
+        "indices": [
+          415,
+          414
+        ],
+        "validation_approvals": 24887,
+        "validation_risk": 0.049985936432675696,
+        "validation_thick_frr": 0.16402569593147753,
+        "validation_thin_frr": 0.16241555218530268,
+        "validation_abs_frr_gap": 0.0016101437461748525,
+        "gap_slack": 0.018389856253825148,
+        "thin_noharm_slack": 0.01999999999999999,
+        "thick_noharm_slack": 0.01999999999999999,
+        "noharm_changes_gap_only": false
+      },
+      "gap_e0.05": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": null,
+        "candidate_fingerprint": "4efd4af4fc655d76131ac9c5817a7cc909cb00f6e72ed7af184179b4721968a3",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202244,
+        "gap_feasible_candidates": 19963,
+        "final_feasible_candidates": 19963,
+        "noharm_removed_candidates": 0,
+        "thresholds": [
+          0.09470456911516272,
+          0.19717644225254102
+        ],
+        "indices": [
+          415,
+          414
+        ],
+        "validation_approvals": 24887,
+        "validation_risk": 0.049985936432675696,
+        "validation_thick_frr": 0.16402569593147753,
+        "validation_thin_frr": 0.16241555218530268,
+        "validation_abs_frr_gap": 0.0016101437461748525,
+        "gap_slack": 0.04838985625382515,
+        "gap_changes_business": false
+      },
+      "noharm_e0.05_d0.00": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.0,
+        "candidate_fingerprint": "4efd4af4fc655d76131ac9c5817a7cc909cb00f6e72ed7af184179b4721968a3",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202244,
+        "gap_feasible_candidates": 19963,
+        "final_feasible_candidates": 1,
+        "noharm_removed_candidates": 19962,
+        "thresholds": [
+          0.09470456911516272,
+          0.19717644225254102
+        ],
+        "indices": [
+          415,
+          414
+        ],
+        "validation_approvals": 24887,
+        "validation_risk": 0.049985936432675696,
+        "validation_thick_frr": 0.16402569593147753,
+        "validation_thin_frr": 0.16241555218530268,
+        "validation_abs_frr_gap": 0.0016101437461748525,
+        "gap_slack": 0.04838985625382515,
+        "thin_noharm_slack": 0.0,
+        "thick_noharm_slack": 0.0,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.05_d0.01": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.01,
+        "candidate_fingerprint": "4efd4af4fc655d76131ac9c5817a7cc909cb00f6e72ed7af184179b4721968a3",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202244,
+        "gap_feasible_candidates": 19963,
+        "final_feasible_candidates": 58,
+        "noharm_removed_candidates": 19905,
+        "thresholds": [
+          0.09470456911516272,
+          0.19717644225254102
+        ],
+        "indices": [
+          415,
+          414
+        ],
+        "validation_approvals": 24887,
+        "validation_risk": 0.049985936432675696,
+        "validation_thick_frr": 0.16402569593147753,
+        "validation_thin_frr": 0.16241555218530268,
+        "validation_abs_frr_gap": 0.0016101437461748525,
+        "gap_slack": 0.04838985625382515,
+        "thin_noharm_slack": 0.010000000000000009,
+        "thick_noharm_slack": 0.010000000000000009,
+        "noharm_changes_gap_only": false
+      },
+      "noharm_e0.05_d0.02": {
+        "status": "PASS",
+        "feasible": true,
+        "epsilon": 0.05,
+        "delta": 0.02,
+        "candidate_fingerprint": "4efd4af4fc655d76131ac9c5817a7cc909cb00f6e72ed7af184179b4721968a3",
+        "grid_counts": [
+          514,
+          514
+        ],
+        "risk_feasible_candidates": 202244,
+        "gap_feasible_candidates": 19963,
+        "final_feasible_candidates": 220,
+        "noharm_removed_candidates": 19743,
+        "thresholds": [
+          0.09470456911516272,
+          0.19717644225254102
+        ],
+        "indices": [
+          415,
+          414
+        ],
+        "validation_approvals": 24887,
+        "validation_risk": 0.049985936432675696,
+        "validation_thick_frr": 0.16402569593147753,
+        "validation_thin_frr": 0.16241555218530268,
+        "validation_abs_frr_gap": 0.0016101437461748525,
+        "gap_slack": 0.04838985625382515,
+        "thin_noharm_slack": 0.01999999999999999,
+        "thick_noharm_slack": 0.01999999999999999,
+        "noharm_changes_gap_only": false
+      }
+    }
+  },
+  "sources": [
+    {
+      "model": "full",
+      "status": "RESTORED_FIXED_MODEL",
+      "train_n": 153755,
+      "parameters": {
+        "max_depth": 5,
+        "n_estimators": 200
+      }
+    },
+    {
+      "model": "r50_s17_biased",
+      "status": "RESTORED_FIXED_MODEL",
+      "train_n": 135620,
+      "parameters": {
+        "max_depth": 5,
+        "n_estimators": 200
+      }
+    },
+    {
+      "model": "r50_s29_biased",
+      "status": "RESTORED_FIXED_MODEL",
+      "train_n": 135620,
+      "parameters": {
+        "max_depth": 5,
+        "n_estimators": 200
+      }
+    },
+    {
+      "model": "r50_s43_biased",
+      "status": "RESTORED_FIXED_MODEL",
+      "train_n": 135620,
+      "parameters": {
+        "max_depth": 5,
+        "n_estimators": 200
+      }
+    },
+    {
+      "model": "r50_s61_biased",
+      "status": "RESTORED_FIXED_MODEL",
+      "train_n": 135620,
+      "parameters": {
+        "max_depth": 5,
+        "n_estimators": 200
+      }
+    },
+    {
+      "model": "r50_s89_biased",
+      "status": "RESTORED_FIXED_MODEL",
+      "train_n": 135620,
+      "parameters": {
+        "max_depth": 5,
+        "n_estimators": 200
+      }
+    }
+  ]
+}

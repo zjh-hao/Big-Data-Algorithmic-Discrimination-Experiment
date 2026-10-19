@@ -1,0 +1,12 @@
+# Local record-level data and private render intermediates
+results/run_*/scores/
+results/run_*/models/
+results/run_*/plans/
+results/run_*/ledgers/
+results/run_*/split_manifest.csv
+results/run_*/*_test_decisions.csv.gz
+presentation/node_modules
+presentation/.build/
+presentation/previews/
+presentation/.chart-data-*/
+presentation/.codex-finalizer/

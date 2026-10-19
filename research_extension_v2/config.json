@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "threads": 4,
+  "risk_budget": 0.05,
+  "primary_epsilon": 0.02,
+  "primary_delta": 0.01,
+  "epsilons": [0.01, 0.02, 0.05],
+  "deltas": [0.0, 0.01, 0.02],
+  "grid": 512,
+  "minimum_approvals": 500,
+  "parameters": {"max_depth": 5, "n_estimators": 200},
+  "sampling_seeds": [17, 29, 43, 61, 89],
+  "retention": 0.5,
+  "income_quantiles": [0.3333333333333333, 0.6666666666666666],
+  "minimum_subgroup_n": 100,
+  "minimum_subgroup_good": 100,
+  "minimum_ess": 100,
+  "exploration_rates": [0.0, 0.05, 0.1],
+  "simulation_seeds": [17, 29, 43, 61, 89],
+  "simulation_seed_offset": 850000,
+  "bootstrap_repetitions": 1000,
+  "bootstrap_seed": 20261019
+}

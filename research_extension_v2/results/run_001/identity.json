@@ -1,0 +1,92 @@
+{
+  "started_unix": 1792397957.2118049,
+  "command": [
+    "/Users/pytenter/Documents/临时项目1/Big-Data-Algorithmic-Discrimination-Experiment/research_extension_v2/run.py"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6-arm64-arm-64bit",
+  "git_head": "5a43e3758933f3440b6c53a1dd2224407c62577d",
+  "hashes": {
+    "research_extension_v2/config.json": "d6b6744784222caacaa402555b4722515710a0aed90a1f506599c6ec97ba54e2",
+    "research_extension_v2/PROTOCOL.md": "4485e4a30473116da37fada450b403d11788ea117a7cbcc35b139fb47aeab9a2",
+    "research_extension_v2/__init__.py": "47e0772be4c8519c2f4984e44f73ff7c2548b0c175e6739d426fef55fd7595bf",
+    "research_extension_v2/common.py": "cf2cededa569f8c0b6401973d9df6f605f4e1544415b57fb23714f6c30bc0281",
+    "research_extension_v2/exploration_risk.py": "bb07a3d2862bc5efcd704b186d765dae97ca2b564417045edcc94a0408556c7c",
+    "research_extension_v2/policy_noharm.py": "8c12b581509428bf355f8a21dd8cd2b875b1c878f5dc71e99586b3d6c97feee2",
+    "research_extension_v2/restore_data.py": "cb19e41789a5d0bcd03a0a7988dc48d911788d22a803afc5e987db635c83c4f8",
+    "research_extension_v2/run.py": "cd7caae7ed60b161dd3698b22f7176f6c5ef75b2d9d0b5e4dbc4e3346570956b",
+    "research_extension_v2/selective_label_ipw.py": "754158cedf833e243bf35cb1cad988f0b789a31a19dd343d6318d88a2c28ad0a",
+    "research_extension_v2/statistics.py": "ec1f225b6c018c11700597b42e5beda41a6ab4d38e5677e2d6b92f54954af68d",
+    "research_extension_v2/subgroup_audit.py": "88ca0d05e7c422291dc9f3c5444a78e90bdf37bfb52869313b682c83dbd76571",
+    "research_extension_v2/verify.py": "9ba3ea1b0d5994965ea64501145a925c4761b3ae83bcc665c6392ca859b33d75",
+    "src/experiment.py": "d048cbf6d56ad62f3622602cfa16ee053ab29b9ae6b3e2154a4453dea315c360",
+    "src/extensions.py": "3d876b54c0cb3db40cf63161e6b5ec811c6eb2849d16caf8a77188caf72b301e",
+    "config.json": "18ff5728a3b50d6cae05f6e9024d9048073294181be6a934cd36ad081cf72d05",
+    "data/raw/bureau.parquet": "ec8694dac827b2ab8202398ba9ce48cf0aa9fbc98b2c472d417a4d7b096b0629",
+    "data/raw/HomeCredit_columns_description.csv": "eef7665398228a80f7367c9258220c5fbe1038f3f54094244f354d54e2d4fb03",
+    "data/raw/app_train.parquet": "91cc5fd191a67fef84edf4c99318ea52b53966ebc02591152a31e1e68324649e"
+  },
+  "config": {
+    "version": "2.0.0",
+    "threads": 4,
+    "risk_budget": 0.05,
+    "primary_epsilon": 0.02,
+    "primary_delta": 0.01,
+    "epsilons": [
+      0.01,
+      0.02,
+      0.05
+    ],
+    "deltas": [
+      0.0,
+      0.01,
+      0.02
+    ],
+    "grid": 512,
+    "minimum_approvals": 500,
+    "parameters": {
+      "max_depth": 5,
+      "n_estimators": 200
+    },
+    "sampling_seeds": [
+      17,
+      29,
+      43,
+      61,
+      89
+    ],
+    "retention": 0.5,
+    "income_quantiles": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "minimum_subgroup_n": 100,
+    "minimum_subgroup_good": 100,
+    "minimum_ess": 100,
+    "exploration_rates": [
+      0.0,
+      0.05,
+      0.1
+    ],
+    "simulation_seeds": [
+      17,
+      29,
+      43,
+      61,
+      89
+    ],
+    "simulation_seed_offset": 850000,
+    "bootstrap_repetitions": 1000,
+    "bootstrap_seed": 20261019
+  },
+  "versions": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.5.2",
+    "xgboost": "2.1.4",
+    "pyarrow": "19.0.1",
+    "matplotlib": "3.9.4",
+    "joblib": "1.4.2"
+  }
+}

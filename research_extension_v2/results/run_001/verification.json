@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "checks": 3707,
+  "policy_rows": 78,
+  "ledger_files": 90,
+  "scope": "Independent grid optimum and record arithmetic, observed-label isolation and provenance; conditional scientific validity only"
+}
