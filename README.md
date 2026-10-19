@@ -1,284 +1,326 @@
-# 大数据算法歧视实验：贷款审批中的数据、目标与反馈
+# 大数据算法歧视：贷款审批中的公平性与业务目标权衡
 
-**Big Data Algorithmic Discrimination Experiment**
+**云计算课程大作业 · 任务四：Algorithmic Discrimination in Big Data**
 
-本项目用于辅助《云计算与大数据平台》课程汇报，以贷款审批为应用场景，在 Home Credit 历史贷款数据上研究：**训练数据的采集方式、系统的优化目标，以及审批后的数据反馈，如何影响不同群体获得贷款的机会。**
+使用 Home Credit 历史贷款数据与 XGBoost 风险评分，研究：**一项公平干预帮助了谁、让谁承担了代价，以及这些影响能否被可靠地评价。**
 
-实验采用 XGBoost，在本机 CPU 上运行，参考 AWS 官方信用风险预测与偏差分析项目的流程。仓库提供可复现代码、实验协议、中文结果报告、英文汇报摘要和图表，可用于课堂展示、方法讨论与实验复现。
+> **先看结论：** 减小两个群体的错拒率差距，可能让另一组正常还款者更容易被拒；加入双侧保护后，部分模型找不到满足所有要求的审批规则。随机探索可以增加反馈信息，但也可能推高实际获批风险。
+>
+> 本项目是本地 CPU 上的受控历史数据实验，不代表银行生产系统，也不能据此认定真实机构存在违法歧视。
 
-> 本项目是受控机制实验。它不代表银行生产系统，也不用于认定 Home Credit 存在实际歧视。群体指标差异是需要解释和审查的现象，不能直接等同于不公平歧视。
+[英文 PPT](research_extension_v2/presentation/output/Fairness_Research_V2.pptx) · [英文讲稿](research_extension_v2/presentation/SPEAKER_NOTES_EN.md) · [中文实验报告](research_extension_v2/RESEARCH_EXTENSION_RESULTS.md) · [完整结果表](research_extension_v2/COMPARISON_TABLES.csv) · [复现说明](research_extension_v2/README.md)
 
-## 最新进展：Research Extension V2（2026-10-19）
+## 阅读与汇报安排
 
-**V2 的代码、实验结果和英文 PPT 已合并到 `main`，位于 [`research_extension_v2/`](research_extension_v2/)。** 本轮在已有实验基础上，检查公平干预帮助了谁、是否让其他群体受损，以及选择性反馈是否让评价失真。
+沿用两部分、8 页、约 8 分钟的汇报结构。**这份中文图文稿用于理解和备课，不建议逐字照读；正式 PPT 页面使用英文。** 图中标题、坐标和图例均为英文，中文读图说明紧随图后。
 
-| 新增工作 | 已完成的内容 |
-|---|---|
-| P0 双侧群体保护 | 同一模型、相同阈值候选空间，比较 Business Group、Fair Gap Only、Fair Gap + No-Harm；无可行方案明确报告 `INFEASIBLE` |
-| P1 交叉子群体审计 | 只用训练数据确定收入边界，审计征信组别 × 收入的六个子群体，并报告样本量及不确定性 |
-| P2 选择性标签估计 | 区分计划批准、实际批准、标签可见性与观察概率，比较 Naive、IPW 和最终离线 Oracle |
-| P3 探索风险核算 | 比较 0%、5%、10% 探索率，将额外批准的风险计入实际总体获批风险 |
+| 部分 | 建议页次 | 内容 | 时间 |
+|---|---:|---|---|
+| 背景与现状调研 | 1 | 为什么预测准确还不够 | 0:00—0:40 |
+| 背景与现状调研 | 2 | 偏见机制、分组和指标 | 0:40—1:35 |
+| 背景与现状调研 | 3 | 文献依据与研究缺口 | 1:35—2:40 |
+| 背景与现状调研 | 4 | 已有实验与问题来源 | 2:40—3:50 |
+| 个人想法与可行解决方案 | 5 | 同模型下的双侧群体保护 | 3:50—4:55 |
+| 个人想法与可行解决方案 | 6 | 实际效果与不可行结果 | 4:55—6:00 |
+| 个人想法与可行解决方案 | 7 | 子群体、估计可靠性与探索成本 | 6:00—7:20 |
+| 个人想法与可行解决方案 | 8 | 结论、局限与云计算联系 | 7:20—8:00 |
 
-本轮恢复 **6 个固定评分模型**，保留 **78 行策略配置**（63 个可行、15 个不可行），生成 **90 份静态探索回放台账**。**30 项方法测试和 3707 项独立核验通过**；历史 `audit_extension` 的 220 模型、701 行评价及 9768 项核验记录单独保留，不能混称为本轮重新执行的检查。
+第 7 页材料较多，口头汇报建议重点展示 IPW 对照与探索后的风险数值；其余图可作为备答。上表是内容安排建议，最终时长需试讲确认，仓库中的现有英文 PPT 和讲稿可供排版与表达参考。
 
-### V2 的主要发现
+---
 
-- **差距缩小不代表双方都受益。** 完整数据固定模型中，Gap Only 将测试 FRR 差距从 **5.83pp 降至 0.09pp**，同时使比较组 FRR 增加 **1.74pp**。
-- **双侧保护可能没有可行解。** 主参数为验证风险预算 5%、FRR 差距上限 2pp、各组额外恶化上限 1pp。6 个模型中，3 个不可行，另外 3 个与 Gap Only 规则相同，没有主配置下的额外改善。
-- **总体接近仍可能掩盖子群体代价。** 完整模型中，比较组／中等收入子群的 FRR 增加约 **1.82pp**；这是有限分组下、未经多重比较校正的探索性发现。
-- **信息收益伴随探索风险。** 完整模型在 10% 探索下，薄弱组 IPW FRR 五种子均值约 **20.33%**，离线 Oracle 为 **20.15%**，Naive 为 **2.49%**；实际总体获批风险均值从约 **4.79% 升至 5.18%**。零探索时 IPW 报告 `NOT_IDENTIFIABLE`。
+## 第一部分：背景与现状调研
 
-全部预设参数、不可行结果和测试超出容差的配置均保留，未根据测试结果重新选参。当前验证仍是**本地 CPU 历史数据实验**；历史测试集已被查看，没有实际 AWS 部署，也没有识别真实被拒申请人的还款反事实。可选 Budgeted Exploration 尚未运行。
+### 第 1 页：为什么预测准确率高还不够？
 
-![V2 群体 FRR 对照：完整模型的 No-Harm 不可行；右侧仅比较共同可行的三个偏置模型](research_extension_v2/FIGURES/02_groupwise_frr.png)
+贷款系统通常先预测还款困难的风险，再用审批规则决定是否放贷。**模型的总体预测表现较好，并不意味着不同群体获得贷款的机会都合理。**
 
-## 从哪里开始阅读
+例如，征信记录较少的人，如果在训练数据中缺少正常还款案例，可能得到偏高的风险评分。即使调整规则让两组结果接近，也仍需检查其他人是否因此承担了更多错拒。
 
-| 阅读目的 | 推荐入口 |
-|---|---|
-| 阅读 V2 完整结果 | [中文研究报告](research_extension_v2/RESEARCH_EXTENSION_RESULTS.md) · [English summary](research_extension_v2/RESEARCH_EXTENSION_RESULTS_EN.md) |
-| 下载约 8 分钟的英文课堂 PPT | [8 页英文 PowerPoint](research_extension_v2/presentation/output/Fairness_Research_V2.pptx) |
-| 准备逐页讲解 | [英文讲稿与时间安排](research_extension_v2/presentation/SPEAKER_NOTES_EN.md) · [中文逐页解释](research_extension_v2/presentation/SPEAKER_NOTES_ZH.md) |
-| 查看全部 V2 对照与图表 | [78 行策略配置 CSV](research_extension_v2/COMPARISON_TABLES.csv) · [子群体、IPW、风险及区间表](research_extension_v2/results/run_001/) · [六组 PNG/PDF 图表](research_extension_v2/FIGURES/) |
-| 查看 V2 方法与文献 | [冻结协议](research_extension_v2/PROTOCOL.md) · [七篇正式文献及逐页对应](research_extension_v2/REFERENCES.md) · [局限](research_extension_v2/LIMITATIONS.md) |
-| 复现 V2 与核查交付 | [运行说明](research_extension_v2/README.md) · [环境、命令与核验记录](research_extension_v2/REPRODUCIBILITY_REPORT.md) · [完整交付清单](research_extension_v2/DELIVERY_SUMMARY.md) |
-| 查看历史实验的当前审查 | [V2 基线审查](research_extension_v2/BASELINE_AUDIT.md) · [历史方法审查](AUDIT_REPORT.md) |
-| 阅读此前的采样、训练损失及反馈对照 | [audit_extension 历史结果](audit_extension/RESULTS_REPORT.md) · [历史协议](audit_extension/PROTOCOL.md) |
-| 查看早期固定评分与反馈实验 | [基础三模块报告](COMPLETE_RESULTS_REPORT.md) · [历史英文摘要](PRESENTATION_NOTES.md) |
+本项目依次回答三个问题：
 
-**版本与复核：**V2 的 `run_001` 核验包含实验时历史文件的哈希。逐条复核该冻结运行时，请使用[实验提交 `1b096dc`](https://github.com/zjh-hao/Big-Data-Algorithmic-Discrimination-Experiment/tree/1b096dc04dd65365dd9184038d7d9e78e91be27b)，并按其复现说明恢复未发布的本地逐条材料。本页后续导航更新不改写已冻结结果或其哈希。
+1. **数据和训练目标如何影响机会差异？**
+2. **缩小群体差距时，能否限制每一组的额外损失？**
+3. **只能看见部分还款结果时，评价是否可靠、获取信息要付出什么代价？**
 
-## 1. 研究背景：高预测性能是否足够？
+**这一页的核心话：预测模型是否准确，与整个审批系统是否公平，是需要分别检查的问题。**
 
-贷款审批通常先根据申请信息估计风险，再按照业务规则决定是否批准。但模型的总体预测能力不能完整说明不同群体受到怎样的对待。
+### 第 2 页：偏见可能出现在哪些环节？
 
-例如，可观察征信记录较少的申请人，如果在训练数据中缺少正常还款案例，模型可能对这一群体形成偏高的风险判断。模型上线后，又通常只能看到已获批贷款的还款结果，后续训练和验证数据的构成会继续受到审批选择影响。
-
-本实验围绕三个问题组织：
-
-| 核心问题 | 实验关注点 | 课程讨论方向 |
+| 环节 | 本项目检查的问题 | 需要区分的概念 |
 |---|---|---|
-| **数据怎么来？** | 群体代表不足、组内标签比例失真、参考分布纠正 | 数据采集、样本代表性与数据治理 |
-| **系统优化什么？** | 预测损失、业务代价、机会导向目标、审批公平约束 | 模型训练与决策策略的目标权衡 |
-| **系统如何更新？** | 选择性标签、探索采样、验证信息来源、多轮更新 | 模型生命周期、反馈采集与持续审计 |
+| 数据采集与采样 | 某组正常还款案例被选择性遗漏 | 群体人数较少，与组内标签比例失真是不同变化 |
+| 模型训练 | 训练损失更重视哪些记录和错误 | 机会导向损失是代理目标，不保证最终 FRR 相等 |
+| 审批决策 | 如何在批准人数、风险和公平要求之间选择规则 | 公平差距变小，不一定意味着各组都改善 |
+| 反馈更新 | 哪些申请人的还款标签可见 | 可见标签的组成受历史审批决定影响 |
 
-## 2. 与云计算及大数据平台的关系
+**研究分组**根据时间检查后的可观察征信记录数量确定：
 
-公平性问题贯穿数据与模型的整个处理流程，需要在数据准备、模型训练、策略执行和反馈管理中共同检查。
+- **Thin-file，征信记录较少组：** `BUREAU_COUNT <= 1`，包括零条记录。
+- **Comparison，比较组：** 至少两条可观察征信记录。
+
+零记录可能反映数据覆盖不足。上述分组不自动代表贫困人口，也不等同于法律上的受保护身份。
+
+**主要机会指标：错拒率（False Rejection Rate，FRR）**
+
+$$
+\mathrm{FRR}_g=P(\text{Reject}\mid Y=0,G=g).
+$$
+
+它表示：在某组历史标签为正常的记录中，有多少被当前规则拒绝。`TARGET=1` 表示历史还款困难，`TARGET=0` 表示其余正常标签；后者并不保证一个人永远不会违约。“错拒”是相对于这个历史标签的操作性定义。
+
+| 指标 | 在本文中的含义 | 单位 |
+|---|---|---|
+| 群体 FRR | 该组历史正常标签记录中被拒绝的比例 | % |
+| 绝对 FRR 差距 | 两组 FRR 的绝对差 | 百分点，pp |
+| 获批率 | 所有记录中获得批准的比例 | % |
+| 获批风险 | 获批记录中 `TARGET=1` 的比例 | %，不是损失金额 |
+| AUC | 评分区分两类历史标签的排序能力 | 0—1 |
+
+例如，FRR 从 14% 变为 16%，是**上升 2 个百分点**，不是上升 2%。
+
+### 第 3 页：已有研究提供了什么思想？
+
+| 研究方向 | 正式文献 | 对本项目的启发 |
+|---|---|---|
+| 机会准则与后处理 | Hardt 等，NeurIPS 2016 [1] | 用条件于有利历史标签的机会指标评价，并在评分后调整决策 |
+| 公平性与业务目标联合优化 | Corbett-Davies 等，KDD 2017 [2]；Agarwal 等，ICML 2018 [3] | 把目标和约束写清楚，保留公平约束带来的业务代价与不可行情况 |
+| 子群体公平性 | Kearns 等，ICML 2018 [4] | 粗群体的平均指标可能掩盖交叉子群体的不利变化 |
+| 选择性标签 | Lakkaraju 等，KDD 2017 [5] | 决策影响标签是否可见，直接用可见数据评价可能产生偏差 |
+| 决策学习与长期公平 | Kilbertus 等，AISTATS 2020 [6]；Valdrighi 等，ICML 2026 [7] | 将信息获取与决策后果纳入研究，不能把一次改善外推为长期公平保证 |
+
+本项目借鉴这些思想，组合出可复现的阈值优化与审计流程；**没有声称完整复现公平分类归约、对抗式子群体学习或长期强化学习算法，也没有提出新的公平性理论。**
+
+### 第 4 页：已有实验如何引出新问题？
+
+数据包括 **307,511 条有标签贷款申请**和 **1,716,428 条征信记录**。训练、参考、校准、验证和测试按贷款记录划分为 **50% / 10% / 10% / 10% / 20%**。参考集用于分布纠正，校准集用于概率校准，验证集用于选审批规则，测试集用于冻结后的评价。
+
+#### 图 1：正常案例遗漏与训练目标都会改变错拒
+
+![历史采样和训练目标实验：仅遗漏薄弱组正常标签记录时FRR升高；机会导向损失改善薄弱组但增加比较组FRR](figures/course_presentation/01_sampling_and_training.png)
+
+**如何读图：**
+
+- **左图看数据机制。** 同组人数、保留组内标签比例的对照（Matched group N）中，薄弱组 FRR 为 **20.62%**；正常标签组成失真后为 **40.27%**。参考分布重加权后回到 **21.24%**。
+- **右图看训练目标。** 有偏数据上，机会权重 1 使薄弱组 FRR 从 **40.27% 降至 14.97%**，同时使比较组从 **11.48% 升至 16.28%**；两组绝对差距从 **28.79pp 降至 1.30pp**。
+
+**统计口径：** 此图来自历史 `audit_extension`，为 50% 薄弱组正常标签保留场景、五个采样种子的测试均值。同一个历史测试人群上的五个种子不是五个独立业务场景。左图包含同总人数随机对照；其中 Matched group N 与 Distorted labels 进一步匹配两组人数。
+
+**结论边界：** 重加权依赖有代表性的有标签参考数据。机会权重 1 也并非处处有效：在完整训练数据上，历史差距从 **6.28pp 变为 7.40pp**。不能只保留有偏数据上的正面结果。
+
+[采样结果来源](audit_extension/results/sampling_summary.csv) · [训练损失结果来源](audit_extension/results/loss_summary.csv) · [历史完整报告](audit_extension/RESULTS_REPORT.md)
+
+**由此引出新问题：能否在限制业务风险、缩小群体差距的同时，也限制每一组相对原业务规则的额外损失？**
+
+---
+
+## 第二部分：个人想法与可行解决方案
+
+### 第 5 页：提出同模型下的双侧群体保护
+
+我们保留同一模型的风险评分、验证记录、阈值候选集合和确定性同分处理规则，只改变审批阶段的约束：
+
+| 策略 | 共同目标 | 验证集上的约束 |
+|---|---|---|
+| **A. Business Group** | 尽可能增加批准人数 | 获批风险不超过 5% |
+| **B. Fair Gap Only** | 同上 | 风险不超过 5%，两组 FRR 差距不超过 2pp |
+| **C. Fair Gap + No-Harm** | 同上 | 同时满足 B，并限制每组 FRR 相对 A 最多增加 1pp |
+
+**保护基线必须是同一模型、相同决策空间中的 Business Group。** 不能拿另一种训练配置的结果作参照，否则模型差异会混入策略比较。
+
+对策略 $\pi$，主配置求解：
+
+$$
+\begin{aligned}
+\max_{\pi}\quad &\widehat{\mathrm{ApprovalRate}}_{\mathrm{val}}(\pi)\\
+\text{subject to}\quad
+&\widehat{\mathrm{ApprovedRisk}}_{\mathrm{val}}(\pi)\le 0.05,\\
+&\left|\widehat{\mathrm{FRR}}_{\mathrm{thin,val}}(\pi)
+-\widehat{\mathrm{FRR}}_{\mathrm{comparison,val}}(\pi)\right|\le 0.02,\\
+&\widehat{\mathrm{FRR}}_{g,\mathrm{val}}(\pi)
+\le\widehat{\mathrm{FRR}}_{g,\mathrm{val}}(\pi_{\mathrm{business}})+0.01,\quad\forall g.
+\end{aligned}
+$$
+
+这是一个**限制群体平均恶化幅度**的设计。“No-Harm”在本配置中允许最多 1pp 的 FRR 增量，并不意味着每个个体都不会受损。这些阈值是预设实验参数，不是监管标准。
+
+规则只在验证集上确定，冻结后用于测试。程序要求验证集至少批准 500 条记录；若固定阈值网格中不存在满足全部条件的规则，就报告 **INFEASIBLE**，不将全部拒绝视为成功。
+
+业务基线与公平策略共享批准人数优先、风险次之、差距再次的破同分规则，因此对照衡量的是**增加公平性硬约束的额外作用**。这一模块不改变 XGBoost 的训练损失。
+
+### 第 6 页：实际结果——公平性改善有成本，双侧保护可能不可行
+
+V2 按固定设置恢复 **6 个 200 树 XGBoost 评分模型**：一个完整数据模型，以及五个采样种子下的有偏数据模型。共保留 **78 个预设配置**，其中 63 个在验证集可行，15 个不可行。恢复的模型是本轮本地检查点，不声称与历史模型逐字节相同。
+
+#### 图 2：同一评分模型下，差距缩小但比较组承担更多错拒
+
+![V2完整数据固定评分模型：Gap Only降低薄弱组FRR，却提高比较组FRR；误差线为条件95%区间](figures/course_presentation/02_fixed_score_policies.png)
+
+**如何读图：** 以同模型 Business Group 为参照，Gap Only 让薄弱组 FRR 下降约 **4.00pp**，却让比较组上升约 **1.74pp**。因此，小差距不能单独用来证明所有群体都受益。
+
+| 完整模型的测试指标 | Business Group | Fair Gap Only | Fair Gap + No-Harm |
+|---|---:|---:|---|
+| 薄弱组 FRR | 20.15% | 16.14% | INFEASIBLE，无审批指标 |
+| 比较组 FRR | 14.32% | 16.05% | — |
+| 绝对 FRR 差距 | 5.83pp | 0.09pp | — |
+| 获批率 | 81.29% | 81.03% | — |
+| 获批风险 | 4.79% | 4.79% | — |
+| 模型 AUC | 0.7674 | 0.7674 | 同一评分模型；不生成不可行规则的审批结果 |
+
+**统计口径：** 图 2 的柱为完整模型的测试点估计，误差线为固定模型和策略下的条件性配对 bootstrap 95% 区间。获批风险保留两位小数后相同，不意味着未取整的风险完全一致。批准率实际下降约 **0.26pp**，变化来自后处理规则；文中百分点差值均按未取整数值计算。
+
+#### 图 3：主参数下，六个模型的可行性全部保留
+
+![六个预设模型的主配置可行性：三模型No-Harm不可行，另三模型与Gap Only规则相同](figures/course_presentation/03_noharm_feasibility.png)
+
+**如何读图：** `FEASIBLE` 表示存在满足冻结验证约束的规则；`SAME RULE` 表示 No-Harm 可行，但与 Gap Only 选中了相同规则；`INFEASIBLE` 表示当前网格没有满足全部约束的方案。
+
+**主配置没有获得额外的 No-Harm 改善：3/6 个模型不可行，另外 3 个规则不变。** 这揭示了当前评分和决策空间下的可行性边界，而不是程序失败，也不证明所有连续或随机化审批策略都无解。
+
+敏感性分析保留预设的差距上限 1/2/5pp 和恶化上限 0/1/2pp。另有两个可行敏感性配置改变了规则，但不能据此替换主配置；还有 **7 行敏感性配置的测试差距超过对应验证容差**。验证达标不保证测试或未来达标，所有结果均在原表中保留。
+
+[完整审批配置 CSV](research_extension_v2/COMPARISON_TABLES.csv) · [配对区间](research_extension_v2/results/run_001/paired_intervals.csv) · [V2 完整报告](research_extension_v2/RESEARCH_EXTENSION_RESULTS.md)
+
+### 第 7 页：进一步审计——谁仍可能受损，评价又有多可靠？
+
+#### 7.1 子群体：两组平均接近，还要看内部差异
+
+用原训练集收入的三分位边界，将 Thin／Comparison 各分为低、中、高收入三组，共六个交叉子群体。边界为原收入单位 **117,000 / 180,000**，不作货币换算，也不利用测试集调整分界。
+
+#### 图 4：Gap Only 对六个收入交叉子群体的 FRR 影响
+
+![完整模型中六个交叉子群的FRR变化：蓝色表示下降，红色表示上升，括号显示条件性95%区间](figures/course_presentation/04_subgroup_changes.png)
+
+**如何读图：** 数值是 Gap Only 减去同模型 Business Group 的 FRR，蓝色表示错拒减少，红色表示增加。比较组／中等收入子群增加约 **1.82pp**，条件性 95% 区间约为 **[+1.60, +2.01]pp**。
+
+**这是探索性审计。** 区间未校正多重比较；收入不是本项目认定的法律保护属性，六个分组也不能覆盖任意子群体。主配置 No-Harm 在完整模型上不可行，因此没有编造其子群体审批结果。
+
+[子群体点估计与样本量](research_extension_v2/results/run_001/subgroups.csv) · [配对变化区间](research_extension_v2/results/run_001/paired_intervals.csv)
+
+#### 7.2 选择性标签：只看获批者，可能严重低估原策略错拒
+
+在独立的**静态历史回放**中，先冻结 Business Group，再随机批准一部分原本计划拒绝的申请。探索比例指**计划拒绝者中被随机批准的概率**，不是全部申请人的获批比例。
+
+必须区分四项记录：
+
+| 字段 | 含义 |
+|---|---|
+| Proposed approval | 原策略原本计划批准谁 |
+| Actual approval | 加入探索之后，实际批准谁 |
+| Visible | 谁的成熟还款标签可被观察 |
+| Inclusion probability | 每条记录的标签被观察到的概率 |
+
+探索获批者属于实际批准者，但计算**原策略 FRR**时，仍计入“原本计划拒绝”的记录。IPW 根据已知观察概率，给予较少被观察到的记录更高权重；Oracle 只在最终离线评价中使用完整历史标签作参照。
+
+#### 图 5：10% 探索下，Naive、IPW 与离线参考的差别
+
+![完整模型10%探索下的FRR估计：Naive低估，IPW接近离线Oracle；误差线为五种子范围](figures/course_presentation/05_selective_label_estimates.png)
+
+| 完整模型；薄弱组；10% 探索 | FRR |
+|---|---:|
+| Naive：直接使用可见标签 | 2.49% |
+| IPW：按观察概率加权 | 20.33% |
+| Oracle：离线完整历史标签参照 | 20.15% |
+
+**统计口径：** 图 5 和上表为五个探索种子的均值，图中误差线为种子最小值至最大值，**不是 95% 置信区间**。它们是同一历史人群上的重复模拟。各配置的条件性估计区间另外保存在结果 CSV 中。
+
+本设定下 IPW 更接近离线参照，但不保证每个随机种子都优于 Naive。IPW 依赖正确记录观察概率、正的观察概率、相容的标签成熟机制和足够的有效样本量。薄弱组在 10% 探索下的正常标签 ESS 均值约 **5,139**，最大权重为 **10**。
+
+**0% 探索时，被拒者的观察概率为零，IPW 报告 NOT_IDENTIFIABLE。** 即使已获批记录数量很多，也不能用它们补出完全不可见的拒绝者标签。
+
+Home Credit 的原始完整标签也只覆盖历史已记录贷款。因此，本回放不等于识别了现实拒贷申请人的还款反事实，也不是长期闭环公平性的验证。
+
+[IPW、Oracle、ESS、覆盖率与误差区间](research_extension_v2/results/run_001/ipw_estimates.csv)
+
+#### 7.3 探索成本：更多反馈可能伴随更高的放贷风险
+
+#### 图 6：把探索批准计入后，总体风险会怎样变化？
+
+![完整模型的探索风险：总体风险随探索率上升；10%探索时探索批准子集的风险高于常规批准子集](figures/course_presentation/06_exploration_risk.png)
+
+**如何读图：** 左图将常规批准和探索批准共同计入总体实际风险；右图分别展示两类批准记录各自的风险。右图的 22.04% 不是整个系统的风险，也不能与总体 5.18% 混用分母。
+
+| 探索概率（针对计划拒绝者） | 平均额外批准数 | 实际总体获批风险 |
+|---|---:|---:|
+| 0% | 0 | 4.79% |
+| 5% | 575.8 | 4.99% |
+| 10% | 1,146.4 | 5.18% |
+
+**统计口径：** 完整模型、五个静态回放种子的均值；人数取均值后可以出现小数。左图误差线表示种子范围。获批风险均为相应批准集合中的 `TARGET=1` 比例，既不是未来风险保证，也不是损失金额。
+
+**结论是存在需要管理的风险—信息权衡，不是 5% 或 10% 探索率已经最优。** 本轮没有用测试标签选择探索率。Budgeted Exploration（把探索纳入共同预算后选择探索量）尚未执行，属于后续研究方向。
+
+[探索人数与各类风险结果](research_extension_v2/results/run_001/exploration_risk.csv)
+
+### 第 8 页：总结、可行性与云计算联系
+
+本项目形成三条主要认识：
+
+1. **公平差距要与各组损益一起看。** 总体差距变小，可以同时伴随某一群体或内部子群的错拒上升。
+2. **严格保护可能遇到可行性边界。** 约束冲突和规则不变都是需要保留的结果，不能靠事后放宽参数掩盖。
+3. **公平评价需要管理反馈质量与探索成本。** 标签覆盖、观察概率、有效样本量和实际放贷风险应一起监控。
+
+**技术可行性：** 已在本地 CPU、4 线程环境完成固定评分后的阈值搜索、子群体审计、IPW 估计和探索风险核算。评分恢复完成后，主要策略比较无需重新训练 XGBoost。30 项方法测试和 3,707 项独立核验通过，核验确认的是实现与保存记录的一致性，不是生产系统公平性保证。
+
+**与云计算和大数据平台的联系：**
 
 ```mermaid
 flowchart LR
-    A[历史申请与征信数据] --> B[数据检查与特征聚合]
-    B --> C[XGBoost 风险评分]
-    C --> D[概率校准与验证]
-    D --> E[审批策略]
-    E --> F[已批准贷款的成熟反馈]
-    F --> G[下一轮训练与验证数据]
-    G --> C
-    C --> H[性能、群体机会与风险审计]
-    E --> H
+    A[Data Collection<br/>Versioned historical records] --> B[Data Processing<br/>Feature aggregation and split checks]
+    B --> C[Model Training<br/>Risk scoring and calibration]
+    C --> D[Fairness-Aware Decision<br/>Risk and groupwise constraints]
+    D --> E[Feedback Monitoring<br/>Visibility, propensity and actual risk]
+    E --> C
 ```
 
-| 平台环节 | 本项目中的实现 | 可在课程汇报中讨论的扩展 |
+| 生命周期环节 | 本项目已完成 | 可扩展的云端能力（尚未部署） |
 |---|---|---|
-| 数据处理 | 申请表与征信表关联、分块聚合、缺失值处理 | 云端数据存储、批处理与数据质量管理 |
-| 模型训练 | CPU XGBoost、固定配置、多组对照 | 云端训练任务、实验管理与资源调度 |
-| 决策与审计 | 风险预算、审批阈值、群体错拒指标 | 策略管理、模型监控与公平性审计 |
-| 反馈管理 | 标签可见性台账、探索概率、更新批次 | 标签成熟管理、数据来源追踪与更新治理 |
-| 可复现性 | 数据哈希、固定随机种子、策略冻结、独立核验 | 数据与模型版本管理 |
+| 数据采集与处理 | 固定来源、哈希、征信聚合、贷款记录划分 | 对象存储、版本化数据、批处理管道 |
+| 模型训练与管理 | CPU XGBoost、概率校准、固定配置 | 训练任务调度、模型注册和实验追踪 |
+| 决策审核 | 共享候选空间、策略冻结、不可行性检查 | 策略版本管理与审批服务 |
+| 反馈监控 | 标签可见性、观察概率、ESS、探索风险核算 | 成熟标签采集、持续风险与公平审计 |
 
-**实施范围：**本项目完成的是上述流程的本地 CPU 实验，没有实际部署 AWS 服务，也没有进行 Spark、分布式训练或云端扩展性能测试。云端架构对应关系用于课程分析，不作为已实现功能展示。
+当前没有实际部署 AWS，也没有测量 Spark、分布式训练或云端扩展性能。云端能力是架构提案。
 
-## 3. 数据、模型与评价方式
+**必须保留的局限：** 测试集此前已被查看；记录 ID 不保证自然人或家庭不跨集合；原始镜像未与官方数据逐值比对；真实拒贷反事实、时间漂移和长期人口行为未被识别；条件性区间不包含重新划分重训的不确定性，探索性比较未作多重检验校正。
 
-### 数据与分组
+**最后要回答的是：一项公平干预何时有用、帮助了谁、代价是什么，以及我们对评价结果有多大把握。**
 
-- **数据集：**Home Credit Default Risk。
-- **规模：**307,511 条有标签贷款申请、1,716,428 条征信记录。
-- **输入：**申请信息、征信聚合特征、收入与贷款负担比例等。
-- **分组：**可观察征信记录为 **0—1 条**的申请记为征信记录较少组，报告中简称“薄弱组”；至少 **2 条**为比较组。零记录也可能来自数据覆盖不足，该分组不自动代表贫困或其他社会身份。
-- **标签：**`TARGET=1` 表示前 Y 期中至少一期逾期超过 X 天，X/Y 未公开；`TARGET=0` 为其余情况，不表示永久不会违约。
+---
 
-数据通过固定版本的第三方 GitHub 镜像获取，原始发布入口为 [Kaggle Home Credit Default Risk](https://www.kaggle.com/competitions/home-credit-default-risk/data)。下载地址、文件大小与 SHA-256 记录在 [来源清单](data/raw/source.json) 中。代码进行了结构、标签数量与键的检查，但没有与官方数据逐值比对。
+## 文献与项目实现对应
 
-### 模型与审批
+1. Hardt, M., Price, E., and Srebro, N. (2016). [Equality of Opportunity in Supervised Learning](https://proceedings.neurips.cc/paper_files/paper/2016/hash/6a9659feb1216f14f7384ba499518b38-Abstract.html). *NeurIPS*. 提供机会准则及后处理的思想。
+2. Corbett-Davies, S., et al. (2017). [Algorithmic Decision Making and the Cost of Fairness](https://www.kdd.org/kdd2017/papers/view/algorithmic-decision-making-and-the-cost-of-fairness). *KDD*. 提供业务目标与公平约束联合优化的视角。
+3. Agarwal, A., et al. (2018). [A Reductions Approach to Fair Classification](https://proceedings.mlr.press/v80/agarwal18a.html). *ICML*. 提供显式约束分类问题的思想，本项目没有实现其归约算法。
+4. Kearns, M., et al. (2018). [Preventing Fairness Gerrymandering: Auditing and Learning for Subgroup Fairness](https://proceedings.mlr.press/v80/kearns18a.html). *ICML*. 提供交叉子群审计动机，本项目只审计六个预设交叉组。
+5. Lakkaraju, H., et al. (2017). [The Selective Labels Problem](https://www.cs.cornell.edu/home/kleinber/kdd17-selective.pdf). *KDD*. 解释决策影响标签可见性带来的评价问题。
+6. Kilbertus, N., et al. (2020). [Fair Decisions Despite Imperfect Predictions](https://proceedings.mlr.press/v108/kilbertus20a.html). *AISTATS*. 提供选择性标签下关注决策政策与探索的视角。
+7. Valdrighi, G., et al. (2026). [Long-term Fairness with Selective Labels](https://proceedings.mlr.press/v306/valdrighi26a.html). *ICML*. 提醒可见标签下的短期指标不能替代长期公平评价；本项目没有复现其强化学习方法。
 
-核心预测模型为 **XGBoost**；逻辑回归仅用于概率校准。模型输出风险分数后，再根据验证集选择审批阈值。
+[详细文献—实现—PPT 页次对应](research_extension_v2/REFERENCES.md)。本页重新组织了中文汇报内容，文献提供思想依据，不代表本项目复现了其完整理论或实验。
 
-`audit_extension` 与 V2 固定模型均使用 **200 棵树、最大深度 5、学习率 0.05、CPU 4 线程**。训练、参考、校准、验证、测试按贷款记录划分为 **50% / 10% / 10% / 10% / 20%**。主要业务规则是在验证集经验获批风险不超过 **5%** 时尽量增加批准人数。
+## 实验材料与复现
 
-基础静态实验使用了不同的树数设置，因此应在各轮实验内部比较对照，不能直接将不同轮次的数值相减归因于某项改进。
-
-### 主要指标
-
-| 指标 | 含义 |
+| 内容 | 入口 |
 |---|---|
-| AUC | 模型区分两类历史还款标签的排序能力 |
-| 群体错拒率 FRR | 某组 `TARGET=0` 记录中被策略拒绝的比例 |
-| 错拒差距 | 两组 FRR 的绝对差，单位为百分点（pp） |
-| 获批率 | 全部申请中获得批准的比例 |
-| 获批风险 | 获批记录中 `TARGET=1` 的比例，非损失金额 |
+| V2 详细结果 | [中文报告](research_extension_v2/RESEARCH_EXTENSION_RESULTS.md) · [英文摘要](research_extension_v2/RESEARCH_EXTENSION_RESULTS_EN.md) |
+| 协议与边界 | [冻结协议](research_extension_v2/PROTOCOL.md) · [基线审查](research_extension_v2/BASELINE_AUDIT.md) · [研究局限](research_extension_v2/LIMITATIONS.md) |
+| 现有汇报材料 | [8 页英文 PPT](research_extension_v2/presentation/output/Fairness_Research_V2.pptx) · [英文讲稿](research_extension_v2/presentation/SPEAKER_NOTES_EN.md) · [中文讲解](research_extension_v2/presentation/SPEAKER_NOTES_ZH.md) |
+| 全部原始汇总结果 | [V2 策略 CSV](research_extension_v2/COMPARISON_TABLES.csv) · [子群体、IPW、风险与区间表](research_extension_v2/results/run_001/) · [历史训练结果](audit_extension/results/) |
+| 课堂简明图 | [本页六组 PNG/PDF](figures/course_presentation/) · [图表数据与输入哈希](figures/course_presentation/figure_data.json) · [生成脚本](docs/course_presentation/generate_figures.py) |
+| 完整研究图 | [历史实验图](audit_extension/figures/) · [V2 全部图](research_extension_v2/FIGURES/) |
+| 运行与身份 | [V2 运行说明](research_extension_v2/README.md) · [环境与复现报告](research_extension_v2/REPRODUCIBILITY_REPORT.md) · [独立核验记录](research_extension_v2/results/run_001/verification.json) |
+| 数据来源 | [固定镜像来源与校验值](data/raw/source.json) · [Kaggle 原始发布入口](https://www.kaggle.com/competitions/home-credit-default-risk/data) |
 
-“错拒”是相对于历史标签的操作性定义，不意味着每个被拒记录的决策都不合理。实验同时报告预测表现、两组机会、总体批准和风险，避免只凭单个公平指标判断策略优劣。
+**证据分层：** 历史项目发布了 220 个模型标识、701 行评价和 9,768 项核验记录；V2 没有重新执行那些历史逐条核验。本轮 V2 实际恢复 6 个评分模型，形成 78 个策略配置和 90 份静态回放台账，完成 3,707 项独立核验。本页只是基于保存结果重新绘图与整理表述，没有重新训练、修改测试划分或改变冻结参数。
 
-## 4. 三组实验如何设计
+原始数据、模型权重、逐条预测和台账保留本地，不随仓库公开；新克隆需要按说明恢复后才能逐条核验。`run_001` 的历史文件哈希绑定实验版本，复核冻结运行请使用[实验提交 `1b096dc`](https://github.com/zjh-hao/Big-Data-Algorithmic-Discrimination-Experiment/tree/1b096dc04dd65365dd9184038d7d9e78e91be27b)。后续 README 和课堂简明图更新不改写冻结结果或其哈希。
 
-### A. 数据采样：把人数不足与标签比例失真分开
+已有 Python 环境时，只重新生成本页简明图：
 
-比较四种训练条件：
-
-1. **同规模随机样本：**控制总训练人数。
-2. **仅改变群体人数：**与偏置条件保持相同的两组人数，但保留各组原来的标签比例。
-3. **选择性样本偏置：**仅减少薄弱组中的 `TARGET=0` 案例，真实标签本身不改动。
-4. **参考分布纠正：**使用同一偏置样本，根据独立参考集的组别×标签比例调整训练权重。
-
-设置 50% 和 25% 两档正常标签保留率、五个随机种子，检验差异来自群体构成还是组内标签组成。纠正方法依赖有代表性的有标签参考数据，不假定实际业务中总能获得这种信息。
-
-### B. 优化目标：同时区分训练层与决策层
-
-**训练层：**固定样本与树参数，比较标准交叉熵、业务代价加权、机会导向加权和组合目标。机会项给予两组正常标签的平均损失相同的组权重，通过 `sample_weight` 直接影响 XGBoost 训练。它是公平代理目标，不保证两组 FRR 相等。
-
-**决策层：**基础实验固定风险分数，分别按准确率、业务风险预算、群体错拒差距约束选择审批规则；公平策略与无公平硬约束的业务策略采用相同的分组阈值搜索空间。
-
-这两层对照分别回答“模型学习时重视哪些错误”和“评分之后如何分配批准机会”。
-
-### C. 反馈更新：比较谁的标签可见，以及用什么数据验证
-
-在五轮历史回放中，比较仅获批反馈与随机探索后逆概率加权更新，并交叉三种验证信息来源：
-
-- **独立验证：**使用独立校准/验证池，人数匹配当前路径已获得的对应保留记录数。
-- **仅可见反馈：**校准和验证只使用截至当前已揭示的标签。
-- **固定初始验证：**不补充新的验证信息，继续使用初始保留记录。
-
-每条记录事先指定训练、校准或验证角色，保留角色记录不进入树训练。六条路径共享同一初始状态；此外固定同一个模型、只替换验证信息选阈值，以区分模型变化与验证信息变化。
-
-回放假定每批标签在下一次更新前已成熟；模拟轮次不是实际日期。探索需要额外批准部分原本被拒的申请，其风险另行计入。
-
-## 5. audit_extension 的历史主要发现
-
-以下结果来自此前完成的 `audit_extension`；V2 的后处理及估计审计见本页顶部与 V2 报告。除完整数据单一基线外，以下主要对照采用五个采样或模拟种子；表中差值由未取整数值计算。
-
-| 观察 | 结果 | 应如何理解 |
-|---|---|---|
-| 人数构成变化 | 主场景薄弱组 FRR 差值 −0.13pp，条件95%区间 [−0.77, +0.52] | 本设定未检测到明确的方向性差异，不能推论人数不平衡永远无影响 |
-| 同人数下标签比例失真 | 薄弱组 FRR 从 20.62% 升至 40.27%；配对增量 +19.64pp | 当前受控机制下，组内正常案例缺失带来明显额外错拒 |
-| 参考分布纠正 | 偏置条件的薄弱组 FRR 从 40.27% 降至 21.24% | 与选择机制匹配的加权可恢复部分表现 |
-| 机会导向训练目标 | 偏置数据上，错拒差距从 28.79pp 降至 1.30pp；比较组 FRR 从 11.48% 升至 16.28% | 改善伴随机会重新分配，并非所有群体都受益 |
-| 强化机会权重 | 权重从1增至4后，偏置数据上的差距扩大至11.57pp | 更强的代理目标不一定对应更小的实际差距 |
-| 验证信息与反馈 | 仅获批路径末轮，仅可见验证与独立验证的平均测试获批风险分别为5.04%和4.79% | 对应风险及薄弱组FRR差值区间均跨零，均值差异不足以建立稳定方向性结论 |
-
-同样的机会权重1用于完整数据时，差距从 **6.28pp 变为7.40pp**，也没有改善该指标。这一反例与偏置数据上的正面结果一并保留。
-
-当前反馈设定中，各信息模式下仅获批更新的薄弱组 FRR 从初始到末轮均下降，**未证明该指标随反馈持续放大**。实验的目的在于检验机制及其条件，不预设所有偏差必然恶化或所有纠正必然有效。
-
-![不同采样机制下的机会差异](audit_extension/figures/01_sampling.png)
-
-完整指标、所有轮次、配对区间及风险代价见 [主要结果报告](audit_extension/RESULTS_REPORT.md)。该轮完成 **220 个唯一模型、701 行策略评价**，其中包含450行同模型信息来源诊断；本机训练与评价耗时约21.3分钟，不含报告和核验，其他设备耗时会不同。
-
-## 6. 如何用于课程汇报
-
-V2 已提供可直接使用的 [8 页英文 PPT](research_extension_v2/presentation/output/Fairness_Research_V2.pptx)、[英文逐页讲稿](research_extension_v2/presentation/SPEAKER_NOTES_EN.md)和[中文逐页说明](research_extension_v2/presentation/SPEAKER_NOTES_ZH.md)，总时间计划约 8 分钟。下面的历史图表可作为补充材料。
-
-建议按以下顺序组织实验部分：
-
-1. **引入问题：**贷款审批的总体准确性与群体机会差异为何需要同时考察。
-2. **展示数据实验：**用人数匹配的对照说明标签组成失真如何影响模型。
-3. **展示目标权衡：**结合训练目标和审批目标，说明风险、性能与机会不能只用一个指标衡量。
-4. **展示反馈路径：**解释审批决定如何改变后续可观察数据，以及验证信息来源的重要性。
-5. **回到平台治理：**讨论数据来源追踪、训练与验证隔离、策略版本、风险监控和标签成熟管理。
-
-| 汇报内容 | 可直接使用的图 |
-|---|---|
-| 采样机制 | [人数与标签组成对照](audit_extension/figures/01_sampling.png) |
-| 训练目标 | [训练损失对照](audit_extension/figures/02_training_losses.png) |
-| 审批目标 | [固定评分下的审批策略](figures/06_objectives.png) |
-| 反馈更新 | [验证信息来源与五轮轨迹](audit_extension/figures/03_feedback.png) |
-| 纠正的代价 | [包含探索的实际批准风险](audit_extension/figures/05_actual_risk.png) |
-
-图中文字为英文，并提供同名 PDF，便于用于英文幻灯片和导出排版。
-
-## 快速复现
-
-**V2 单独复现：**请按 [V2 运行说明](research_extension_v2/README.md)操作。缺少历史预测时只需恢复 6 个固定模型，无需先重跑历史 220 模型实验。下面命令用于此前的完整基础及 `audit_extension` 流程，保留作为历史实验复现入口。
-
-环境：**Python 3.12、Windows PowerShell**。不需要 GPU 或 AWS 账号。
-
-```powershell
-git clone https://github.com/zjh-hao/Big-Data-Algorithmic-Discrimination-Experiment.git
-cd Big-Data-Algorithmic-Discrimination-Experiment
-
-$env:PYTHONUTF8 = "1"
-python -m venv .venv
-./.venv/Scripts/python.exe -m pip install -r requirements-lock.txt
-./.venv/Scripts/python.exe -X utf8 src/prepare_data.py
-
-# 生成基础实验、划分清单与预处理器
-./run_complete.ps1
-
-# 运行人数/标签组成、训练损失与验证来源的完整对照
-./audit_extension/run.ps1
+```bash
+python docs/course_presentation/generate_figures.py
 ```
 
-`prepare_data.py` 从固定来源下载输入并校验哈希，不执行第三方代码。数据获取及使用应遵守其原始条款。
-
-首次克隆后需要先运行基础实验，再运行 `audit_extension`，后者依赖前者生成的划分和词表。程序保留断点；数据、参数或冻结代码变化时会拒绝混用旧结果。更多运行与输出说明见 [实验目录 README](audit_extension/README.md)。
-
-## 仓库结构
-
-```text
-README.md                      项目介绍与课程汇报入口
-src/                           基础实验、数据准备、报告与核验代码
-tests/                         基础方法测试
-config.json                    基础采样与训练配置
-extensions_config.json         基础审批目标与反馈配置
-results/                       已发布的汇总指标与核验记录
-figures/                       基础实验图表，PNG/PDF
-COMPLETE_RESULTS_REPORT.md     基础三模块报告
-AUDIT_REPORT.md                 方法审查记录
-
-audit_extension/
-  PROTOCOL.md                  人数/标签组成、训练目标、验证来源协议
-  run_experiment.py            完整对照实验实现
-  config.json                  固定参数与随机种子
-  test_methods.py              采样、损失等价性与信息来源测试
-  verify.py                    标签可见性、权重、阈值与指标核验
-  RESULTS_REPORT.md            主要结果报告
-  PRESENTATION_NOTES.md        英文汇报摘要
-  results/                     汇总结果与配对区间
-  figures/                     六组 PNG/PDF 图表
-
-research_extension_v2/
-  README.md                    V2 入口、运行命令与表字段说明
-  BASELINE_AUDIT.md             当前基线审查与已解决的历史缺口
-  PROTOCOL.md                  冻结的 P0–P3 设计与参数
-  policy_noharm.py              同模型双侧群体保护策略
-  subgroup_audit.py             训练收入边界与交叉子群体审计
-  selective_label_ipw.py        可见台账估计与独立离线 Oracle
-  exploration_risk.py           常规、探索及实际总体风险
-  run.py / verify.py            实验编排与独立核验
-  RESEARCH_EXTENSION_RESULTS.md 中文完整结果
-  RESEARCH_EXTENSION_RESULTS_EN.md 英文摘要
-  REPRODUCIBILITY_REPORT.md     环境、命令与输入输出身份
-  results/run_001/              全部汇总结果及冻结规则
-  FIGURES/                     六组 PNG/PDF 科研图
-  presentation/output/         8 页可编辑英文 PPT
-  presentation/                英文讲稿、中文解释与完整 PPT 源文件
-```
-
-仓库发布代码、协议、报告、图表和汇总结果；**原始数据、逐条申请预测与反馈台账、模型权重、虚拟环境和运行检查点保留在本地**，可通过复现生成。已发布的核验记录来自完成的实验；首次克隆后若要重新核验逐记录结果，需要先生成这些本地文件。
-
-## 结论边界
-
-- 样本偏置是人为设置的机制，不是对数据提供方历史行为的证明；完整数据基线也不等于无偏真值。
-- 分组机会差距不自动代表不正当差别待遇；删除性别字段也不能保证其他特征不含代理信息。
-- 历史已获贷样本不能提供真实被拒申请者的还款反事实，随机回放不能替代时间外验证。
-- 独立参考数据、标签成熟和探索放贷均有条件与代价。验证集上的5%经验风险约束不能保证未来风险或探索后的整体风险。
-- 后续实验使用了此前已查看过的测试集，不属于全新外部盲测。配对区间条件于当前数据与模拟，未覆盖时间漂移、自然人聚类或所有训练不确定性；辅助比较未作多重检验校正。
-- 程序核验用于确认实现与协议一致，不能代替现实系统有效性或公平性的论证。
-
-## 数据与流程参考
-
-- [AWS 官方信用风险预测、解释与偏差分析项目](https://github.com/aws-samples/amazon-sagemaker-credit-risk-prediction-explainability-bias-detection)：作为流程参考，本项目没有直接复现其数据与全部服务配置。
-- [Home Credit Default Risk 原始发布](https://www.kaggle.com/competitions/home-credit-default-risk/data)。
-- [本实验使用的固定版本数据镜像](https://github.com/qwyt/HomeCreditDefaultRisk/tree/920bbfca12ac236a10ca6b9772286fa15f7a9cca/dataset/full)。
-- [数据来源、校验值与获取边界](data/raw/source.json)。
+完整 V2 复现沿用固定数据来源与参数，默认 CPU、4 线程，无需 GPU 或 AWS 账号。命令见上方运行说明。

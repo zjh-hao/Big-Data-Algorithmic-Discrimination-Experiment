@@ -1,0 +1,249 @@
+{
+  "purpose": "Course README figures derived from frozen aggregates; no new training or policy selection",
+  "inputs": {
+    "audit_extension/results/sampling_summary.csv": "379f464f19a09f567c34ea86dc9b902c19af160665a271d90bdac008880de8b0",
+    "audit_extension/results/loss_summary.csv": "16e68e674d53db45c1b52a407ad8ed7e557b483745a0f3992b777da6e9334a04",
+    "research_extension_v2/results/run_001/COMPARISON_TABLES.csv": "fe9339a949e7d4dae45627cc18c7416fd32dbdeaa3dff55426c345465c0665b3",
+    "research_extension_v2/results/run_001/paired_intervals.csv": "ff30878deb2fe30debc8dfb792a291a8809377447d451ac4c9bef55e6630e3c3",
+    "research_extension_v2/results/run_001/subgroups.csv": "31bfbae811758837ff06389ee93a34807f6c4c25c20d9fcc66be8202adc8d8a7",
+    "research_extension_v2/results/run_001/ipw_estimates.csv": "ef29f1a537ed4c929f1090cef6eaf88614b4abbf1b4cbd7b6dcd537f8cdd4c35",
+    "research_extension_v2/results/run_001/exploration_risk.csv": "aca015bc725057d46d0ccd761c354d99cdb8860e9a5520e28d43137d2d84dc7f"
+  },
+  "generator_sha256": "724cb9cb3e8500221c28b7f4b58ce59ec379bce1f05d66bfeed2e2a459083d0a",
+  "data": {
+    "historical": {
+      "sampling": {
+        "random": {
+          "thin_frr": 0.207554452715743,
+          "thick_frr": 0.141827266238401,
+          "abs_frr_gap": 0.0657271864773418
+        },
+        "group_only": {
+          "thin_frr": 0.2062448304383787,
+          "thick_frr": 0.1401522721865333,
+          "abs_frr_gap": 0.0660925582518453
+        },
+        "biased": {
+          "thin_frr": 0.4026743865453542,
+          "thick_frr": 0.1147799191054008,
+          "abs_frr_gap": 0.2878944674399533
+        },
+        "corrected": {
+          "thin_frr": 0.2123793768955058,
+          "thick_frr": 0.1409659766833214,
+          "abs_frr_gap": 0.0714134002121844
+        }
+      },
+      "loss": {
+        "standard": {
+          "thin_frr": 0.4026743865453542,
+          "thick_frr": 0.1147799191054008,
+          "abs_frr_gap": 0.2878944674399533
+        },
+        "opportunity1": {
+          "thin_frr": 0.1497380755445271,
+          "thick_frr": 0.1627551748750892,
+          "abs_frr_gap": 0.013017099330562
+        },
+        "opportunity4": {
+          "thin_frr": 0.0937275985663082,
+          "thick_frr": 0.2094313585534141,
+          "abs_frr_gap": 0.1157037599871059
+        }
+      }
+    },
+    "full_policy": {
+      "business": {
+        "thin_frr": 0.2014750482492417,
+        "thick_frr": 0.1431596478705686,
+        "abs_frr_gap": 0.0583154003786731,
+        "approval_rate": 0.8128871762353056,
+        "approved_risk": 0.0479447944794479,
+        "auc": 0.7673806104687605
+      },
+      "gap_e0.02": {
+        "thin_frr": 0.1614281775572098,
+        "thick_frr": 0.1605281941470378,
+        "abs_frr_gap": 0.0008999834101719,
+        "approval_rate": 0.8102856771214413,
+        "approved_risk": 0.0478779973913915,
+        "auc": 0.7673806104687605
+      }
+    },
+    "primary_status": [
+      {
+        "model": "full",
+        "business": "FEASIBLE",
+        "gap_e0.02": "FEASIBLE",
+        "noharm_e0.02_d0.01": "INFEASIBLE"
+      },
+      {
+        "model": "r50_s17_biased",
+        "business": "FEASIBLE",
+        "gap_e0.02": "FEASIBLE",
+        "noharm_e0.02_d0.01": "INFEASIBLE"
+      },
+      {
+        "model": "r50_s29_biased",
+        "business": "FEASIBLE",
+        "gap_e0.02": "FEASIBLE",
+        "noharm_e0.02_d0.01": "SAME RULE"
+      },
+      {
+        "model": "r50_s43_biased",
+        "business": "FEASIBLE",
+        "gap_e0.02": "FEASIBLE",
+        "noharm_e0.02_d0.01": "SAME RULE"
+      },
+      {
+        "model": "r50_s61_biased",
+        "business": "FEASIBLE",
+        "gap_e0.02": "FEASIBLE",
+        "noharm_e0.02_d0.01": "INFEASIBLE"
+      },
+      {
+        "model": "r50_s89_biased",
+        "business": "FEASIBLE",
+        "gap_e0.02": "FEASIBLE",
+        "noharm_e0.02_d0.01": "SAME RULE"
+      }
+    ],
+    "subgroup": [
+      {
+        "group": "thin",
+        "income": "low",
+        "change_pp": -4.673213681002371,
+        "lo_pp": -5.219274054784339,
+        "hi_pp": -4.11923496207333,
+        "normal_count": 5906
+      },
+      {
+        "group": "thin",
+        "income": "middle",
+        "change_pp": -4.17647058823529,
+        "lo_pp": -4.74738539663414,
+        "hi_pp": -3.6039549424165997,
+        "normal_count": 5100
+      },
+      {
+        "group": "thin",
+        "income": "high",
+        "change_pp": -2.6270702455739503,
+        "lo_pp": -3.16968530129111,
+        "hi_pp": -2.0795763389288497,
+        "normal_count": 3502
+      },
+      {
+        "group": "comparison",
+        "income": "low",
+        "change_pp": 1.75615039455361,
+        "lo_pp": 1.52617249702985,
+        "hi_pp": 1.98976315590853,
+        "normal_count": 12926
+      },
+      {
+        "group": "comparison",
+        "income": "middle",
+        "change_pp": 1.81538264160626,
+        "lo_pp": 1.6005591754180999,
+        "hi_pp": 2.00608866477186,
+        "normal_count": 15589
+      },
+      {
+        "group": "comparison",
+        "income": "high",
+        "change_pp": 1.6278209396966299,
+        "lo_pp": 1.42920999270864,
+        "hi_pp": 1.8435295430774798,
+        "normal_count": 13515
+      }
+    ],
+    "ipw_10pct": [
+      {
+        "group": 1,
+        "method": "naive_frr",
+        "mean_pct": 2.488071976746868,
+        "min_pct": 2.44210526315789,
+        "max_pct": 2.5487886944818303
+      },
+      {
+        "group": 0,
+        "method": "naive_frr",
+        "mean_pct": 1.6333706381698279,
+        "min_pct": 1.56617285300388,
+        "max_pct": 1.6709897610921498
+      },
+      {
+        "group": 1,
+        "method": "ipw_frr",
+        "mean_pct": 20.327752481537075,
+        "min_pct": 20.02071108042803,
+        "max_pct": 20.73212452959288
+      },
+      {
+        "group": 0,
+        "method": "ipw_frr",
+        "mean_pct": 14.239258005913815,
+        "min_pct": 13.72685240639149,
+        "max_pct": 14.525431372083638
+      },
+      {
+        "group": 1,
+        "method": "oracle_frr",
+        "mean_pct": 20.14750482492417,
+        "min_pct": 20.14750482492417,
+        "max_pct": 20.14750482492417
+      },
+      {
+        "group": 0,
+        "method": "oracle_frr",
+        "mean_pct": 14.31596478705686,
+        "min_pct": 14.31596478705686,
+        "max_pct": 14.31596478705686
+      }
+    ],
+    "risk_full": [
+      {
+        "exploration_rate": 0.0,
+        "regular_n": 49995.0,
+        "regular_risk": 0.0479447944794479,
+        "exploration_n": 0.0,
+        "exploration_risk": null,
+        "actual_n": 49995.0,
+        "actual_risk": 0.0479447944794479
+      },
+      {
+        "exploration_rate": 0.05,
+        "regular_n": 49995.0,
+        "regular_risk": 0.0479447944794479,
+        "exploration_n": 575.8,
+        "exploration_risk": 0.21839256305926882,
+        "actual_n": 50570.8,
+        "actual_risk": 0.04988647248122911
+      },
+      {
+        "exploration_rate": 0.1,
+        "regular_n": 49995.0,
+        "regular_risk": 0.0479447944794479,
+        "exploration_n": 1146.4,
+        "exploration_risk": 0.22038492253099112,
+        "actual_n": 51141.4,
+        "actual_risk": 0.05181308830649546
+      }
+    ]
+  },
+  "outputs": {
+    "figures/course_presentation/01_sampling_and_training.pdf": "033fceed6dbdb3ef264474cb39415067dfec0f88187415b1192fb3d2fd008e5a",
+    "figures/course_presentation/01_sampling_and_training.png": "84aa3dd6b0a03561383dc476b21cf2be5b86a428628c6f4426640425beab34c7",
+    "figures/course_presentation/02_fixed_score_policies.pdf": "470b27d30d31d29064eedc5f827d233940e2eb6b99aca6c860b7d00f63e28756",
+    "figures/course_presentation/02_fixed_score_policies.png": "b1c5d7d5670191e4adab9833f6bda1f8313c43a44670bc098e32d7d7e835e617",
+    "figures/course_presentation/03_noharm_feasibility.pdf": "ccfb3e2cd2738f3655b2dd34f584a28a343a8640483a9d651c168136bf3995ea",
+    "figures/course_presentation/03_noharm_feasibility.png": "ef8f7763a9284d6a76a1bd7fa167d18ace9b552ffe47b3f48d20400786261218",
+    "figures/course_presentation/04_subgroup_changes.pdf": "45bda0dae807431742054bc1e74c7e7a5cdfcd12ce60add984c72ba35c4431b6",
+    "figures/course_presentation/04_subgroup_changes.png": "009f8893b476336f1a7027e26de0ed419349b2447b6080f208a2186887c957d5",
+    "figures/course_presentation/05_selective_label_estimates.pdf": "c75fe32477d7fbd04f87b599fed1a74be4bc35c173bb8e9f2e6470dacc3547f4",
+    "figures/course_presentation/05_selective_label_estimates.png": "e5d8c5b07cc18e5fbe6312511c01730a255ab4b6b4245342b121e347f8a00e6e",
+    "figures/course_presentation/06_exploration_risk.pdf": "81874349befa23f132db55a9dca0dcf5fad4f2188afb77ccec22f7592a34b08a",
+    "figures/course_presentation/06_exploration_risk.png": "64a948a5dcf6f61e15556e528a741b3270f6a8ad7eb86f38d2665f9ecfb95197"
+  }
+}
