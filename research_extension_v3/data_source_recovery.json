@@ -1,0 +1,24 @@
+{
+  "original_source": "https://www.kaggle.com/competitions/home-credit-default-risk/data",
+  "retrieval": "Third-party public GitHub mirrors, not an official Home Credit distribution",
+  "conversion_source": "https://raw.githubusercontent.com/qwyt/HomeCreditDefaultRisk/920bbfca12ac236a10ca6b9772286fa15f7a9cca/src_draft/load_dataset.py",
+  "verified_utc": "2026-10-22T12:07:44.783094+00:00",
+  "limitations": "Original Kaggle byte hashes are unavailable. Structural checks do not prove exact equivalence. Mirror repository licenses are not asserted to relicense underlying data.",
+  "files": {
+    "app_train.parquet": {
+      "url": "https://raw.githubusercontent.com/qwyt/HomeCreditDefaultRisk/920bbfca12ac236a10ca6b9772286fa15f7a9cca/dataset/full/app_train.parquet",
+      "sha256": "91cc5fd191a67fef84edf4c99318ea52b53966ebc02591152a31e1e68324649e",
+      "bytes": 22225867
+    },
+    "bureau.parquet": {
+      "url": "https://raw.githubusercontent.com/qwyt/HomeCreditDefaultRisk/920bbfca12ac236a10ca6b9772286fa15f7a9cca/dataset/full/bureau.parquet",
+      "sha256": "ec8694dac827b2ab8202398ba9ce48cf0aa9fbc98b2c472d417a4d7b096b0629",
+      "bytes": 35838261
+    },
+    "HomeCredit_columns_description.csv": {
+      "url": "https://raw.githubusercontent.com/tejase13/Home-Credit-Default-Risk/d547460fce1d5345cb1cd4b00b9b99fb8cbcb11c/HomeCredit_columns_description.csv",
+      "sha256": "eef7665398228a80f7367c9258220c5fbe1038f3f54094244f354d54e2d4fb03",
+      "bytes": 37383
+    }
+  }
+}

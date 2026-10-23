@@ -1,0 +1,31 @@
+{
+  "purpose": "Pre-publication V3 source archive. The five portability-edited modules retain their original versions; other top-level V3 modules are preserved as they stood before publication. Historical result fingerprints are not rewritten.",
+  "files": {
+    "__init__.py.txt": "a1ba450ef68a93b38575ffca83bb1015dc09e2952d42c66c2a63cc74f2c0b86c",
+    "adaptive_run.py.txt": "ed8ffcd25c46b9f1fc476e42bc671552b484d7a86aa5a3dd491ad3f96526003b",
+    "advanced_models.py.txt": "4e6bd3e9f32d674042c5c7571b0d9dd11a0210758db70f79048969eceacfcb42",
+    "advanced_search.py.txt": "8b7a61801775faf88f5266e6b6fffe2429c682d91d34581a99c41b45a68fbc45",
+    "background_queue.py.txt": "e64f10202c14b8d0b5e58a2fd0691cc1164ad29ea3d1053093398baecbedf848",
+    "business.py.txt": "f4bb23026e16851254dea2c7259aeac2cfd47520c6163c4da682450bb1b908e8",
+    "common.py.txt": "c9f20547bf8fb0cf7e2ad98d249e26b467ab285372e97ef5dead8a0a8d4d405b",
+    "fairlearn_business.py.txt": "7d96f698ac1b82d4b1a50165da13048c793243ae06e12f67a7fa48431bc2fb02",
+    "followup.py.txt": "2076d544efeafdcb38c4a76e6a885d620524f8269861955cd1948d434ecbb1fb",
+    "followup_analysis.py.txt": "59fdf042a69d2294f265741c7d50aa803f17ba4e844cf866297ad2151c6b6b90",
+    "inference.py.txt": "a7201b37eabafe4ad6c62a600596ad509f7166b63eed0daeb499bc5e6e2ded6e",
+    "mechanisms.py.txt": "f238c9362208cd75094a19007778f02699d99fb2c83d5f3bfd76d05df5f1780e",
+    "prepare.py.txt": "7a6f3ca99b709b3476f42d2b6afdcfbebc9a942860c75f6041259ab23f0a734e",
+    "protected_compare.py.txt": "e4ac269d3c193a4612b2b41e6aac1cba08f32eeb10c5a4a38ba56a83667a4c1f",
+    "protected_policy.py.txt": "fe619266bfcc355af3bd5d679000cf2affcedb2361112be5295df05d2f5111e5",
+    "protected_report.py.txt": "3c4cd12082138629770db09ba34fdcde4ec8390aafb9cfef6677f53c82d6dd26",
+    "protected_run.py.txt": "ed049c26bc1a0005c5b3664bfb68819181a743b86131e2fe7ef3bf72e96a3349",
+    "protected_verify.py.txt": "db7da415687da04e6401def3dfc9ec5942010423ccfa4daecd8cff037c1cf046",
+    "provenance.py.txt": "5ea0c1dbf2c3a2ba768882d1eaf5a607c06f5ece42389c3eb8c9a2783125bb62",
+    "report.py.txt": "3d07385e45a1c5f8f95f2defaebfa5e39aee093f9034d4a0896e265895f926bd",
+    "run.py.txt": "1195a9f8ddd5ca57c95632d169ac5dee88b54002273b82e0c2f8c418fc7e9a64",
+    "setup_baselines.py.txt": "fba487c39376f54a94b31baf1beb6e55fae07361834342d703e69e9010b3e9cd",
+    "test_advanced_models.py.txt": "bd2dc8e6064b9f4ce57e330d223481c6c850e83b32e489c44019a44e2c31736e",
+    "training_objective.py.txt": "47a8277b243b49356c7a2bd86a8dfc5e53aef7c46c9cf4bbac6716ee902fb252",
+    "verify.py.txt": "4531a23aae67a1ecf12d88d04a7796b97f9b81c9d9f02900b46c70e59b3f2b37"
+  },
+  "filename_note": "Original Python sources have a .txt suffix so pytest and Python do not execute archived research code. Bytes and SHA256 values are preserved."
+}

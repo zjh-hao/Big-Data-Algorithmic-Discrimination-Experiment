@@ -1,0 +1,27 @@
+已登记的后续实验队列（2026-10-22）
+
+结果目录：research_extension_v3/results/run_002。
+队列状态：research_extension_v3/continuation_queue/queue.json。
+分任务日志：research_extension_v3/continuation_queue/*.log。
+启动或恢复：仓库根目录执行 ./Start-Research-Queue.ps1。
+
+执行顺序：
+1. 校验首轮完整证据。
+2. LightGBM 12个配置的扩展reference搜索。
+3. TabM 8个配置的扩展reference搜索（GPU串行）。
+4. 所选配置的3种子最终模型与业务审批。
+5. 强LightGBM模型下5个采样种子×3种偏置/纠正/机会损失压力测试。
+6. 原始概率与Platt校准消融，并检查固定解析收益阈值。
+7. 阈值网格、风险和资金预算敏感性。
+8. 成本敏感Fairlearn业务对照。
+9. 1000次成对bootstrap与收入交叉子群。
+10. 自动输出科学图表。
+11. 独立校验。
+12. 与首轮结果比较并生成新增中文结论。
+13. 保存完整环境与来源记录。
+
+队列有进程互斥锁、逐任务日志、断点与最多两次自动尝试。
+失败超过重试次数会进入NEEDS_ATTENTION，由自动跟进读取日志修复。
+已有PASS任务不会重复训练。全部登记项完成后停止计算。
+本次13项有限队列已完成，自动跟进已停止。Git不上传本机的queue.json、进程锁或日志；新电脑执行时会按代码初始化自己的队列。历史完成证据见results/run_002/completion.json。
+重新运行本地实验需要保持电脑开机、不休眠；只有用户另外创建了自动跟进时才会自动唤醒检查。

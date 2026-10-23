@@ -2,11 +2,21 @@
 
 **云计算课程大作业 · 任务四：Algorithmic Discrimination in Big Data**
 
+**2026-10-23 研究更新：强基线复现、六子群保护、双预算与机会改善定价已完成。** 完整过程、实际结果、代码地图和新电脑复现顺序见 [本轮研究更新](RESEARCH_UPDATES_2026-10-22_23.md)。最新方法有明确业务取舍，当前不宣称 SOTA；发布前全仓库 **97 项测试通过**。
+
+**2026-10-22：已新增 V3 强基线与业务收益实验。** 新实验比较 LR、XGBoost、LightGBM、TabM（4060 GPU）、M²FGB、标准及成本敏感 Fairlearn，量化公平约束对放贷数量、金额、风险和情景净贡献的影响；另完成采样机制和训练损失对照。
+
+[V3 实验入口与复现](research_extension_v3/README.md) · [V3 中文结果与图表](research_extension_v3/results/run_001/RESULTS_CN.md) · [V3 完成状态](research_extension_v3/results/run_001/status.json) · [独立校验](research_extension_v3/results/run_001/verification.json)
+
+**优化复核与自有方法已补做完成。** 扩大搜索结果见 [run_002](research_extension_v3/results/run_002/FOLLOWUP_RESULTS_CN.md)；新方法采用收益预算、六子群保护与最小必要伤害优化，见 [run_004 方法报告](research_extension_v3/results/run_004/METHODS_RESULTS_CN.md) 和 [完整优化审计](research_extension_v3/OPTIMIZATION_AUDIT_CN.txt)。主方法在9/9个验证配置可行；LightGBM三种子平均测试净贡献下降约0.155%、两组误拒差距从5.39pp降至1.22pp。不存在所有方法、所有指标都领先的结论，严格保护不可行与测试约束偏离均保留。
+
+仓库根目录执行 `./run_research_v3.ps1 run` 可恢复运行完整实验，`report` 重建图表，`verify` 独立复核。下面保留 V2 的原有汇报说明，V3 的最终汇报按约 10 分钟组织。
+
 使用 Home Credit 历史贷款数据与 XGBoost 风险评分，研究：**一项公平干预帮助了谁、让谁承担了代价，以及这些影响能否被可靠地评价。**
 
 > **先看结论：** 减小两个群体的错拒率差距，可能让另一组正常还款者更容易被拒；加入双侧保护后，部分模型找不到满足所有要求的审批规则。随机探索可以增加反馈信息，但也可能推高实际获批风险。
 >
-> 本项目是本地 CPU 上的受控历史数据实验，不代表银行生产系统，也不能据此认定真实机构存在违法歧视。
+> V2 使用本地 CPU，V3 的 TabM 使用 RTX 4060 GPU；均为受控历史数据实验，不代表银行生产系统，也不能据此认定真实机构存在违法歧视。
 
 [英文 PPT](research_extension_v2/presentation/output/Fairness_Research_V2.pptx) · [英文讲稿](research_extension_v2/presentation/SPEAKER_NOTES_EN.md) · [中文实验报告](research_extension_v2/RESEARCH_EXTENSION_RESULTS.md) · [完整结果表](research_extension_v2/COMPARISON_TABLES.csv) · [复现说明](research_extension_v2/README.md)
 

@@ -1,0 +1,41 @@
+from pathlib import Path
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+import uuid
+import numpy as np
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent
+CONFIG = HERE / 'config.json'
+BASELINE_SOURCES = Path(os.environ.get('CREDIT_FAIRNESS_BASELINES', str(ROOT.parent / 'credit-fairness-baselines'))).expanduser().resolve()
+
+def now():
+    return datetime.now(timezone.utc).isoformat()
+
+def sha(path):
+    h = hashlib.sha256()
+    with Path(path).open('rb') as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b''):
+            h.update(chunk)
+    return h.hexdigest()
+
+def clean(value):
+    if isinstance(value, dict): return {str(k): clean(v) for k, v in value.items()}
+    if isinstance(value, (list, tuple)): return [clean(v) for v in value]
+    if isinstance(value, np.ndarray): return clean(value.tolist())
+    if isinstance(value, np.generic): return clean(value.item())
+    if isinstance(value, Path): return str(value)
+    if isinstance(value, float) and not np.isfinite(value): return None
+    return value
+
+def dump(path, obj):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temp = path.with_name(path.name + '.' + uuid.uuid4().hex + '.tmp')
+    temp.write_text(json.dumps(clean(obj), ensure_ascii=False, indent=2, allow_nan=False), encoding='utf-8')
+    os.replace(temp, path)
+
+def load_config(path=CONFIG):
+    return json.loads(Path(path).read_text(encoding='utf-8'))

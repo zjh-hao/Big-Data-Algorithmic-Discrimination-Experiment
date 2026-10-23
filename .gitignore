@@ -1,5 +1,26 @@
 # Local environment and credentials
 .venv/
+.venv-v3/
+/research_extension_v3/cache/
+/research_extension_v3/results/**/predictions/
+/research_extension_v3/results/**/checkpoints/
+/research_extension_v3/results/**/decisions/
+/research_extension_v3/results/**/bootstrap_draws/
+/research_extension_v3/results/**/*.parquet
+/research_extension_v3/results/**/*.ubj
+/research_extension_v3/results/**/*.joblib
+/research_extension_v3/results/**/*.pt
+/research_extension_v3/results/**/*.npy
+/research_extension_v3/results/**/*.npz
+/research_extension_v3/results/**/model.txt
+/research_extension_v3/results/_*/
+/research_extension_v3/results/*_preflight_*/
+/research_extension_v3/continuation_queue/
+/research_extension_v3/results_published/
+/research_extension_v3/theory_extension/theory_note/*.aux
+/research_extension_v3/theory_extension/theory_note/*.out
+/research_extension_v3/theory_extension/theory_note/*.toc
+/research_extension_v3/theory_extension/theory_note/*.synctex.gz
 __pycache__/
 *.py[cod]
 .env

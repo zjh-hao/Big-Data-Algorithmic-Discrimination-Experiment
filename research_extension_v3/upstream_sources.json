@@ -1,0 +1,71 @@
+{
+  "description": "Pinned upstream sources used in the recorded experiments. Historical archive hashes refer to the original branch ZIP downloads; setup fetches immutable git commits and verifies the listed source files. LightGBM runtime uses the pinned pip release, not the downloaded source tree.",
+  "sources": [
+    {
+      "name": "LightGBM",
+      "repository": "https://github.com/lightgbm-org/LightGBM",
+      "branch": "main",
+      "commit": "c6ef24fa680ecd12e74d67282914c60528d3ece4",
+      "archive_sha256": "6382ae5a035819562eac737ee507090785a7a35c0cf625fedf490b5e9e9ccbd1",
+      "role": "Strong tree predictor",
+      "historical_archive_url": "https://codeload.github.com/lightgbm-org/LightGBM/zip/refs/heads/main",
+      "verification_files": {
+        "LICENSE": "ca70f15d841f7e76c8bbd284d25300cd4ae2ef1035e7e5252b13b73449464305"
+      },
+      "runtime_required": false
+    },
+    {
+      "name": "tabm",
+      "repository": "https://github.com/yandex-research/tabm",
+      "branch": "main",
+      "commit": "28e47ae301c92ec37787dde1ce923a0793f405b4",
+      "archive_sha256": "178a5cdbdb4ed25d946678cd92b86b9dcfd8725d690e7db75e3c0c8adbfa314e",
+      "role": "ICLR 2025 tabular neural predictor",
+      "historical_archive_url": "https://codeload.github.com/yandex-research/tabm/zip/refs/heads/main",
+      "verification_files": {
+        "tabm.py": "fc654af6a16bac53d893a8265c79d7af4ebddcb95ad0d600cc6b6bc6b7317ade"
+      },
+      "runtime_required": true
+    },
+    {
+      "name": "fairlearn",
+      "repository": "https://github.com/fairlearn/fairlearn",
+      "branch": "main",
+      "commit": "21c6b4c384126d388e2da7ba13ff0c434ebd42cd",
+      "archive_sha256": "a1512e648576e18c7b93d42a5046a4a212ea46b5f33c2beabd36412a41f25ca1",
+      "role": "Standard fairness baselines",
+      "historical_archive_url": "https://codeload.github.com/fairlearn/fairlearn/zip/refs/heads/main",
+      "verification_files": {
+        "fairlearn/__init__.py": "507caeb045a32a763b8bbcfc64003760dde4d228fbaccd203237cf68719958b5",
+        "fairlearn/postprocessing/_threshold_optimizer.py": "c03286ecca036f3b4463d3076338a9b3fcf0abf9497243bf9fe6bbc228a6607f"
+      },
+      "runtime_required": true
+    },
+    {
+      "name": "m2fgb-facct25",
+      "repository": "https://github.com/hiaac-finance/m2fgb",
+      "branch": "facct25",
+      "commit": "680974819af1583e23b049e18442aa36c6710eba",
+      "archive_sha256": "6754bf8c51e0dec8004935d549c771df24e054f94f0dbdebc71dc8040d7e2da4",
+      "role": "FAccT 2025 original paper implementation",
+      "historical_archive_url": "https://codeload.github.com/hiaac-finance/m2fgb/zip/refs/heads/facct25",
+      "verification_files": {
+        "scripts/models.py": "3d4146e6a8bf5354f563626a710b8df49e52c29ffa92d56f6d99c3d42eb19044"
+      },
+      "runtime_required": true
+    },
+    {
+      "name": "Fair_Credit_Scoring",
+      "repository": "https://github.com/kozodoi/Fair_Credit_Scoring",
+      "branch": "main",
+      "commit": "5ebe84bdb9238b2c9890f3a5a50e3d7deb7d0a22",
+      "archive_sha256": "640a2e42e372e9f177a3f0bec1ae9288a65e334943e32a48cf287daf00fb341b",
+      "role": "Profit-fairness evaluation reference",
+      "historical_archive_url": "https://codeload.github.com/kozodoi/Fair_Credit_Scoring/zip/refs/heads/main",
+      "verification_files": {
+        "README.md": "d7c7472dfbee45ab6c5f0544484b408fe3b347f297c1d8885defd3607f616ff8"
+      },
+      "runtime_required": false
+    }
+  ]
+}

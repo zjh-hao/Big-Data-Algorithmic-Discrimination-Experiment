@@ -1,3 +1,7 @@
 * text=auto eol=lf
 *.png binary
 *.pdf binary
+
+# Frozen experiment evidence carries byte-level hashes; preserve its line endings.
+research_extension_v3/results/** -text whitespace=cr-at-eol,-blank-at-eof
+research_extension_v3/publication_source_archive/** -text whitespace=cr-at-eol

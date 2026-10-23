@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "validated_utc": "2026-10-23T08:46:47.323977+00:00",
+  "base_commit": "8914fbc86ee6d7c6778924aa604f120a9335ab85",
+  "remote": "origin/main",
+  "remote_divergence_at_start": "0 ahead, 0 behind",
+  "pytest": {
+    "command": ".venv-v3/Scripts/python.exe -m pytest -q",
+    "passed": 97,
+    "failed": 0,
+    "warnings": 13,
+    "seconds": 40.46
+  },
+  "upstream_sources_verified": 5,
+  "powershell_syntax": "PASS",
+  "git_diff_check": "PASS",
+  "secret_pattern_hits": 0,
+  "record_level_csv_headers_found": 0,
+  "large_runtime_artifacts_excluded": true,
+  "historical_results_recomputed": false,
+  "publication_changes": "Dependency path discovery, pinned-source setup, documentation, evidence publication; experimental algorithms and numerical results retained",
+  "historical_evidence_byte_checks": 1387,
+  "legacy_source_or_result_files_changed": 0,
+  "documentation_link_check": "PASS"
+}
