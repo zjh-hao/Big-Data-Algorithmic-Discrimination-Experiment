@@ -1,0 +1,28 @@
+{
+  "version": "budget-theory-1",
+  "grid": 256,
+  "minimum_approvals": 500,
+  "minimum_subgroup_normal": 100,
+  "primary_loss_ratio": 5,
+  "primary_risk_budget": 0.05,
+  "capital_fraction": 1.0,
+  "primary_epsilon": 0.02,
+  "primary_beta": 0.01,
+  "betas": [
+    0.01
+  ],
+  "additional_harm_budgets": [
+    0.001,
+    0.003
+  ],
+  "primary_tau": 0.001,
+  "allocation_modes": [
+    "absolute_maxmin",
+    "normalized_maxmin",
+    "normalized_leximin"
+  ],
+  "face_tolerance": 1e-08,
+  "range_tolerance": 1e-07,
+  "scenario_interest": 0.12,
+  "scenario_cost": 0.03
+}

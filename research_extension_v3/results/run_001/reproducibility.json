@@ -1,0 +1,127 @@
+{
+  "generated_utc": "2026-10-22T12:52:43.241024+00:00",
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.1.3",
+      "pandas": "2.2.3",
+      "scipy": "1.14.1",
+      "scikit-learn": "1.6.1",
+      "xgboost": "2.1.4",
+      "lightgbm": "4.6.0",
+      "matplotlib": "3.9.4",
+      "pyarrow": "19.0.1",
+      "torch": "2.7.0+cu128",
+      "rtdl_num_embeddings": "0.0.12",
+      "narwhals": "1.31.0",
+      "joblib": "1.4.2"
+    },
+    "fairlearn_source_version": "0.16.0.dev0",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "tf32_enabled_for_training": true,
+    "generated_utc": "2026-10-22T12:52:43.236026+00:00"
+  },
+  "upstream_sources": {
+    "sources": [
+      {
+        "name": "LightGBM",
+        "repository": "https://github.com/lightgbm-org/LightGBM",
+        "branch": "main",
+        "commit": "c6ef24fa680ecd12e74d67282914c60528d3ece4",
+        "archive_url": "https://codeload.github.com/lightgbm-org/LightGBM/zip/refs/heads/main",
+        "archive_sha256": "6382ae5a035819562eac737ee507090785a7a35c0cf625fedf490b5e9e9ccbd1",
+        "bytes": 6656839,
+        "files": 570,
+        "local_path": "D:\\workspace\\credit-fairness-baselines\\LightGBM",
+        "role": "Strong tree predictor",
+        "status": "SOURCE_DOWNLOADED_NOT_RUN",
+        "downloaded_utc": "2026-10-22T08:05:40.527450+00:00"
+      },
+      {
+        "name": "tabm",
+        "repository": "https://github.com/yandex-research/tabm",
+        "branch": "main",
+        "commit": "28e47ae301c92ec37787dde1ce923a0793f405b4",
+        "archive_url": "https://codeload.github.com/yandex-research/tabm/zip/refs/heads/main",
+        "archive_sha256": "178a5cdbdb4ed25d946678cd92b86b9dcfd8725d690e7db75e3c0c8adbfa314e",
+        "bytes": 49168419,
+        "files": 60189,
+        "local_path": "D:\\workspace\\credit-fairness-baselines\\tabm",
+        "role": "ICLR 2025 tabular neural predictor",
+        "status": "SOURCE_DOWNLOADED_NOT_RUN",
+        "downloaded_utc": "2026-10-22T08:07:54.794684+00:00"
+      },
+      {
+        "name": "fairlearn",
+        "repository": "https://github.com/fairlearn/fairlearn",
+        "branch": "main",
+        "commit": "21c6b4c384126d388e2da7ba13ff0c434ebd42cd",
+        "archive_url": "https://codeload.github.com/fairlearn/fairlearn/zip/refs/heads/main",
+        "archive_sha256": "a1512e648576e18c7b93d42a5046a4a212ea46b5f33c2beabd36412a41f25ca1",
+        "bytes": 3217521,
+        "files": 341,
+        "local_path": "D:\\workspace\\credit-fairness-baselines\\fairlearn",
+        "role": "Standard fairness baselines",
+        "status": "SOURCE_DOWNLOADED_NOT_RUN",
+        "downloaded_utc": "2026-10-22T08:07:56.817817+00:00"
+      },
+      {
+        "name": "m2fgb-facct25",
+        "repository": "https://github.com/hiaac-finance/m2fgb",
+        "branch": "facct25",
+        "commit": "680974819af1583e23b049e18442aa36c6710eba",
+        "archive_url": "https://codeload.github.com/hiaac-finance/m2fgb/zip/refs/heads/facct25",
+        "archive_sha256": "6754bf8c51e0dec8004935d549c771df24e054f94f0dbdebc71dc8040d7e2da4",
+        "bytes": 16299986,
+        "files": 323,
+        "local_path": "D:\\workspace\\credit-fairness-baselines\\m2fgb-facct25",
+        "role": "FAccT 2025 original paper implementation",
+        "status": "SOURCE_DOWNLOADED_NOT_RUN",
+        "downloaded_utc": "2026-10-22T08:08:01.392382+00:00"
+      },
+      {
+        "name": "Fair_Credit_Scoring",
+        "repository": "https://github.com/kozodoi/Fair_Credit_Scoring",
+        "branch": "main",
+        "commit": "5ebe84bdb9238b2c9890f3a5a50e3d7deb7d0a22",
+        "archive_url": "https://codeload.github.com/kozodoi/Fair_Credit_Scoring/zip/refs/heads/main",
+        "archive_sha256": "640a2e42e372e9f177a3f0bec1ae9288a65e334943e32a48cf287daf00fb341b",
+        "bytes": 296851777,
+        "files": 1214,
+        "local_path": "D:\\workspace\\credit-fairness-baselines\\Fair_Credit_Scoring",
+        "role": "Profit-fairness evaluation reference",
+        "status": "SOURCE_DOWNLOADED_NOT_RUN",
+        "downloaded_utc": "2026-10-22T08:09:15.450592+00:00"
+      }
+    ]
+  },
+  "code_hashes": {
+    "research_extension_v3\\__init__.py": "a1ba450ef68a93b38575ffca83bb1015dc09e2952d42c66c2a63cc74f2c0b86c",
+    "research_extension_v3\\advanced_models.py": "4e6bd3e9f32d674042c5c7571b0d9dd11a0210758db70f79048969eceacfcb42",
+    "research_extension_v3\\advanced_search.py": "8b7a61801775faf88f5266e6b6fffe2429c682d91d34581a99c41b45a68fbc45",
+    "research_extension_v3\\business.py": "f4bb23026e16851254dea2c7259aeac2cfd47520c6163c4da682450bb1b908e8",
+    "research_extension_v3\\common.py": "c9f20547bf8fb0cf7e2ad98d249e26b467ab285372e97ef5dead8a0a8d4d405b",
+    "research_extension_v3\\fairlearn_business.py": "7d96f698ac1b82d4b1a50165da13048c793243ae06e12f67a7fa48431bc2fb02",
+    "research_extension_v3\\inference.py": "a7201b37eabafe4ad6c62a600596ad509f7166b63eed0daeb499bc5e6e2ded6e",
+    "research_extension_v3\\mechanisms.py": "f238c9362208cd75094a19007778f02699d99fb2c83d5f3bfd76d05df5f1780e",
+    "research_extension_v3\\prepare.py": "7a6f3ca99b709b3476f42d2b6afdcfbebc9a942860c75f6041259ab23f0a734e",
+    "research_extension_v3\\provenance.py": "5ea0c1dbf2c3a2ba768882d1eaf5a607c06f5ece42389c3eb8c9a2783125bb62",
+    "research_extension_v3\\report.py": "3d07385e45a1c5f8f95f2defaebfa5e39aee093f9034d4a0896e265895f926bd",
+    "research_extension_v3\\run.py": "86a13319e8173b5d6d5f3e01853ef6d49c53fdbffd708f2fd815c0815093ae0e",
+    "research_extension_v3\\test_advanced_models.py": "bd2dc8e6064b9f4ce57e330d223481c6c850e83b32e489c44019a44e2c31736e",
+    "research_extension_v3\\training_objective.py": "47a8277b243b49356c7a2bd86a8dfc5e53aef7c46c9cf4bbac6716ee902fb252",
+    "research_extension_v3\\verify.py": "4531a23aae67a1ecf12d88d04a7796b97f9b81c9d9f02900b46c70e59b3f2b37"
+  },
+  "config_sha256": "7ffbe4caf2cfa37dd4eb3a9e3cf95b6c3567e1366013d41c27475ae164f04baf",
+  "split_manifest_sha256": "becf4665452be8884a9723e3786bc6e2b990c3f6f4f92ad453cffefdaa248583",
+  "historical_base_commit": "8914fbc86ee6d7c6778924aa604f120a9335ab85",
+  "notes": [
+    "Official algorithm adaptation to shared Home Credit protocol; not a reproduction of every original paper benchmark",
+    "Historical holdout already inspected; no new blind test claim",
+    "Fixed-model/policy bootstrap, not training uncertainty",
+    "Initial completed basic checkpoints predate stricter resume guards; saved predictions unchanged",
+    "LR and M2FGB current deterministic settings can yield identical outputs across seeds"
+  ]
+}

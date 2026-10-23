@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE",
+  "training_completed_utc": "2026-10-22T13:49:15.093982+00:00",
+  "reviewed_utc": "2026-10-22T14:05:17.554895+00:00",
+  "queue_tasks": 13,
+  "model_seed_jobs": 6,
+  "bias_stress_jobs": 15,
+  "independent_audit_categories": 96,
+  "independent_audit_failures": 0,
+  "report": "FOLLOWUP_RESULTS_CN.md",
+  "report_sha256": "521af0b562528dd3c4c659d53e77c4ed00cd736fedf6292c5d2e3d37f9f97167"
+}

@@ -1,0 +1,12 @@
+{
+  "model": "tabm",
+  "seed": 731,
+  "calibration_variant": "raw",
+  "loss_ratio": 3.0,
+  "threshold": 0.25,
+  "selection_protocol": "analytic expectation threshold; no fitted validation threshold",
+  "risk_constraint_enforced": false,
+  "capital_constraint_enforced": false,
+  "fairness_constraint_enforced": false,
+  "frozen_utc": "2026-10-22T13:44:30.814534+00:00"
+}

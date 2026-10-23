@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "index": 2,
+  "model": "tabm",
+  "seed": 731,
+  "parameters": {
+    "batch_size": 512,
+    "eval_batch_size": 1024,
+    "k": 32,
+    "d_block": 128,
+    "n_blocks": 4,
+    "max_epochs": 120,
+    "patience": 12,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0003
+  },
+  "reference_auc": 0.7601991261630059,
+  "artifact": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\tuning\\tabm\\trial_02",
+  "input_fingerprint": "1fb88ba3c55217f6e7ad0629176b8bb3fac840e0c2aba14e71824e917c972e4e",
+  "completed_utc": "2026-10-22T13:21:46.564031+00:00",
+  "checkpoint_sha256": {
+    "best_checkpoint.pt": "8509ce63f2526a6e7af35e9ebd288ca8c041a97bcca378c78159b86c6045a853",
+    "preprocessor.joblib": "2e355603b7abe25c8545b17cb40966c0a63d1c0de189218ec9960ed31d9a7d42",
+    "metadata.json": "d697a5b0a877ad83109dde250364c6a9b835c9add8a2fb13e7e68de922290f91"
+  },
+  "metadata": {
+    "algorithm": "TabM",
+    "official_source": {
+      "repository": "https://github.com/yandex-research/tabm",
+      "branch": "main",
+      "commit": "28e47ae301c92ec37787dde1ce923a0793f405b4"
+    },
+    "source_file": "D:\\workspace\\credit-fairness-baselines\\tabm\\tabm.py",
+    "source_sha256": "fc654af6a16bac53d893a8265c79d7af4ebddcb95ad0d600cc6b6bc6b7317ade",
+    "package_version": "0.0.3",
+    "torch_version": "2.7.0+cu128",
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "peak_gpu_memory_bytes": 434238464,
+    "seed": 731,
+    "parameters": {
+      "n_num_features": 334,
+      "d_out": 1,
+      "k": 32,
+      "n_blocks": 4,
+      "d_block": 128,
+      "dropout": 0.1,
+      "arch_type": "tabm"
+    },
+    "training_config": {
+      "batch_size": 512,
+      "eval_batch_size": 1024,
+      "k": 32,
+      "d_block": 128,
+      "n_blocks": 4,
+      "max_epochs": 120,
+      "patience": 12,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0003
+    },
+    "preprocessing": "caller-imputed dense inputs; train-only QuantileTransformer(normal), continuous columns only; one-hot/binary indicators preserved",
+    "rank_normalized_columns": 85,
+    "label": "P(TARGET=1): repayment difficulty",
+    "loss": "mean binary cross-entropy over all objects and all ensemble members independently",
+    "inference": "mean of member sigmoid probabilities",
+    "selection": "reference/stop ROC AUC; no calibration/validation/test data",
+    "best_epoch": 41,
+    "epochs_run": 53,
+    "best_stop_auc": 0.7601991261630059,
+    "training_seconds": 121.21491360000073,
+    "model_artifact": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\tuning\\tabm\\trial_02\\best_checkpoint.pt",
+    "preprocessor_artifact": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\tuning\\tabm\\trial_02\\preprocessor.joblib"
+  }
+}

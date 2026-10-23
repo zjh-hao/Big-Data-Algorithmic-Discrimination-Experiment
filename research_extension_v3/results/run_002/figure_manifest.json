@@ -1,0 +1,88 @@
+{
+  "run_directory": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002",
+  "selection": "Configuration selected without test optimization; saved outcomes only.",
+  "config_sha256": "ec6e24d52dccfadb035f888631f50338e525160bfbf43c31c0798b84cf773b91",
+  "figures": [
+    {
+      "name": "01_models_accuracy_and_time",
+      "description": "Mean test AUC and measured training time; bars are SD across completed seeds.",
+      "source_rows": 6,
+      "files": {
+        "figures\\01_models_accuracy_and_time.png": "7671c3447de54b42309f038698c35322cc0746f62f703a072cfe741e4386ca86",
+        "figures\\01_models_accuracy_and_time.pdf": "465f88f91400f07d3352ce28f1ecdf862f25da5109ea60179dd1d9db227a3e4e",
+        "figure_data\\01_models_accuracy_and_time.csv": "f684522edff853779509bed4b754978e9780c70fa9c0e79307359345caa5978c"
+      }
+    },
+    {
+      "name": "02_fairness_business_frontier",
+      "description": "All completed primary-scenario frozen policies. Threshold policies enforce the validation risk budget; standard Fairlearn does not impose that business constraint.",
+      "source_rows": 133,
+      "files": {
+        "figures\\02_fairness_business_frontier.png": "fe8bbe92c02fc1bf58bf49dc7153acfbbc86a22249321976b7f758c455d39f5d",
+        "figures\\02_fairness_business_frontier.pdf": "89cff61b676f03fedfcb5b8e96e9a5d194f481397aea6c538307723f52af5357",
+        "figure_data\\02_fairness_business_frontier.csv": "c2425e38bbaf68738a2eefb825b9941327b8c1e7a3493b5a94ab39af5ecb88ce"
+      }
+    },
+    {
+      "name": "03_fairness_strength_business",
+      "description": "Means across available seeds; validation constraints need not hold exactly on test data.",
+      "source_rows": 30,
+      "files": {
+        "figures\\03_fairness_strength_business.png": "1a38f4ed431f4e2bfeacffd3c1983c04a3a509498db6a62d2f23e9cca86113bb",
+        "figures\\03_fairness_strength_business.pdf": "f52c36ece8666e9e80f84a3d6912d0cfe5e31729f8e388eb8f2df6799da42f53",
+        "figure_data\\03_fairness_strength_business.csv": "22d14241a63d4551b821eb3a80610654ab45d3c448909d433f53e3ca31d785d7"
+      }
+    },
+    {
+      "name": "04_business_contribution_waterfall",
+      "description": "Fair group-profit policy minus unconstrained group-profit policy, same backend/seed/scenario.",
+      "source_rows": 6,
+      "files": {
+        "figures\\04_business_contribution_waterfall.png": "cd167d84e8a8c15ab065c4e200dbe81d3d061d7e417c655a7c7e4c60acf2eba7",
+        "figures\\04_business_contribution_waterfall.pdf": "a54ba4b8bb0ae190f9d3666f1f6efd5abfe1f935443417e2deb7f03a12a3054a",
+        "figure_data\\04_business_contribution_waterfall.csv": "1bf148df316b6f0b483176374aa060e4de5a8bbea44fcf9372f614987f888ec1"
+      }
+    },
+    {
+      "name": "06_group_opportunity_changes",
+      "description": "Groupwise FRR changes: reduced gap can include increased rejection in another group.",
+      "source_rows": 6,
+      "files": {
+        "figures\\06_group_opportunity_changes.png": "6eb431a18b82f969dff457ca810b4955df03fd4492701917edccc0c980d7988c",
+        "figures\\06_group_opportunity_changes.pdf": "b2bdaf516b87c0590f5d5e19dfd9b2ada1a3ea60ac89a2945cc67a865e492d0d",
+        "figure_data\\06_group_opportunity_changes.csv": "1bf148df316b6f0b483176374aa060e4de5a8bbea44fcf9372f614987f888ec1"
+      }
+    },
+    {
+      "name": "05_loss_scenario_sensitivity",
+      "description": "Matched same-model baselines per loss scenario; values are not compared across currencies.",
+      "source_rows": 24,
+      "files": {
+        "figures\\05_loss_scenario_sensitivity.png": "a8c9b8e58b3b3cd14ea58b57d84ad6e100fba21fde51c6083bbb9f8e76a2f749",
+        "figures\\05_loss_scenario_sensitivity.pdf": "188050b21877594012a92541c4d1b79a922fe602248ea8184181d9d14b45ef32",
+        "figure_data\\05_loss_scenario_sensitivity.csv": "39e50249b02b53d49ee1b7e1f6695114466c0b2a6fa58d5593c795671c5e3347"
+      }
+    },
+    {
+      "name": "07_amount_business_and_capital",
+      "description": "Amount-profit objective; both capital caps use total requested applicant principal as denominator. Test spending can differ from validation bounds.",
+      "source_rows": 24,
+      "files": {
+        "figures\\07_amount_business_and_capital.png": "b5615c9576a94271395cc5201f1887473bfddd3823c5cb3d442535945eae7c6e",
+        "figures\\07_amount_business_and_capital.pdf": "74a78ed2b754dcc4f6f567cbbccb3511243f3d6585f0cccbb22ce8f6c084af62",
+        "figure_data\\07_amount_business_and_capital.csv": "eb7b7ccf03d368ca4853e9071b740f51c7db783ac7e1a0a6f810bb3322bda90d"
+      }
+    },
+    {
+      "name": "08_business_aligned_fairlearn",
+      "description": "Unmodified Fairlearn with validation-only negative-class cost replication and risk-screened cost selection; expected stochastic outcomes compared with deterministic thresholds.",
+      "source_rows": 12,
+      "files": {
+        "figures\\08_business_aligned_fairlearn.png": "9bb5f9b25d86605ce404afb9f8bf5883e6696894b5c2c61f0167c7a5431e0c41",
+        "figures\\08_business_aligned_fairlearn.pdf": "0d96ac63104b4c8d2f45451dfa3c979bca3bf2c5b8a5ff5e228e1e4f993e7e48",
+        "figure_data\\08_business_aligned_fairlearn.csv": "1d16248dda3293b6f0edda304e6043fade496fa966e3bc8a85d8ee8816b2869e"
+      }
+    }
+  ],
+  "skipped": []
+}

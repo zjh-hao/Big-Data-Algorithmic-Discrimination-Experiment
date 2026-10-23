@@ -1,0 +1,4 @@
+﻿job,policy,baseline,metric,lower,upper,bootstrap_mean,repetitions,uncertainty
+xgboost_s733,budget_allocation_normalized_leximin_b0.01_tau0.001,previous_adaptive_primary,utility_per_1000_applicants,-0.7271644971528672,0.36873283093351283,-0.16581614537194173,1000,paired applicant bootstrap of expected decisions
+xgboost_s733,budget_allocation_normalized_leximin_b0.01_tau0.001,previous_adaptive_primary,abs_frr_gap,0.0012106238507040457,0.002388425068513672,0.0017756019115813776,1000,paired applicant bootstrap of expected decisions
+xgboost_s733,budget_allocation_normalized_leximin_b0.01_tau0.001,previous_adaptive_primary,worst_subgroup_frr,0.0004802697318307014,0.002163487947167808,0.0012898755446220532,1000,paired applicant bootstrap of expected decisions

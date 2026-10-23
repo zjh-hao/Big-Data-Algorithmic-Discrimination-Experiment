@@ -1,0 +1,14 @@
+{
+  "model": "lightgbm",
+  "seed": 732,
+  "status": "PASS",
+  "finished": "2026-10-23T07:20:24.527026+00:00",
+  "source_prediction_sha256": {
+    "validation": "86b56c9334f7a3f4bb1fd495c7e82f717c88352a7096e977c5792fe924053a99",
+    "test": "ccdae77d69ce7686fb7d07b37f55452303b51e18ea5a2ec489557742cc97655d"
+  },
+  "frozen_policy_sha256": "583d72b5dcd61193cafe5f360e5a52ceab3f0236345efd2f200b6898e5134c85",
+  "policy_rows": 8,
+  "checks": 553,
+  "seconds": 10.310408699995605
+}

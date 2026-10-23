@@ -1,0 +1,4550 @@
+{
+  "run": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_006_budget",
+  "data_used": "validation only; no test predictions read",
+  "method": "Direct threshold replay and recomputation; consistency audit of recorded range/optimal-face evidence",
+  "limitation": "This audit does not independently prove the LP extrema with exact arithmetic. Business feasibility and normalized leximin precision are reported separately.",
+  "normalized_certificate_tolerance": 1e-06,
+  "primary_beta": 0.01,
+  "primary_tau": 0.001,
+  "policy_rows": 63,
+  "feasible_policies": 63,
+  "business_constraint_failures": 0,
+  "feasible_leximin_policies": 18,
+  "leximin_numerical_certificate_failures": 0,
+  "leximin_fixed_range_cases": 0,
+  "primary_group_range_count": 54,
+  "primary_range_max": 0.0070794795154717205,
+  "primary_range_median": 0.002929644342200166,
+  "policies": [
+    {
+      "job": "lightgbm_s731",
+      "model": "lightgbm",
+      "seed": 731,
+      "policy": "lp_profit_baseline",
+      "mode": "profit",
+      "beta": null,
+      "stored_status": "PASS",
+      "tau": null,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": []
+    },
+    {
+      "job": "lightgbm_s731",
+      "model": "lightgbm",
+      "seed": 731,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.001",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 2.220446049250313e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.8043538291198895,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        -7.354176892403248e-14,
+        6.783059583628158e-14,
+        0.30780257391042615,
+        1.0000000000000313,
+        0.7155198482106212,
+        0.9848620711434474
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "lightgbm_s731",
+      "model": "lightgbm",
+      "seed": 731,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.001",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5486409274998538,
+          "stage_requirement_violation": 1.0382276149911718e-09,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.5486409274998906,
+        0.5486409274998775,
+        0.5486409264616262,
+        0.5486409274998618,
+        0.5486409274998361,
+        0.5688586091977966
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "lightgbm_s731",
+      "model": "lightgbm",
+      "seed": 731,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.001",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5486409274998538,
+          "stage_requirement_violation": 1.7763568394002505e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.1035616864774056e-13,
+          "recorded_forced_maximum_excess": 1.2465362075886333e-11,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.5688586091975341,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 2.625677453238495e-13,
+          "recorded_forced_maximum_excess": 8.626432901337466e-14,
+          "missing_forced_evidence": [],
+          "remaining": [
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.5486409274999642,
+        0.5486409274998775,
+        0.5486409274998439,
+        0.5486409274998462,
+        0.5486409274998361,
+        0.5688586091977966
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "lightgbm_s731",
+      "model": "lightgbm",
+      "seed": 731,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.003",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 5.551115123125783e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.8098905429651903,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        -6.295900739243577e-14,
+        -3.0527818464517423e-14,
+        0.28953307182426036,
+        1.0000000000000147,
+        0.8571258595486703,
+        0.9980609544170939
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "lightgbm_s731",
+      "model": "lightgbm",
+      "seed": 731,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.003",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.573714950875531,
+          "stage_requirement_violation": 2.020605904817785e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.57371495087554,
+        0.5737149508755616,
+        0.582610971894666,
+        0.5737149508755344,
+        0.5737149508755108,
+        0.6427801612802114
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "lightgbm_s731",
+      "model": "lightgbm",
+      "seed": 731,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.003",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 2.220446049250313e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.573714950875531,
+          "stage_requirement_violation": 3.0531133177191805e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 3.0531133177191805e-14,
+          "recorded_forced_maximum_excess": 1.4521051028282272e-11,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.5826109718946754,
+          "stage_requirement_violation": 9.325873406851315e-15,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 9.325873406851315e-15,
+          "recorded_forced_maximum_excess": 9.43689570931383e-15,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2,
+            5
+          ],
+          "frozen": [
+            2
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.6427801612801901,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.176836406102666e-14,
+          "recorded_forced_maximum_excess": 1.176836406102666e-14,
+          "missing_forced_evidence": [],
+          "remaining": [
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.57371495087554,
+        0.5737149508755005,
+        0.582610971894666,
+        0.5737149508755344,
+        0.5737149508755108,
+        0.6427801612802019
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "lightgbm_s732",
+      "model": "lightgbm",
+      "seed": 732,
+      "policy": "lp_profit_baseline",
+      "mode": "profit",
+      "beta": null,
+      "stored_status": "PASS",
+      "tau": null,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": []
+    },
+    {
+      "job": "lightgbm_s732",
+      "model": "lightgbm",
+      "seed": 732,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.001",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.8036304981157181,
+          "stage_requirement_violation": 1.1102230246251565e-16,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        -1.6098072876335184e-11,
+        0.1284188804593012,
+        0.29262190068812466,
+        0.9999999999999056,
+        0.9999999999999191,
+        0.999999999999977
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "lightgbm_s732",
+      "model": "lightgbm",
+      "seed": 732,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.001",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5859680583373436,
+          "stage_requirement_violation": 5.379030554308883e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.5859680583376765,
+        0.5859680583373283,
+        0.5859680583368057,
+        0.5859680583373126,
+        0.6037736287661098,
+        0.713270810958601
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "lightgbm_s732",
+      "model": "lightgbm",
+      "seed": 732,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.001",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5859680583373436,
+          "stage_requirement_violation": 1.48991929904696e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.48991929904696e-13,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.6037736287661368,
+          "stage_requirement_violation": 1.6187051699034782e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.6187051699034782e-13,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            4,
+            5
+          ],
+          "frozen": [
+            4
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.713270810958624,
+          "stage_requirement_violation": 1.6064927166326015e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.6064927166326015e-13,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.5859680583372325,
+        0.585968058337267,
+        0.5859680583373094,
+        0.5859680583371946,
+        0.603773628765975,
+        0.7132708109584633
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "lightgbm_s732",
+      "model": "lightgbm",
+      "seed": 732,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.003",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.8087347709821627,
+          "stage_requirement_violation": 1.1102230246251565e-16,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        -2.7385409989386747e-12,
+        0.06190924640453613,
+        0.31003908298158916,
+        0.9999999999999727,
+        0.9999999999999805,
+        1.0
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "lightgbm_s732",
+      "model": "lightgbm",
+      "seed": 732,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.003",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5759361053586689,
+          "stage_requirement_violation": 9.334755191048316e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.5759361053611499,
+        0.5759361053577354,
+        0.6524406813802164,
+        0.5759361053586621,
+        0.6190260351523748,
+        0.6963136340200767
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "lightgbm_s732",
+      "model": "lightgbm",
+      "seed": 732,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.003",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 2.220446049250313e-16,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5759361053586689,
+          "stage_requirement_violation": 2.4410473642433317e-12,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 2.4410473642433317e-12,
+          "recorded_forced_maximum_excess": 7.549516567451064e-14,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.619026035152365,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2,
+            4,
+            5
+          ],
+          "frozen": [
+            4
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.6524406813800533,
+          "stage_requirement_violation": 1.3519185770860531e-12,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.3519185770860531e-12,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2,
+            5
+          ],
+          "frozen": [
+            2
+          ]
+        },
+        {
+          "stage": 3,
+          "level": 0.6963136340201043,
+          "stage_requirement_violation": 5.5067062021407764e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 5.5067062021407764e-14,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.5759361053562279,
+        0.5759361053570426,
+        0.6524406813787014,
+        0.5759361053586621,
+        0.619026035152365,
+        0.6963136340200492
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "lightgbm_s733",
+      "model": "lightgbm",
+      "seed": 733,
+      "policy": "lp_profit_baseline",
+      "mode": "profit",
+      "beta": null,
+      "stored_status": "PASS",
+      "tau": null,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": []
+    },
+    {
+      "job": "lightgbm_s733",
+      "model": "lightgbm",
+      "seed": 733,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.001",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.8218950979859204,
+          "stage_requirement_violation": 1.1102230246251565e-16,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.0,
+        0.005836928574769512,
+        0.13332981669318417,
+        0.999999999999964,
+        0.9859953558901566,
+        0.9847383542136716
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "lightgbm_s733",
+      "model": "lightgbm",
+      "seed": 733,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.001",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.46143488077966516,
+          "stage_requirement_violation": 9.446887716535457e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.46143488077991707,
+        0.4614348807796675,
+        0.46143488077872047,
+        0.4614348807796333,
+        0.46449064730349504,
+        0.5720476589467971
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "lightgbm_s733",
+      "model": "lightgbm",
+      "seed": 733,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.001",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 3.3306690738754696e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.46143488077966516,
+          "stage_requirement_violation": 1.7580381594939354e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.7580381594939354e-13,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.46449064730357903,
+          "stage_requirement_violation": 1.9445556276309617e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.9445556276309617e-13,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            4,
+            5
+          ],
+          "frozen": [
+            4
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.5720476589470099,
+          "stage_requirement_violation": 4.2021941482062175e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 4.2021941482062175e-13,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.46143488077974915,
+        0.4614348807796675,
+        0.4614348807797715,
+        0.46143488077948935,
+        0.4644906473033846,
+        0.5720476589465897
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "lightgbm_s733",
+      "model": "lightgbm",
+      "seed": 733,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.003",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.8260638864821827,
+          "stage_requirement_violation": 1.1102230246251565e-16,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.0,
+        0.00754364942801971,
+        0.13332981669328534,
+        0.999999999999988,
+        0.9859953558901295,
+        0.9847383542136743
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "lightgbm_s733",
+      "model": "lightgbm",
+      "seed": 733,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.003",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 2.220446049250313e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5040521673539466,
+          "stage_requirement_violation": 1.5520917884259688e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.5040521673539676,
+        0.5040521673537914,
+        0.5040521673545693,
+        0.5040521673539409,
+        0.5057579236689658,
+        0.6047043554149095
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "lightgbm_s733",
+      "model": "lightgbm",
+      "seed": 733,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.003",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5040521673539466,
+          "stage_requirement_violation": 3.497202527569243e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 2.1016521856154213e-13,
+          "recorded_forced_maximum_excess": 6.518119377574294e-13,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.5057579236689919,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.9484414082171497e-13,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            4,
+            5
+          ],
+          "frozen": [
+            4
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.6047043554150098,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 5.5289106626332796e-14,
+          "recorded_forced_maximum_excess": 3.4416913763379853e-15,
+          "missing_forced_evidence": [],
+          "remaining": [
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.5040521673539117,
+        0.5040521673539756,
+        0.5040521673539561,
+        0.5040521673541568,
+        0.5057579236691867,
+        0.6047043554150651
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "tabm_s731",
+      "model": "tabm",
+      "seed": 731,
+      "policy": "lp_profit_baseline",
+      "mode": "profit",
+      "beta": null,
+      "stored_status": "PASS",
+      "tau": null,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": []
+    },
+    {
+      "job": "tabm_s731",
+      "model": "tabm",
+      "seed": 731,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.001",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.7965657742616562,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.4199373934815185,
+        -7.327398688538773e-12,
+        0.28313219867151385,
+        1.0,
+        0.4436013587413033,
+        0.9999999999999445
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "tabm_s731",
+      "model": "tabm",
+      "seed": 731,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.001",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 3.3306690738754696e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.6149837860435462,
+          "stage_requirement_violation": 7.032152637975742e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.6184294234423287,
+        0.6149837860434907,
+        0.614983786042843,
+        0.614983786043586,
+        0.6149837860435619,
+        0.6293703232844335
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "tabm_s731",
+      "model": "tabm",
+      "seed": 731,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.001",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 1.1102230246251565e-16,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.6149837860435462,
+          "stage_requirement_violation": 2.353672812205332e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.3877787807814457e-12,
+          "recorded_forced_maximum_excess": 1.6442402994698568e-13,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.6184294234423101,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 4.992672941739329e-13,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            5
+          ],
+          "frozen": [
+            0
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.6293703232845143,
+          "stage_requirement_violation": 3.304023721284466e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 3.304023721284466e-13,
+          "recorded_forced_maximum_excess": 2.55351295663786e-15,
+          "missing_forced_evidence": [],
+          "remaining": [
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.6184294234428094,
+        0.614983786044934,
+        0.6149837860441011,
+        0.6149837860433108,
+        0.614983786043348,
+        0.6293703232841839
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "tabm_s731",
+      "model": "tabm",
+      "seed": 731,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.003",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 5.551115123125783e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.8009074770353475,
+          "stage_requirement_violation": 1.1102230246251565e-16,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.31608100469195094,
+        -1.632022406124264e-11,
+        0.3129896753604947,
+        0.99999999999999,
+        0.7495263599813711,
+        1.0
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "tabm_s731",
+      "model": "tabm",
+      "seed": 731,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.003",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 2.220446049250313e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.6117199236178338,
+          "stage_requirement_violation": 5.5473958759932884e-11,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.6363979305121944,
+        0.6117199235623598,
+        0.6258250700203511,
+        0.6117199236178361,
+        0.6117199236178178,
+        0.6799564864701635
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "tabm_s731",
+      "model": "tabm",
+      "seed": 731,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.003",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 4.440892098500626e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.6117199236178338,
+          "stage_requirement_violation": 1.555787720874946e-10,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.555787720874946e-10,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.6258250700471183,
+          "stage_requirement_violation": 9.17578235615224e-11,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 9.17578235615224e-11,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            2,
+            5
+          ],
+          "frozen": [
+            2
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.6363979305179788,
+          "stage_requirement_violation": 9.180278759401972e-11,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 9.180278759401972e-11,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            5
+          ],
+          "frozen": [
+            0
+          ]
+        },
+        {
+          "stage": 3,
+          "level": 0.6799564864688503,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 3.833267037123278e-12,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.636397930426176,
+        0.611719923462255,
+        0.6258250699553605,
+        0.6117199236210856,
+        0.6117199236207334,
+        0.6799564864726836
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "tabm_s732",
+      "model": "tabm",
+      "seed": 732,
+      "policy": "lp_profit_baseline",
+      "mode": "profit",
+      "beta": null,
+      "stored_status": "PASS",
+      "tau": null,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": []
+    },
+    {
+      "job": "tabm_s732",
+      "model": "tabm",
+      "seed": 732,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.001",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 2.220446049250313e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.7910474221922156,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.2465361225371991,
+        9.991907302552872e-13,
+        0.646607863189032,
+        1.0,
+        0.9663317857089188,
+        0.5114222125452336
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "tabm_s732",
+      "model": "tabm",
+      "seed": 732,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.001",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.6238739249815282,
+          "stage_requirement_violation": 6.402656183013278e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.6287497842626836,
+        0.6238739249808879,
+        0.8280613141689298,
+        0.6238739249815735,
+        0.6890173021544467,
+        0.6238739249815375
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "tabm_s732",
+      "model": "tabm",
+      "seed": 732,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.001",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 1.1102230246251565e-16,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 1.3877787807814457e-17,
+        "gap": 3.3306690738754696e-16,
+        "subgroup_acceptance": 1.1102230246251565e-16
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.6238739249815282,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 4.699574063238288e-13,
+          "recorded_forced_maximum_excess": 2.5868196473766147e-14,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.6287497842630286,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.9173551635276453e-13,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            2,
+            4
+          ],
+          "frozen": [
+            0
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.689017302154419,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 2.3037127760972e-13,
+          "recorded_forced_maximum_excess": 9.2148511043888e-15,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2,
+            4
+          ],
+          "frozen": [
+            4
+          ]
+        },
+        {
+          "stage": 3,
+          "level": 0.8280613141690623,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.5731860258938468e-13,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2
+          ],
+          "frozen": [
+            2
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.6287497842632204,
+        0.6238739249819981,
+        0.8280613141692196,
+        0.6238739249818158,
+        0.6890173021546494,
+        0.623873924981668
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "tabm_s732",
+      "model": "tabm",
+      "seed": 732,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.003",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 4.440892098500626e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.7964232015149774,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.24626122750775495,
+        -2.2204386477881147e-13,
+        0.506141514964507,
+        1.0000000000000084,
+        0.9922943484756581,
+        0.851125228759118
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "tabm_s732",
+      "model": "tabm",
+      "seed": 732,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.003",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 1.0913936421275139e-11,
+        "risk": 0.0,
+        "gap": 2.220446049250313e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.6158009698298745,
+          "stage_requirement_violation": 4.787281682183675e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.6772744595864374,
+        0.6158009698293958,
+        0.7899192768636979,
+        0.6158009698298783,
+        0.6653404077679304,
+        0.6158009698298823
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "tabm_s732",
+      "model": "tabm",
+      "seed": 732,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.003",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 1.1102230246251565e-16,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.6158009698298745,
+          "stage_requirement_violation": 8.93729534823251e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.9677026674713716e-10,
+          "recorded_forced_maximum_excess": 6.228351168147128e-14,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.665340407767954,
+          "stage_requirement_violation": 8.693046282814976e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 8.693046282814976e-14,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            2,
+            4
+          ],
+          "frozen": [
+            4
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.6772744595867622,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.3772882834217626e-10,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            2
+          ],
+          "frozen": [
+            0
+          ]
+        },
+        {
+          "stage": 3,
+          "level": 0.7899192768618556,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 9.274458978580924e-11,
+          "recorded_forced_maximum_excess": 5.440092820663267e-15,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2
+          ],
+          "frozen": [
+            2
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.6772744597244911,
+        0.6158009700266448,
+        0.7899192769546002,
+        0.6158009698297852,
+        0.6653404077678671,
+        0.6158009698298187
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "tabm_s733",
+      "model": "tabm",
+      "seed": 733,
+      "policy": "lp_profit_baseline",
+      "mode": "profit",
+      "beta": null,
+      "stored_status": "PASS",
+      "tau": null,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 2.220446049250313e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": []
+    },
+    {
+      "job": "tabm_s733",
+      "model": "tabm",
+      "seed": 733,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.001",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.8015735164468419,
+          "stage_requirement_violation": 1.1102230246251565e-16,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        1.5389807438988456e-13,
+        -2.590826353405834e-13,
+        0.2067234169398899,
+        0.9999999999999798,
+        0.999999999999889,
+        0.9537627444240825
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "tabm_s733",
+      "model": "tabm",
+      "seed": 733,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.001",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5003948396014881,
+          "stage_requirement_violation": 4.163336342344337e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.5003948396015244,
+        0.5003948396015035,
+        0.5148636880871802,
+        0.6356559925046606,
+        0.5003948396014465,
+        0.6555162137404127
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "tabm_s733",
+      "model": "tabm",
+      "seed": 733,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.001",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5003948396014881,
+          "stage_requirement_violation": 2.1220802892685242e-12,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 2.1220802892685242e-12,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.5148636880873987,
+          "stage_requirement_violation": 1.439737218333903e-12,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.439737218333903e-12,
+          "recorded_forced_maximum_excess": 3.419486915845482e-14,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2,
+            3,
+            5
+          ],
+          "frozen": [
+            2
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.6356559925046982,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.1560752355421755e-12,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            3,
+            5
+          ],
+          "frozen": [
+            3
+          ]
+        },
+        {
+          "stage": 3,
+          "level": 0.655516213740866,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 5.111466805374221e-13,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.5003948395993698,
+        0.500394839599366,
+        0.514863688085959,
+        0.6356559925058543,
+        0.5003948396031119,
+        0.6555162137413771
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "tabm_s733",
+      "model": "tabm",
+      "seed": 733,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.003",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.8066726003547159,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.0,
+        2.9892249176836657e-14,
+        0.20272314482169657,
+        1.0,
+        0.9999999999999528,
+        0.9978708439648428
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "tabm_s733",
+      "model": "tabm",
+      "seed": 733,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.003",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5437396006217592,
+          "stage_requirement_violation": 1.1213252548714081e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.5437396006217747,
+        0.543739600621748,
+        0.5815776038163856,
+        0.6285320117352948,
+        0.5437396006217592,
+        0.6623793885996353
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "tabm_s733",
+      "model": "tabm",
+      "seed": 733,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.003",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5437396006217592,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 6.0785820821251946e-12,
+          "recorded_forced_maximum_excess": 2.8310687127941492e-14,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.5815776038164979,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 4.044542478709445e-12,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2,
+            3,
+            5
+          ],
+          "frozen": [
+            2
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.6285320117349378,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 3.4938718584953676e-13,
+          "recorded_forced_maximum_excess": 3.6637359812630166e-15,
+          "missing_forced_evidence": [],
+          "remaining": [
+            3,
+            5
+          ],
+          "frozen": [
+            3
+          ]
+        },
+        {
+          "stage": 3,
+          "level": 0.6623793885995868,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 8.104628079763643e-15,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.5437396006278378,
+        0.5437396006276368,
+        0.5815776038205425,
+        0.6285320117352872,
+        0.5437396006217686,
+        0.6623793885995949
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "xgboost_s731",
+      "model": "xgboost",
+      "seed": 731,
+      "policy": "lp_profit_baseline",
+      "mode": "profit",
+      "beta": null,
+      "stored_status": "PASS",
+      "tau": null,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 1.1102230246251565e-16,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": []
+    },
+    {
+      "job": "xgboost_s731",
+      "model": "xgboost",
+      "seed": 731,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.001",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 3.3306690738754696e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.8102065634675625,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.0,
+        0.009551569721560568,
+        0.18699268090240462,
+        1.0000000000000344,
+        0.9395143232760101,
+        0.9509529046649977
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "xgboost_s731",
+      "model": "xgboost",
+      "seed": 731,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.001",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5014149740555229,
+          "stage_requirement_violation": 2.2648549702353193e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.5014149740555003,
+        0.5014149740555585,
+        0.5897333825847694,
+        0.5014149740675046,
+        0.5014149740664683,
+        0.5529814516298922
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "xgboost_s731",
+      "model": "xgboost",
+      "seed": 731,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.001",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5014149740555229,
+          "stage_requirement_violation": 1.928235349168972e-12,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.1299627900029918e-11,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.5529814516202918,
+          "stage_requirement_violation": 5.503375533066901e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 5.503375533066901e-13,
+          "recorded_forced_maximum_excess": 1.8540724511240114e-14,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2,
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.589733382581727,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.1680434397476347e-11,
+          "recorded_forced_maximum_excess": 7.30526750203353e-14,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2
+          ],
+          "frozen": [
+            2
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.5014149740668226,
+        0.5014149740649758,
+        0.5897333825934075,
+        0.5014149740540231,
+        0.5014149740535947,
+        0.5529814516197414
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "xgboost_s731",
+      "model": "xgboost",
+      "seed": 731,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.003",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 2.220446049250313e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.8142095526482591,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        3.0192954738886554e-14,
+        0.06192406844856083,
+        0.06875200309746311,
+        1.0,
+        0.9408348456202841,
+        0.9523200603542322
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "xgboost_s731",
+      "model": "xgboost",
+      "seed": 731,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.003",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 2.220446049250313e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.536694763884978,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.5366947638849875,
+        0.5366947638849917,
+        0.6211554281999196,
+        0.536694763884994,
+        0.5366947638849839,
+        0.5851281033266994
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "xgboost_s731",
+      "model": "xgboost",
+      "seed": 731,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.003",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 1.1102230246251565e-16,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 1.3877787807814457e-17,
+        "gap": 2.220446049250313e-16,
+        "subgroup_acceptance": 1.1102230246251565e-16
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.536694763884978,
+          "stage_requirement_violation": 3.945843651820269e-12,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 3.945843651820269e-12,
+          "recorded_forced_maximum_excess": 6.983302824892235e-14,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.5851281033267273,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 2.1549428907974288e-13,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2,
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.6211554282010354,
+          "stage_requirement_violation": 4.231726080661247e-12,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 4.231726080661247e-12,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2
+          ],
+          "frozen": [
+            2
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.5366947638810322,
+        0.5366947638813506,
+        0.6211554281968037,
+        0.5366947638856314,
+        0.5366947638857821,
+        0.5851281033269428
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "xgboost_s732",
+      "model": "xgboost",
+      "seed": 732,
+      "policy": "lp_profit_baseline",
+      "mode": "profit",
+      "beta": null,
+      "stored_status": "PASS",
+      "tau": null,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": []
+    },
+    {
+      "job": "xgboost_s732",
+      "model": "xgboost",
+      "seed": 732,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.001",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.7992266926152279,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.0904321444447272,
+        0.0,
+        0.6169933012382514,
+        1.0000000000000215,
+        0.7919980830589188,
+        0.6387387288368803
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "xgboost_s732",
+      "model": "xgboost",
+      "seed": 732,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.001",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5760049148706408,
+          "stage_requirement_violation": 6.7390537594747e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.5760049148705734,
+        0.5760049148715208,
+        0.7382793777006538,
+        0.5760049148705879,
+        0.5760049148705768,
+        0.5760049148706006
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "xgboost_s732",
+      "model": "xgboost",
+      "seed": 732,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.001",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5760049148706408,
+          "stage_requirement_violation": 1.1183276527049202e-12,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.1183276527049202e-12,
+          "recorded_forced_maximum_excess": 6.580291866953303e-13,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.7382793777002578,
+          "stage_requirement_violation": 5.870859354217828e-13,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 5.870859354217828e-13,
+          "recorded_forced_maximum_excess": 1.3655743202889425e-14,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2
+          ],
+          "frozen": [
+            2
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.5760049148699072,
+        0.5760049148695224,
+        0.7382793776996707,
+        0.5760049148706528,
+        0.5760049148706603,
+        0.5760049148706423
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "xgboost_s732",
+      "model": "xgboost",
+      "seed": 732,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.003",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 2.220446049250313e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.8035997529554442,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.04806020532671684,
+        0.0,
+        0.5557770834563734,
+        1.0000000000000093,
+        0.90093415879293,
+        0.8344975443891889
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "xgboost_s732",
+      "model": "xgboost",
+      "seed": 732,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.003",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 2.220446049250313e-16,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 2.220446049250313e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5963149303183684,
+          "stage_requirement_violation": 4.54081217071689e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.5963149303183229,
+        0.5963149303187663,
+        0.7812605373782395,
+        0.596314930318364,
+        0.5963149303183551,
+        0.668301089859078
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "xgboost_s732",
+      "model": "xgboost",
+      "seed": 732,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.003",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.5963149303183684,
+          "stage_requirement_violation": 1.3211653993039363e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.3387402297837525e-11,
+          "recorded_forced_maximum_excess": 3.979039320256561e-13,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.6683010898601163,
+          "stage_requirement_violation": 1.0382805726294464e-12,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 1.0382805726294464e-12,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2,
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.7812605373754841,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 8.177125643271665e-12,
+          "recorded_forced_maximum_excess": 1.9984014443252818e-15,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2
+          ],
+          "frozen": [
+            2
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.596314930329466,
+        0.5963149303317558,
+        0.7812605373836612,
+        0.596314930318364,
+        0.5963149303183551,
+        0.668301089859078
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "xgboost_s733",
+      "model": "xgboost",
+      "seed": 733,
+      "policy": "lp_profit_baseline",
+      "mode": "profit",
+      "beta": null,
+      "stored_status": "PASS",
+      "tau": null,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 0.0,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": []
+    },
+    {
+      "job": "xgboost_s733",
+      "model": "xgboost",
+      "seed": 733,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.001",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 7.275957614183426e-12,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.7990343136172274,
+          "stage_requirement_violation": 8.881784197001252e-16,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        -6.521842597434477e-14,
+        -2.1542625675236397e-13,
+        0.6520422121490148,
+        0.9999999999997764,
+        0.7340240462038247,
+        0.7859113060064912
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "xgboost_s733",
+      "model": "xgboost",
+      "seed": 733,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.001",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 5.551115123125783e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.640343560744676,
+          "stage_requirement_violation": 3.108624468950438e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.6403435607446449,
+        0.6403435607447852,
+        0.6799856132815738,
+        0.6403435607446947,
+        0.640343560744712,
+        0.7243834393381918
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "xgboost_s733",
+      "model": "xgboost",
+      "seed": 733,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.001",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.001,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 3.3306690738754696e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.640343560744676,
+          "stage_requirement_violation": 3.7192471324942744e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 3.285394178931256e-11,
+          "recorded_forced_maximum_excess": 7.460698725481052e-14,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.6799856132826231,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 8.938294548954673e-12,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2,
+            5
+          ],
+          "frozen": [
+            2
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.7243834393431249,
+          "stage_requirement_violation": 4.96624963375325e-12,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 4.96624963375325e-12,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.640343560762254,
+        0.64034356077753,
+        0.6799856132915614,
+        0.6403435607446388,
+        0.6403435607446495,
+        0.7243834393381586
+      ],
+      "normalized_leximin_certificate_pass": true
+    },
+    {
+      "job": "xgboost_s733",
+      "model": "xgboost",
+      "seed": 733,
+      "policy": "budget_allocation_absolute_maxmin_b0.01_tau0.003",
+      "mode": "absolute_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 1.1102230246251565e-16,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 0.0
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.8026529860717769,
+          "stage_requirement_violation": 4.440892098500626e-16,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.024446958850621533,
+        3.6632293757166924e-14,
+        0.47422627413281193,
+        0.9999999999999586,
+        0.871589292023581,
+        0.8665751086584649
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "xgboost_s733",
+      "model": "xgboost",
+      "seed": 733,
+      "policy": "budget_allocation_normalized_maxmin_b0.01_tau0.003",
+      "mode": "normalized_maxmin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 3.637978807091713e-12,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 2.220446049250313e-16
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.6438299644207163,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 0.0,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": []
+        }
+      ],
+      "normalized_opportunity": [
+        0.6438299644233851,
+        0.643829964423948,
+        0.7092929530769313,
+        0.6438299644207244,
+        0.6438299644207328,
+        0.7083774063462254
+      ],
+      "normalized_leximin_certificate_pass": null
+    },
+    {
+      "job": "xgboost_s733",
+      "model": "xgboost",
+      "seed": 733,
+      "policy": "budget_allocation_normalized_leximin_b0.01_tau0.003",
+      "mode": "normalized_leximin",
+      "beta": 0.01,
+      "stored_status": "PASS",
+      "tau": 0.003,
+      "feasible": true,
+      "normalized_certificate_tolerance": 1e-06,
+      "replay": {
+        "simplex_error": 0.0,
+        "negative_weight": 0.0,
+        "threshold_disorder": 0.0,
+        "monotonicity_error": 0.0
+      },
+      "business_checks": {
+        "validation_ids": true,
+        "risk": true,
+        "capital": true,
+        "minimum_approvals": true,
+        "valid_simplex": true,
+        "monotone_approval": true,
+        "fairness": true,
+        "profit_floor": true,
+        "minimum_harm_face": true,
+        "serialized_metrics": true
+      },
+      "serialized_metric_errors": {
+        "utility": 0.0,
+        "risk": 0.0,
+        "gap": 1.1102230246251565e-16,
+        "subgroup_acceptance": 3.3306690738754696e-16
+      },
+      "stage_checks": [
+        {
+          "stage": 0,
+          "level": 0.6438299644207163,
+          "stage_requirement_violation": 6.505906924303417e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 6.505906924303417e-14,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "frozen": [
+            0,
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "stage": 1,
+          "level": 0.7083774063461532,
+          "stage_requirement_violation": 0.0,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 6.361577931102147e-14,
+          "recorded_forced_maximum_excess": 0.0,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2,
+            5
+          ],
+          "frozen": [
+            5
+          ]
+        },
+        {
+          "stage": 2,
+          "level": 0.7092929530751517,
+          "stage_requirement_violation": 2.0650148258027912e-14,
+          "decrease_from_previous": 0.0,
+          "frozen_equality_error": 2.0650148258027912e-14,
+          "recorded_forced_maximum_excess": 2.220446049250313e-14,
+          "missing_forced_evidence": [],
+          "remaining": [
+            2
+          ],
+          "frozen": [
+            2
+          ]
+        }
+      ],
+      "normalized_opportunity": [
+        0.6438299644206862,
+        0.6438299644206512,
+        0.7092929530751311,
+        0.6438299644207244,
+        0.6438299644207045,
+        0.7083774063462168
+      ],
+      "normalized_leximin_certificate_pass": true
+    }
+  ]
+}

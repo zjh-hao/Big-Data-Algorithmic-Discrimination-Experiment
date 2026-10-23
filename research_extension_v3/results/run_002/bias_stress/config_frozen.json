@@ -1,0 +1,287 @@
+{
+  "version": "3.1.0",
+  "split_seed": 20261013,
+  "seeds": [
+    731,
+    732,
+    733
+  ],
+  "threads": 4,
+  "models": [
+    "lightgbm",
+    "tabm"
+  ],
+  "risk_budgets": [
+    0.03,
+    0.05,
+    0.08
+  ],
+  "primary_risk_budget": 0.05,
+  "loss_ratios": [
+    3,
+    5,
+    7,
+    10
+  ],
+  "primary_loss_ratio": 5,
+  "epsilons": [
+    0.1,
+    0.05,
+    0.03,
+    0.02,
+    0.01,
+    0.0
+  ],
+  "primary_epsilon": 0.02,
+  "noharm_deltas": [
+    0.0,
+    0.01,
+    0.02,
+    0.04
+  ],
+  "capital_fractions": [
+    1.0,
+    0.6
+  ],
+  "grid": 256,
+  "minimum_approvals": 500,
+  "income_quantiles": [
+    0.3333333333333333,
+    0.6666666666666666
+  ],
+  "scenario_interest": 0.12,
+  "scenario_cost": 0.03,
+  "bootstrap_repetitions": 1000,
+  "fairlearn_tolerances": [
+    0.0,
+    0.01,
+    0.02,
+    0.05
+  ],
+  "fairlearn_objectives": [
+    "accuracy_score",
+    "balanced_accuracy_score"
+  ],
+  "tabm": {
+    "batch_size": 512,
+    "eval_batch_size": 2048,
+    "k": 16,
+    "d_block": 128,
+    "n_blocks": 2,
+    "max_epochs": 60,
+    "patience": 8,
+    "learning_rate": 0.002,
+    "weight_decay": 0.0003
+  },
+  "m2fgb": {
+    "n_estimators": 400,
+    "max_depth": 5,
+    "learning_rate": 0.05,
+    "fair_weight": 0.5
+  },
+  "sampling_seeds": [
+    17,
+    29,
+    43,
+    61,
+    89
+  ],
+  "sampling_retention": 0.5,
+  "notes": "Historical holdout has been inspected before; all V3 choices use reference/calibration/validation only. No fresh-blind-test claim. ROI and loss are scenarios, TARGET is repayment difficulty.",
+  "followup_search": {
+    "version": "v3.1_reference_search_20261022_v1",
+    "selection_split": "reference",
+    "selection_metric": "ROC AUC",
+    "search_seed": 731,
+    "lightgbm": [
+      {
+        "num_leaves": 15,
+        "min_child_samples": 50,
+        "learning_rate": 0.03,
+        "n_estimators": 2000,
+        "early_stopping_rounds": 60
+      },
+      {
+        "num_leaves": 15,
+        "min_child_samples": 50,
+        "learning_rate": 0.05,
+        "n_estimators": 2000,
+        "early_stopping_rounds": 60
+      },
+      {
+        "num_leaves": 15,
+        "min_child_samples": 150,
+        "learning_rate": 0.03,
+        "n_estimators": 2000,
+        "early_stopping_rounds": 60
+      },
+      {
+        "num_leaves": 15,
+        "min_child_samples": 150,
+        "learning_rate": 0.05,
+        "n_estimators": 2000,
+        "early_stopping_rounds": 60
+      },
+      {
+        "num_leaves": 31,
+        "min_child_samples": 50,
+        "learning_rate": 0.03,
+        "n_estimators": 2000,
+        "early_stopping_rounds": 60
+      },
+      {
+        "num_leaves": 31,
+        "min_child_samples": 50,
+        "learning_rate": 0.05,
+        "n_estimators": 2000,
+        "early_stopping_rounds": 60
+      },
+      {
+        "num_leaves": 31,
+        "min_child_samples": 150,
+        "learning_rate": 0.03,
+        "n_estimators": 2000,
+        "early_stopping_rounds": 60
+      },
+      {
+        "num_leaves": 31,
+        "min_child_samples": 150,
+        "learning_rate": 0.05,
+        "n_estimators": 2000,
+        "early_stopping_rounds": 60
+      },
+      {
+        "num_leaves": 63,
+        "min_child_samples": 50,
+        "learning_rate": 0.03,
+        "n_estimators": 2000,
+        "early_stopping_rounds": 60
+      },
+      {
+        "num_leaves": 63,
+        "min_child_samples": 50,
+        "learning_rate": 0.05,
+        "n_estimators": 2000,
+        "early_stopping_rounds": 60
+      },
+      {
+        "num_leaves": 63,
+        "min_child_samples": 150,
+        "learning_rate": 0.03,
+        "n_estimators": 2000,
+        "early_stopping_rounds": 60
+      },
+      {
+        "num_leaves": 63,
+        "min_child_samples": 150,
+        "learning_rate": 0.05,
+        "n_estimators": 2000,
+        "early_stopping_rounds": 60
+      }
+    ],
+    "tabm": [
+      {
+        "batch_size": 512,
+        "eval_batch_size": 1024,
+        "k": 16,
+        "d_block": 128,
+        "n_blocks": 2,
+        "max_epochs": 120,
+        "patience": 12,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0003
+      },
+      {
+        "batch_size": 512,
+        "eval_batch_size": 1024,
+        "k": 16,
+        "d_block": 128,
+        "n_blocks": 3,
+        "max_epochs": 120,
+        "patience": 12,
+        "learning_rate": 0.002,
+        "weight_decay": 0.0003
+      },
+      {
+        "batch_size": 512,
+        "eval_batch_size": 1024,
+        "k": 32,
+        "d_block": 128,
+        "n_blocks": 4,
+        "max_epochs": 120,
+        "patience": 12,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0003
+      },
+      {
+        "batch_size": 512,
+        "eval_batch_size": 1024,
+        "k": 16,
+        "d_block": 192,
+        "n_blocks": 2,
+        "max_epochs": 120,
+        "patience": 12,
+        "learning_rate": 0.002,
+        "weight_decay": 0.0003
+      },
+      {
+        "batch_size": 512,
+        "eval_batch_size": 1024,
+        "k": 32,
+        "d_block": 192,
+        "n_blocks": 3,
+        "max_epochs": 120,
+        "patience": 12,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0003
+      },
+      {
+        "batch_size": 512,
+        "eval_batch_size": 1024,
+        "k": 16,
+        "d_block": 192,
+        "n_blocks": 4,
+        "max_epochs": 120,
+        "patience": 12,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0003
+      },
+      {
+        "batch_size": 512,
+        "eval_batch_size": 1024,
+        "k": 32,
+        "d_block": 256,
+        "n_blocks": 2,
+        "max_epochs": 120,
+        "patience": 12,
+        "learning_rate": 0.002,
+        "weight_decay": 0.0003
+      },
+      {
+        "batch_size": 512,
+        "eval_batch_size": 1024,
+        "k": 16,
+        "d_block": 256,
+        "n_blocks": 3,
+        "max_epochs": 120,
+        "patience": 12,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0003
+      }
+    ],
+    "bias_arms": [
+      "biased",
+      "corrected",
+      "opportunity1"
+    ],
+    "bias_sampling_seeds": [
+      17,
+      29,
+      43,
+      61,
+      89
+    ],
+    "bias_model_seed": 731,
+    "note": "Historical holdout has been inspected; all follow-up selection remains reference-only."
+  }
+}

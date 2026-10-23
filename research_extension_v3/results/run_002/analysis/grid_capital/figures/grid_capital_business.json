@@ -1,0 +1,9 @@
+{
+  "caption": "Mean across requested seeds; same frozen scores, validation-only rules. Requested grids 256/513/1025, funding caps 1/.8/.6/.4. No monotonic grid-optimum claim for nonnested grids. Test risk/capital/gap breaches remain in source CSV.",
+  "generated_utc": "2026-10-22T13:46:16.462642+00:00",
+  "input_csv_sha256": "1f533e5e0391d6078dc1f508fee899de5982ec49924baecbf8aaf55be9d5d46f",
+  "output_sha256": {
+    "png": "13019d9a6d666ff6ee60912f1d8db29cbb8ff01d5ff1fdd57834659f959d0c07",
+    "pdf": "7780ddb1dd90606ef0649d445a7d6ffb3fb30ca821fdc3d17dcd36b6464da361"
+  }
+}

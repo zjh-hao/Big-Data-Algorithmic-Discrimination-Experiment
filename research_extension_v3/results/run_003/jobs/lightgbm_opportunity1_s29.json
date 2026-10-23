@@ -1,0 +1,17 @@
+{
+  "job": "lightgbm_opportunity1_s29",
+  "model": "lightgbm_opportunity1",
+  "seed": 29,
+  "experiment": "stress",
+  "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress",
+  "status": "PASS",
+  "finished": "2026-10-22T14:35:16.589654+00:00",
+  "seconds": 0.794234699998924,
+  "source_prediction_sha256": {
+    "validation": "70dbe755c753dd093683b3d7d9e2a1b406f315be1e3988a9140b6960f24c09f3",
+    "test": "35e8799c00e6da212681386b447dc067ad54774ad89f54e9ff878ff33976bfb7"
+  },
+  "frozen_sha256": "c6e5b36b2872b33e6957e5e4f7244e217c5756cbf638b8a60616154ca937c97d",
+  "policies": 9,
+  "feasible": 7
+}

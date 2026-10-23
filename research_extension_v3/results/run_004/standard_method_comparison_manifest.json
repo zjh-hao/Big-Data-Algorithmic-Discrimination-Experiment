@@ -1,0 +1,39 @@
+{
+  "generated": "2026-10-22T14:45:56.660522+00:00",
+  "source_sha256": "e4ac269d3c193a4612b2b41e6aac1cba08f32eeb10c5a4a38ba56a83667a4c1f",
+  "inputs": {
+    "lightgbm_s731": {
+      "prediction": "0988f0b1615f8f6099f63988ddf780e49ffdf6ba08575192be5205f3a2fc8f82",
+      "fairlearn_decisions": "cc54099545925bc27396385f12db6159cc7fe7a8baedeec04ca0d8cfa16686d5",
+      "our_decisions": "0297e755fcc86f5893717f412445a092ebec200a7f5ae360657c704c78cad9cd"
+    },
+    "lightgbm_s732": {
+      "prediction": "ccdae77d69ce7686fb7d07b37f55452303b51e18ea5a2ec489557742cc97655d",
+      "fairlearn_decisions": "6f60061d9302ef547dac3b05b727252e1e428e0bdd63b66ef31c0b332d62c00e",
+      "our_decisions": "3a5fe0a348258d775e6a66cf3742df0350794eaf46b914b3ea36bff327117598"
+    },
+    "lightgbm_s733": {
+      "prediction": "062d3afa382dc9c833b3666f43c290cdd1caae4d5a1e9ff3cfa8301af640ad2c",
+      "fairlearn_decisions": "df796af5729c85f1b0ff5dc8d5263a3e2a465656dd8011f49107698196bc7ce0",
+      "our_decisions": "12dd2e9383ea0b4b70ac2fcd3cc5ff080669c2e8a398540a69b9669af4ca37c7"
+    },
+    "tabm_s731": {
+      "prediction": "385a2b7e1160304c0faf2853e31d4797e41710db233dcbc96866d123fede1c38",
+      "fairlearn_decisions": "9724520b03bb8bc750e4bbfc93e74af54bbb0af3ffe6c2f9ad3f9a5d52c4e4a7",
+      "our_decisions": "4745788b5aa9b9e975d45065e9e510946b8d5f26bd49b6fb516b65957a417922"
+    },
+    "tabm_s732": {
+      "prediction": "ab221a158fc47492addd1eae847a65ec8fa7bb07a795d6f536fdecfb9e8f8408",
+      "fairlearn_decisions": "2b9b66ce619ee8f807f4cf2b8edd1f025f6856f5baf614cd3cbac822eb931bdd",
+      "our_decisions": "6f89b4732a0e65e721904abb8431ca8686d9accb481bae4c24aabfcc0650644c"
+    },
+    "tabm_s733": {
+      "prediction": "ed98c38766aab064da3f62e07509c45127d35a28f69490b7924e2c13a910ceb5",
+      "fairlearn_decisions": "49627ce8a41e0b658685a32fa7c3afdb8000c6e86f0ede53c2111fee246d77e2",
+      "our_decisions": "e64d5f4bce83a64c1287b668b7e7898694a75f73e862a47ca97aa22a6f7c24d5"
+    }
+  },
+  "rows": 42,
+  "protocol": "Fixed Fairlearn tol=.02 from run002, frozen main run004 methods, same model/seed/applicant outcomes",
+  "interpretation": "Objectives and policy spaces differ. Differences quantify practical matched-score behavior, not universal superiority. Expected randomized metrics."
+}

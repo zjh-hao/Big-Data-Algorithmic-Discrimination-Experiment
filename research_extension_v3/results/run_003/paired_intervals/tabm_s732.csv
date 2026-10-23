@@ -1,0 +1,4 @@
+﻿job,policy,baseline,metric,lower,upper,bootstrap_mean,repetitions,uncertainty
+tabm_s732,lp_gap,lp_profit_baseline,utility_per_1000_applicants,-5.426723726970448,1.0019294877222702,-2.2761309861007493,1000,paired applicant bootstrap of expected decisions
+tabm_s732,lp_gap,lp_profit_baseline,abs_frr_gap,-0.11429380615092175,-0.1054160492658389,-0.10979899018071947,1000,paired applicant bootstrap of expected decisions
+tabm_s732,lp_gap,lp_profit_baseline,worst_subgroup_frr,-0.09013190425454815,-0.07636134570598099,-0.08317225571099846,1000,paired applicant bootstrap of expected decisions

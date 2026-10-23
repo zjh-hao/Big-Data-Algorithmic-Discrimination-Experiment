@@ -1,0 +1,23 @@
+{
+  "code_sha256": "47a8277b243b49356c7a2bd86a8dfc5e53aef7c46c9cf4bbac6716ee902fb252",
+  "helper_code_sha256": "f238c9362208cd75094a19007778f02699d99fb2c83d5f3bfd76d05df5f1780e",
+  "loss_source_sha256": "9cacd5ac9f51ef6df9a2f73b6c887bf414542ca8b55749ed63a22ad6e87463dd",
+  "lambdas": [
+    0.5,
+    1.0,
+    4.0
+  ],
+  "sampling_seeds": [
+    17,
+    29,
+    43,
+    61,
+    89
+  ],
+  "formula": "L=(1/n) sum_i BCE_i + (lambda/2) sum_g mean_{i:g,TARGET=0} BCE_i",
+  "equivalent_weight": "w_i=1+lambda*n/(2*n_g0)*I(TARGET_i=0), then divide by mean(w)",
+  "interpretation": "Both normal-label groups receive an equal-group opportunity term; not a hard FRR-gap constraint",
+  "approval_objective": "Unchanged: validation maximum common-threshold approval count at risk <= 5%",
+  "training_weight_validation": "PASS: algebraic loss/weight equivalence and mean-one weights",
+  "source_file": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\audit_extension\\run_experiment.py"
+}

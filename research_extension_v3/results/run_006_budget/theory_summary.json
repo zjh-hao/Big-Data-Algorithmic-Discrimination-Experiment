@@ -1,0 +1,28 @@
+{
+  "updated": "2026-10-23T07:36:58.172536+00:00",
+  "unit_tests_passed": 61,
+  "primary_new_gap_success": 2,
+  "primary_old_gap_success": 5,
+  "exact_face_audit": {
+    "run": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_005_theory",
+    "data_used": "validation only; no test predictions read",
+    "method": "Direct threshold replay and recomputation; consistency audit of recorded range/optimal-face evidence",
+    "limitation": "This audit does not independently prove the LP extrema with exact arithmetic. Business feasibility and normalized leximin precision are reported separately.",
+    "normalized_certificate_tolerance": 1e-06,
+    "policy_rows": 90,
+    "feasible_policies": 90,
+    "business_constraint_failures": 0,
+    "feasible_leximin_policies": 27,
+    "leximin_numerical_certificate_failures": 3,
+    "leximin_fixed_range_cases": 12,
+    "primary_group_range_count": 54,
+    "primary_range_max": 1.5441707308383457e-06,
+    "primary_range_median": 5.1876724638244553e-08
+  },
+  "conclusion": "Retain existing absolute-worst primary approval. New contribution: explicit dual-budget diagnostics and inverse opportunity pricing; normalized allocation is a tradeoff ablation, not a universal improvement.",
+  "figures": [
+    "allocation_space.png",
+    "inverse_opportunity_price.png",
+    "same_budget_tradeoff.png"
+  ]
+}

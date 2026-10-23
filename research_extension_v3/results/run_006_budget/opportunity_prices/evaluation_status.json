@@ -1,0 +1,85 @@
+{
+  "status": "COMPLETE",
+  "completed_utc": "2026-10-23T07:30:12.206874+00:00",
+  "jobs": 9,
+  "policies": 27,
+  "independent_checks": 2160,
+  "failures": 0,
+  "fit_calls": 0,
+  "target_selection": "None; all three pre-frozen eta values replayed for every scorer",
+  "target_interpretation": "Validation target is W0_validation+eta. Test gain is minimum test opportunity minus the frozen W0 policy's minimum test opportunity; it is measured, not imposed.",
+  "sampling_interpretation": "Expected metrics under frozen stochastic mixtures; historical test has already been inspected",
+  "pricing_plan_sha256": "8b78217060851f73d82316e3f95726581e5bafa2baee804212faefea60ad859b",
+  "evaluator_sha256": "cca7f5d4b0df97e42197db855c07e5eb8eed3e931db82221fcc0212bca488216",
+  "output_csv_sha256": "0bab78eec7eadb2c07424ede8b9e4e9c720e00de747ef68adc51fad0668a0acb",
+  "output_csv": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_006_budget\\opportunity_prices\\test_evaluation.csv",
+  "input_fingerprints": [
+    {
+      "job": "lightgbm_s731",
+      "pricing_job_sha256": "d7c6b620948dee3b2bb4f18f2df1b6c88b4d6cb4e2a1463d423383a1e29132a7",
+      "test_prediction_sha256": "0988f0b1615f8f6099f63988ddf780e49ffdf6ba08575192be5205f3a2fc8f82",
+      "baseline_approval_sha256": "2669e3eafc7d1bdf0e3aed81b18f380310fd9136a898e9996c1ed25874b9ad37",
+      "W0_approval_sha256": "90383d169e96551c8780c1074d8ed6784f3e4482866d22d87a0605b2d8a48e8b"
+    },
+    {
+      "job": "lightgbm_s732",
+      "pricing_job_sha256": "4f4928d28169c8600b564344f54564c1555c4a6d7b2261a23990cc00fff6d4fc",
+      "test_prediction_sha256": "ccdae77d69ce7686fb7d07b37f55452303b51e18ea5a2ec489557742cc97655d",
+      "baseline_approval_sha256": "3a7fec5a85a360cde58babec1851b671427a8281807175d9fcf0e13d9d9ef048",
+      "W0_approval_sha256": "8637ca50660a3ee5459ac78a21a64ee3517918a422c5132001b010edc18e1def"
+    },
+    {
+      "job": "lightgbm_s733",
+      "pricing_job_sha256": "5eda78f5e1435bd76b1ca63e4716a532add4867d537f8a5a2f623970108de6c2",
+      "test_prediction_sha256": "062d3afa382dc9c833b3666f43c290cdd1caae4d5a1e9ff3cfa8301af640ad2c",
+      "baseline_approval_sha256": "b9d1dcecf7261725c443ce46cd4f5b3b67e47a4c5881416e430823416b94dcd9",
+      "W0_approval_sha256": "46539b43096c9dd038d57207b68eb2792514aae56c88daec343f11ad78f94642"
+    },
+    {
+      "job": "tabm_s731",
+      "pricing_job_sha256": "14f94b8d22444ef3465de350d5618985f88ac834f3867949b71c07335a23f497",
+      "test_prediction_sha256": "385a2b7e1160304c0faf2853e31d4797e41710db233dcbc96866d123fede1c38",
+      "baseline_approval_sha256": "008869ba3987e795e9e9e26907ed9c4939cdd9fa8e8b97efe9ab84a414b44f92",
+      "W0_approval_sha256": "5faf695d9cf45dbc8ccd8141b5851dab7d6658ce7c986308f184128f3c280eed"
+    },
+    {
+      "job": "tabm_s732",
+      "pricing_job_sha256": "ec80cfc9909194cb4d7919777120afb28e6e2307449e6bf97fb5d206ce133096",
+      "test_prediction_sha256": "ab221a158fc47492addd1eae847a65ec8fa7bb07a795d6f536fdecfb9e8f8408",
+      "baseline_approval_sha256": "7ee7d95adb200451d36e5b48f3eecac2df598ce6c448e86c383c45d8df1a2f64",
+      "W0_approval_sha256": "149de9d2c8036865303c70351159791062ce00413964e38951156ffb84970e81"
+    },
+    {
+      "job": "tabm_s733",
+      "pricing_job_sha256": "d6530380edc34e3d7273f2e391de89d00b99b52b21a7570fe95dfe5dc7978bee",
+      "test_prediction_sha256": "ed98c38766aab064da3f62e07509c45127d35a28f69490b7924e2c13a910ceb5",
+      "baseline_approval_sha256": "a01785a010e5351b8deb47a0ff90c015bc559df4118e7536badfca2ed2552ce4",
+      "W0_approval_sha256": "3444c401ca3b4a43c4727203f1bb3bdc9732b65b65f9928ea33d16995c2cbb7d"
+    },
+    {
+      "job": "xgboost_s731",
+      "pricing_job_sha256": "901d1164cc988a40b88dcaa7e3b8117e66e9372a9fa74f54dd28adb5a2fccc2f",
+      "test_prediction_sha256": "49ae643a34f6979f842fa3f0ac8a3d48c664dbb4034bb217749eb4ccd7ab1a89",
+      "baseline_approval_sha256": "9cce25f1dc8c15c58a1b95c9d25889571be6749d064a981520d6b2fcd4be30fb",
+      "W0_approval_sha256": "b18e00dd09dd1bc02c5242761727a9d4cde735b6d3b62d68a15943d8f3be0b61"
+    },
+    {
+      "job": "xgboost_s732",
+      "pricing_job_sha256": "6cc13123636ac9cccdc5c0aaf33d3d7d9411998a2f4bedb5b91d4663155b5f2c",
+      "test_prediction_sha256": "665855e533108bd87a4289b807de8d171273ae6c4289bfa1e6f86aba448022f4",
+      "baseline_approval_sha256": "de03df30da08fc3e84e6bf56bea8fb5c67d623911d4d823336531a1123447837",
+      "W0_approval_sha256": "7f2dd5e9f412711444d7a16357ae134e2b2c29cbcc03082b0bfe23327ffe42c5"
+    },
+    {
+      "job": "xgboost_s733",
+      "pricing_job_sha256": "218bd7f7d9b6e762a59423f551794e1d22e52a96cae05617866add736c56fe1e",
+      "test_prediction_sha256": "e3ad0176f92a84b8967456ac7110f86b22422930a8e0a46e3c96438025e302cb",
+      "baseline_approval_sha256": "ac4978717c2e6493dae6a0e2df7e142b0982ffe906305a3ac5fced639a847586",
+      "W0_approval_sha256": "58488ae67fc5ae6c2a9f374e5d8f5a0631041b0f31c714546e2af3c14b784380"
+    }
+  ],
+  "test_gap_met": 8,
+  "test_risk_met": 27,
+  "test_profit_floor_met": 27,
+  "test_eta_gain_met_vs_W0_policy": 9
+}

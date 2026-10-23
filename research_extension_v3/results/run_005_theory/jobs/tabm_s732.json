@@ -1,0 +1,14 @@
+{
+  "model": "tabm",
+  "seed": 732,
+  "status": "PASS",
+  "finished": "2026-10-23T07:16:15.887901+00:00",
+  "source_prediction_sha256": {
+    "validation": "91420dccedc673f6d6d0bb9944cc7a7ab4df88e257687281ceddc2a65cb7c38b",
+    "test": "ab221a158fc47492addd1eae847a65ec8fa7bb07a795d6f536fdecfb9e8f8408"
+  },
+  "frozen_policy_sha256": "71def88abe9899a2421e30926e5a3a7c86c7f765fb3bb7f63c26361bbde7cba6",
+  "policy_rows": 11,
+  "checks": 763,
+  "seconds": 14.029957699996885
+}

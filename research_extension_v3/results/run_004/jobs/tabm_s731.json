@@ -1,0 +1,154 @@
+{
+  "job": "tabm_s731",
+  "model": "tabm",
+  "seed": 731,
+  "experiment": "main",
+  "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002",
+  "policy_specs": [
+    {
+      "name": "adaptive_primary",
+      "mode": "adaptive_protected_minimax",
+      "protection": "six",
+      "minimax_scope": "six",
+      "beta": 0.01,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "robust": false,
+      "deterioration_slack": 0.001
+    },
+    {
+      "name": "adaptive_robust",
+      "mode": "adaptive_protected_minimax",
+      "protection": "six",
+      "minimax_scope": "six",
+      "beta": 0.01,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "robust": true,
+      "deterioration_slack": 0.001
+    },
+    {
+      "name": "lp_gap",
+      "mode": "profit_gap",
+      "epsilon": 0.02
+    },
+    {
+      "name": "minimax_six",
+      "mode": "budgeted_minimax",
+      "beta": 0.01,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "protection": "six",
+      "minimax_scope": "six"
+    },
+    {
+      "name": "adaptive_beta_0",
+      "mode": "adaptive_protected_minimax",
+      "protection": "six",
+      "minimax_scope": "six",
+      "beta": 0,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "robust": false,
+      "deterioration_slack": 0.001
+    },
+    {
+      "name": "adaptive_beta_0.005",
+      "mode": "adaptive_protected_minimax",
+      "protection": "six",
+      "minimax_scope": "six",
+      "beta": 0.005,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "robust": false,
+      "deterioration_slack": 0.001
+    },
+    {
+      "name": "adaptive_beta_0.02",
+      "mode": "adaptive_protected_minimax",
+      "protection": "six",
+      "minimax_scope": "six",
+      "beta": 0.02,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "robust": false,
+      "deterioration_slack": 0.001
+    },
+    {
+      "name": "adaptive_beta_0.03",
+      "mode": "adaptive_protected_minimax",
+      "protection": "six",
+      "minimax_scope": "six",
+      "beta": 0.03,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "robust": false,
+      "deterioration_slack": 0.001
+    },
+    {
+      "name": "adaptive_beta_0.05",
+      "mode": "adaptive_protected_minimax",
+      "protection": "six",
+      "minimax_scope": "six",
+      "beta": 0.05,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "robust": false,
+      "deterioration_slack": 0.001
+    },
+    {
+      "name": "adaptive_robust_beta_0.02",
+      "mode": "adaptive_protected_minimax",
+      "protection": "six",
+      "minimax_scope": "six",
+      "beta": 0.02,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "robust": true,
+      "deterioration_slack": 0.001
+    },
+    {
+      "name": "adaptive_robust_beta_0.03",
+      "mode": "adaptive_protected_minimax",
+      "protection": "six",
+      "minimax_scope": "six",
+      "beta": 0.03,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "robust": true,
+      "deterioration_slack": 0.001
+    },
+    {
+      "name": "adaptive_robust_beta_0.05",
+      "mode": "adaptive_protected_minimax",
+      "protection": "six",
+      "minimax_scope": "six",
+      "beta": 0.05,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "robust": true,
+      "deterioration_slack": 0.001
+    },
+    {
+      "name": "lp_profit_risk_robust",
+      "mode": "profit",
+      "robust": true
+    },
+    {
+      "name": "lp_gap_robust",
+      "mode": "profit_gap",
+      "epsilon": 0.02,
+      "robust": true
+    }
+  ],
+  "status": "PASS",
+  "finished": "2026-10-22T14:44:11.762897+00:00",
+  "seconds": 2.8378365999997186,
+  "source_prediction_sha256": {
+    "validation": "bfc69b77f25e309237c1139b5613a45e203ac5510717ac0fad8313c8dd7f98a4",
+    "test": "385a2b7e1160304c0faf2853e31d4797e41710db233dcbc96866d123fede1c38"
+  },
+  "frozen_sha256": "f4793579455ba8726f4e163fdbc3b1241a3ba736a8cbaa9bbdb58827f3a9dc07",
+  "policies": 18,
+  "feasible": 13
+}

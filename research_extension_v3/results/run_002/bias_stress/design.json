@@ -1,0 +1,22 @@
+{
+  "selection_sha256": "101f878558f8ace540a7d867a76a031b57daec86f1324cb25f1711a1ad81f38a",
+  "model_seed": 731,
+  "sampling_seeds": [
+    17,
+    29,
+    43,
+    61,
+    89
+  ],
+  "arms": [
+    "biased",
+    "corrected",
+    "opportunity1"
+  ],
+  "loss_source_sha256": "9cacd5ac9f51ef6df9a2f73b6c887bf414542ca8b55749ed63a22ad6e87463dd",
+  "mechanisms_sha256": "f238c9362208cd75094a19007778f02699d99fb2c83d5f3bfd76d05df5f1780e",
+  "followup_sha256": "2076d544efeafdcb38c4a76e6a885d620524f8269861955cd1948d434ecbb1fb",
+  "retention": 0.5,
+  "notes": "All arms share selected LightGBM hyperparameters, calibration split, validation policies and test rows; seed field denotes sampling seed, not model initialization.",
+  "opportunity_formula": "Exact audit_extension loss_weights(y,group,1,1), normalized to mean one"
+}

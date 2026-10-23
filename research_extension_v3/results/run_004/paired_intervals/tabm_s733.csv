@@ -1,0 +1,7 @@
+﻿job,policy,baseline,metric,lower,upper,bootstrap_mean,repetitions,uncertainty
+tabm_s733,adaptive_primary,lp_profit_baseline,utility_per_1000_applicants,-2.152529427182131,4.121297177077068,1.1104271566802326,1000,paired applicant bootstrap of expected decisions
+tabm_s733,adaptive_primary,lp_profit_baseline,abs_frr_gap,-0.10567598113237019,-0.09679832977233607,-0.100979381189253,1000,paired applicant bootstrap of expected decisions
+tabm_s733,adaptive_primary,lp_profit_baseline,worst_subgroup_frr,-0.08579552999423383,-0.0720675072578356,-0.07853837432853789,1000,paired applicant bootstrap of expected decisions
+tabm_s733,lp_gap,lp_profit_baseline,utility_per_1000_applicants,-2.2730098675166746,3.2248384911351136,0.38452387136753985,1000,paired applicant bootstrap of expected decisions
+tabm_s733,lp_gap,lp_profit_baseline,abs_frr_gap,-0.10237320834274223,-0.09393905309660115,-0.09817374414002396,1000,paired applicant bootstrap of expected decisions
+tabm_s733,lp_gap,lp_profit_baseline,worst_subgroup_frr,-0.08404293640536993,-0.06954706217752445,-0.07642458599352608,1000,paired applicant bootstrap of expected decisions

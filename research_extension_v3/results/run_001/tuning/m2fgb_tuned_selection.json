@@ -1,0 +1,47 @@
+{
+  "model": "m2fgb_tuned",
+  "selection_split": "reference",
+  "selection_metric": "ROC AUC",
+  "seed": 731,
+  "parameters": {
+    "n_estimators": 400,
+    "max_depth": 5,
+    "learning_rate": 0.05,
+    "fair_weight": 0.1
+  },
+  "trials": [
+    {
+      "parameters": {
+        "n_estimators": 400,
+        "max_depth": 5,
+        "learning_rate": 0.05,
+        "fair_weight": 0.05
+      },
+      "reference_auc": 0.7674957454470234,
+      "artifact": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_001\\checkpoints\\m2fgb_tuned_s731\\trial_00"
+    },
+    {
+      "parameters": {
+        "n_estimators": 400,
+        "max_depth": 5,
+        "learning_rate": 0.05,
+        "fair_weight": 0.1
+      },
+      "reference_auc": 0.7675690169973748,
+      "artifact": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_001\\checkpoints\\m2fgb_tuned_s731\\trial_01"
+    },
+    {
+      "parameters": {
+        "n_estimators": 400,
+        "max_depth": 5,
+        "learning_rate": 0.05,
+        "fair_weight": 0.5
+      },
+      "reference_auc": 0.7209955900531868,
+      "artifact": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_001\\checkpoints\\m2fgb_tuned_s731\\trial_02"
+    }
+  ],
+  "frozen_utc": "2026-10-22T12:31:26.127810+00:00",
+  "input_fingerprint": "6f358d8db93ea918e6fcd8565060948b01ef634b77ebcb19d23ac6602da7e0eb",
+  "guard_attestation": "Added after successful run; original selected parameters and trials preserved"
+}

@@ -1,0 +1,7 @@
+﻿job,policy,baseline,metric,lower,upper,bootstrap_mean,repetitions,uncertainty
+xgboost_s733,adaptive_primary,lp_profit_baseline,utility_per_1000_applicants,-1.5812187242544211,1.1880671808428216,-0.1914127850372405,1000,paired applicant bootstrap of expected decisions
+xgboost_s733,adaptive_primary,lp_profit_baseline,abs_frr_gap,-0.033677178537103857,-0.030539722719268837,-0.032041033958799814,1000,paired applicant bootstrap of expected decisions
+xgboost_s733,adaptive_primary,lp_profit_baseline,worst_subgroup_frr,-0.026690992723351303,-0.021800306273238288,-0.024144485230742353,1000,paired applicant bootstrap of expected decisions
+xgboost_s733,lp_gap,lp_profit_baseline,utility_per_1000_applicants,-1.769062659506119,1.2460600037783618,-0.3669916926400019,1000,paired applicant bootstrap of expected decisions
+xgboost_s733,lp_gap,lp_profit_baseline,abs_frr_gap,-0.03132224039917271,-0.02795762388382987,-0.029655060215125203,1000,paired applicant bootstrap of expected decisions
+xgboost_s733,lp_gap,lp_profit_baseline,worst_subgroup_frr,-0.025154540643342653,-0.020019179298425564,-0.022458777077248585,1000,paired applicant bootstrap of expected decisions

@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "generated_utc": "2026-10-22T14:42:58.857623+00:00",
+  "verifier_source_sha256": "7a0d9d72b6872a142cdafa2ab53f5c154552055654698357ea2e378140fb66a8",
+  "experiment_plan_sha256": "e31a20de2f81da3d2b54e1942adc7ccfa7ec85550876afe80f16b8e2a0c34940",
+  "expected_jobs": 24,
+  "audited_jobs": 24,
+  "expected_policy_records": 279,
+  "actual_policy_records": 279,
+  "feasible_policies": 173,
+  "infeasible_policies": 106,
+  "split_manifest_sha256": {
+    "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\split_manifest.parquet": "becf4665452be8884a9723e3786bc6e2b990c3f6f4f92ad453cffefdaa248583",
+    "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_001\\split_manifest.parquet": "becf4665452be8884a9723e3786bc6e2b990c3f6f4f92ad453cffefdaa248583",
+    "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress\\split_manifest.parquet": "becf4665452be8884a9723e3786bc6e2b990c3f6f4f92ad453cffefdaa248583"
+  },
+  "independent_checks": 25767,
+  "failed_checks": 0,
+  "failures": [],
+  "out_of_sample_constraint_observations": 1031,
+  "out_of_sample_constraint_violations": 59,
+  "test_violation_counts_by_constraint": {
+    "gap": 41,
+    "protect_g0_income1": 9,
+    "protect_thick": 9
+  },
+  "scope": "Independent decision replay, metric arithmetic, actual validation constraints, hashes and finite-job completeness; no LP optimality certificate or infeasibility proof",
+  "decision_semantics": "Approval probabilities and expected counts; test breaches retained as observations, not hidden or refitted",
+  "files": {
+    "protected_verification_audit.csv": "051e5f76fe4ff3e8c7bb1f199fc6988e93b8a5fc88dd1d88c4e1e86924647925",
+    "protected_test_constraint_observations.csv": "5eb8aad3da91a627c96568a99353c3eb09a7703e51fb53f4ee325be29bf9fd54",
+    "protected_independent_metrics.csv": "dbe808610c55af50ca5f994b46b5eaf106c8ea942319facec8ede22152caa4a0"
+  }
+}

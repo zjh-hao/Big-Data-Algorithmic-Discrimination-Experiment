@@ -1,0 +1,16 @@
+{
+  "status": "COMPLETE",
+  "completed_utc": "2026-10-23T07:39:50.552349+00:00",
+  "unit_tests_passed": 61,
+  "allocation_jobs": 9,
+  "allocation_rows": 72,
+  "allocation_independent_checks": 4977,
+  "leximin_audit_passed": 18,
+  "inverse_pricing_rows": 27,
+  "pricing_replay_checks": 2160,
+  "original_runs_preserved": true,
+  "training_jobs_pending": 0,
+  "source_hashes_verified": true,
+  "document": "research_extension_v3/theory_extension/theory_note/main.tex",
+  "readable_note": "research_extension_v3/THEORY_RESEARCH_UPDATE_CN.txt"
+}

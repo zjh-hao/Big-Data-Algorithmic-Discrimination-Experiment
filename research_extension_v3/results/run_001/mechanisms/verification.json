@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-10-22T12:36:11.786831+00:00",
+  "jobs_verified": 21,
+  "recomputed_metric_checks": 210,
+  "checks": [
+    "Stored test decisions match validation-frozen thresholds",
+    "Training and test IDs disjoint",
+    "Every per-job artifact hash matches saved record",
+    "Test FRRs, group gap, risk, counts, utility, amount utility and AUC independently recomputed"
+  ],
+  "business_code_sha256": "f4bb23026e16851254dea2c7259aeac2cfd47520c6163c4da682450bb1b908e8"
+}

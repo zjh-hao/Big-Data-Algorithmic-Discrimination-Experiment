@@ -1,0 +1,8 @@
+{
+  "status": "COMPLETE",
+  "completed_jobs": 9,
+  "expected_jobs": 9,
+  "rows": 27,
+  "updated": "2026-10-23T07:24:31.902430+00:00",
+  "split": "validation_only"
+}

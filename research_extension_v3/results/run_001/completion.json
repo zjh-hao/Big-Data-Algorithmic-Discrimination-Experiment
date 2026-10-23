@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "completed_utc": "2026-10-22T12:54:35.066748+00:00",
+  "model_seed_jobs": 18,
+  "business_fairlearn_jobs": 18,
+  "mechanism_jobs": 21,
+  "new_training_objective_jobs": 18,
+  "policy_records": 1728,
+  "automated_tests_passed": 24,
+  "independent_audit_categories": 276,
+  "independent_audit_failures": 0,
+  "bootstrap_repetitions": 1000,
+  "presentation_figures": 8,
+  "outputs_sha256": {
+    "model_metrics.csv": "69d77a1e5408922ac6f330e660f4f3021fcbd836852a67e2ec3bc889595bb83e",
+    "policy_metrics.csv": "9944ab8385d01be49bdec32b56b12363980c44cb835469d7e00dd7bfa8be2b15",
+    "fairlearn_business\\metrics.csv": "7f34403022f6f2c846d6465478767fca33ef2c068e74e6af6279d69566dd9bb3",
+    "mechanisms\\verification.json": "3e05a8cddd6ee9aefe4d6c2baceac4ad0f06ce7d9e3cac3d2c840e7f99ef02c9",
+    "training_objective\\verification.json": "ea87392cdc1bfe6f75092d5c28340bfb638d8621050713234d09f9fd47eedc96",
+    "RESULTS_CN.txt": "99d83a2fd23e44b44e7312b05309442c1e6b2cb697f01e9baecb50b94250e7a0",
+    "figure_manifest.json": "daec49886175dce016ed0a92f020514c1b9c70a6d970c6ba0e9ad3b73dc23ef2",
+    "verification.json": "896907f470f01888abc4ac4a99a61749c49eb834a5fdc179fb26d0e9e77e240b"
+  }
+}

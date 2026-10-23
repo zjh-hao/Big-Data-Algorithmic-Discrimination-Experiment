@@ -1,0 +1,17 @@
+{
+  "job": "tabm_s731",
+  "model": "tabm",
+  "seed": 731,
+  "experiment": "main",
+  "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002",
+  "status": "PASS",
+  "finished": "2026-10-22T14:34:59.452960+00:00",
+  "seconds": 1.0592641000002914,
+  "source_prediction_sha256": {
+    "validation": "bfc69b77f25e309237c1139b5613a45e203ac5510717ac0fad8313c8dd7f98a4",
+    "test": "385a2b7e1160304c0faf2853e31d4797e41710db233dcbc96866d123fede1c38"
+  },
+  "frozen_sha256": "dfe4afa468241c000f55998178b37150b697882bf913c519575655b8cbb93fe9",
+  "policies": 16,
+  "feasible": 4
+}

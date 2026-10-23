@@ -1,0 +1,12 @@
+{
+  "model": "lightgbm",
+  "seed": 732,
+  "calibration_variant": "platt",
+  "loss_ratio": 7.0,
+  "threshold": 0.125,
+  "selection_protocol": "analytic expectation threshold; no fitted validation threshold",
+  "risk_constraint_enforced": false,
+  "capital_constraint_enforced": false,
+  "fairness_constraint_enforced": false,
+  "frozen_utc": "2026-10-22T13:44:22.943186+00:00"
+}

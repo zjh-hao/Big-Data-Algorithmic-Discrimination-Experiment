@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE",
+  "updated": "2026-10-23T07:21:37.177482+00:00",
+  "completed_jobs": 9,
+  "expected_jobs": 9,
+  "source_sha256": {
+    "allocation_policy.py": "991b9f2296a00370a3b3b4722a7de309493fc6af28213fd4478f490c340ccba8",
+    "budget_allocation.py": "a7bc5bc220119c68de59498e4816b9a8efd40dcd8e9995e657624ba3c90a7112",
+    "paired_certificate.py": "f44c67c03594bf35ad64624023c348a0833e66941b451df1baffb3a2b2b6967b",
+    "run_budget.py": "16831cafdf4414544417ab01d12ab9f5bf467b42bacfe9148b48e5196897cd06"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "status": "PASS",
+  "name": "biased_drop_thin_good_sampling29",
+  "completed_utc": "2026-10-22T12:18:59.908016+00:00",
+  "wall_seconds": 13.216034299999592,
+  "code_sha256": "f238c9362208cd75094a19007778f02699d99fb2c83d5f3bfd76d05df5f1780e",
+  "source_helper_sha256": "d048cbf6d56ad62f3622602cfa16ee053ab29b9ae6b3e2154a4453dea315c360",
+  "business_code_sha256": "f4bb23026e16851254dea2c7259aeac2cfd47520c6163c4da682450bb1b908e8",
+  "split_manifest_sha256": "becf4665452be8884a9723e3786bc6e2b990c3f6f4f92ad453cffefdaa248583",
+  "model_parameters": {
+    "n_estimators": 200,
+    "max_depth": 5,
+    "learning_rate": 0.05,
+    "tree_method": "hist",
+    "device": "cpu",
+    "max_bin": 128,
+    "n_jobs": 4,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 5,
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "random_state": 731
+  },
+  "reference_weights_assumption": "independent representative labeled reference split",
+  "reused_model": null,
+  "training_cells": [
+    {
+      "group": 0,
+      "TARGET": 0,
+      "count": 105074,
+      "weight_sum": 105074.0
+    },
+    {
+      "group": 0,
+      "TARGET": 1,
+      "count": 8635,
+      "weight_sum": 8635.0
+    },
+    {
+      "group": 1,
+      "TARGET": 0,
+      "count": 18134,
+      "weight_sum": 18134.0
+    },
+    {
+      "group": 1,
+      "TARGET": 1,
+      "count": 3777,
+      "weight_sum": 3777.0
+    }
+  ],
+  "sample_design": {
+    "matched_cells": [
+      {
+        "group": 0,
+        "label": 0,
+        "count": 105074
+      },
+      {
+        "group": 0,
+        "label": 1,
+        "count": 8635
+      },
+      {
+        "group": 1,
+        "label": 0,
+        "count": 19844
+      },
+      {
+        "group": 1,
+        "label": 1,
+        "count": 2067
+      }
+    ],
+    "reference_cell_weights_thick_good_bad_thin_good_bad": [
+      0.8820610107600064,
+      0.8820526161750838,
+      1.764202513988656,
+      0.8815855509825102
+    ]
+  },
+  "metrics": {
+    "condition": "biased_drop_thin_good",
+    "sampling_seed": 29,
+    "model_seed": 731,
+    "training_records": 135620,
+    "train_thin_count": 21911,
+    "train_thick_count": 113709,
+    "train_thin_difficulty_rate": 0.17237917027976815,
+    "train_thick_difficulty_rate": 0.0759394594974892,
+    "auc": 0.7576716505438669,
+    "average_precision": 0.23770463303938383,
+    "brier": 0.06803699922664073,
+    "validation_threshold": 0.11687271296977997,
+    "validation_approvals": 24256,
+    "validation_risk": 0.04996701846965699,
+    "records": 61503,
+    "approvals": 48408.0,
+    "approval_rate": 0.7870835568996635,
+    "good_approved": 46092.0,
+    "difficulty_count": 2316.0,
+    "risk": 0.04784333168071393,
+    "expected_risk": 0.047541946832025894,
+    "approved_amount": 30092611950.0,
+    "capital_fraction_used": 0.8169979579255925,
+    "amount_weighted_risk": 0.046947721282798116,
+    "utility": 34512.0,
+    "expected_utility": 34599.53662653174,
+    "utility_per_1000_applicants": 561.1433588605433,
+    "amount_utility": 1945434113.9099998,
+    "expected_amount_utility": 1955004230.986393,
+    "amount_utility_per_1000_applicants": 31631532.021364808,
+    "net_contribution_per_funded_unit": 0.06464823050728902,
+    "loss_ratio": 5.0,
+    "scenario_interest": 0.12,
+    "scenario_cost": 0.03,
+    "scenario_difficulty_loss": 0.41999999999999993,
+    "decision_type": "deterministic",
+    "thick_records": 45484,
+    "thick_normal_records": 42030,
+    "thick_approvals": 39250.0,
+    "thick_good_approved": 37313.0,
+    "thick_difficulty_approved": 1937.0,
+    "thick_risk": 0.04935031847133758,
+    "thick_frr": 0.11222935998096595,
+    "thin_records": 16019,
+    "thin_normal_records": 14508,
+    "thin_approvals": 9158.0,
+    "thin_good_approved": 8779.0,
+    "thin_difficulty_approved": 379.0,
+    "thin_risk": 0.04138458178641625,
+    "thin_frr": 0.3948855803694513,
+    "abs_frr_gap": 0.28265622038848537,
+    "signed_frr_gap": 0.28265622038848537,
+    "utility5": 34512.0
+  },
+  "artifact_sha256": {
+    "calibration_predictions.parquet": "39b13944bf7669bd2fc57607161ee6f7a528ec1ccf5b2f777087740a9333a77d",
+    "frozen_policy.json": "6eff9d58f531a820c314ed58e834940ed8c47990a288c3d280b13cd1128f40d1",
+    "model.ubj": "8fe8bed098380a1e5a4c2bd2a80515a745c6e6ad94e2b8a586769432c1eed854",
+    "test_predictions_decisions.parquet": "0a9545c44365b4f5a1eeb3bbfbafeb95b14763120ce51bf0152133f07e3bb478",
+    "training_samples.parquet": "86aed5568e9b66a1a0794a22ae791124fc98ed90e88c032f0e1d43d1cad1a9dc",
+    "validation_predictions_decisions.parquet": "e3d6ec0f97a794f0b15e753998c4dd7af56cc7a23b2e014403e7ea613c1f28aa"
+  }
+}

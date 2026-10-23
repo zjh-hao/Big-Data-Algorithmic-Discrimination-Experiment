@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "cost": 3,
+      "weighted_accuracy": 0.7406250000000001,
+      "affine_utility_accuracy": 0.740625,
+      "positive_tpr_unchanged": true
+    },
+    {
+      "cost": 5,
+      "weighted_accuracy": 0.75625,
+      "affine_utility_accuracy": 0.75625,
+      "positive_tpr_unchanged": true
+    },
+    {
+      "cost": 7,
+      "weighted_accuracy": 0.7640625000000001,
+      "affine_utility_accuracy": 0.7640625,
+      "positive_tpr_unchanged": true
+    },
+    {
+      "cost": 10,
+      "weighted_accuracy": 0.7704545454545454,
+      "affine_utility_accuracy": 0.7704545454545454,
+      "positive_tpr_unchanged": true
+    },
+    {
+      "cost": 15,
+      "weighted_accuracy": 0.77578125,
+      "affine_utility_accuracy": 0.77578125,
+      "positive_tpr_unchanged": true
+    },
+    {
+      "cost": 25,
+      "weighted_accuracy": 0.7802884615384613,
+      "affine_utility_accuracy": 0.7802884615384614,
+      "positive_tpr_unchanged": true
+    }
+  ]
+}

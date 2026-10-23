@@ -1,0 +1,65 @@
+{
+  "config": {
+    "grid": 256,
+    "minimum_approvals": 500,
+    "minimum_subgroup_normal": 100,
+    "primary_loss_ratio": 5,
+    "primary_risk_budget": 0.05,
+    "capital_fraction": 1.0,
+    "primary_epsilon": 0.02,
+    "primary_beta": 0.01,
+    "etas": [
+      0.0005,
+      0.001,
+      0.002
+    ],
+    "numerical_allowance": 1e-08,
+    "scenario_interest": 0.12,
+    "scenario_cost": 0.03
+  },
+  "jobs": [
+    {
+      "model": "lightgbm",
+      "seed": 731
+    },
+    {
+      "model": "lightgbm",
+      "seed": 732
+    },
+    {
+      "model": "lightgbm",
+      "seed": 733
+    },
+    {
+      "model": "tabm",
+      "seed": 731
+    },
+    {
+      "model": "tabm",
+      "seed": 732
+    },
+    {
+      "model": "tabm",
+      "seed": 733
+    },
+    {
+      "model": "xgboost",
+      "seed": 731
+    },
+    {
+      "model": "xgboost",
+      "seed": 732
+    },
+    {
+      "model": "xgboost",
+      "seed": 733
+    }
+  ],
+  "source_sha256": {
+    "opportunity_price.py": "8ec21eafa68e3a570fffd113558ca506c89cadea2a0b1a53301f02d9e2f7d514",
+    "allocation_policy.py": "991b9f2296a00370a3b3b4722a7de309493fc6af28213fd4478f490c340ccba8",
+    "protected_policy.py": "fe619266bfcc355af3bd5d679000cf2affcedb2361112be5295df05d2f5111e5"
+  },
+  "target_semantics": "All six A_s >= W0 + eta; W0 is best absolute weakest opportunity on minimum-harm face",
+  "target_selection": "Fixed eta values; no selection on validation or test results; no test input read"
+}

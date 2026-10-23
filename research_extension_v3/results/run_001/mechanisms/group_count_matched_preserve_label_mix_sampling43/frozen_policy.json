@@ -1,0 +1,19 @@
+{
+  "threshold": 0.12303213030099869,
+  "validation_approvals": 24802,
+  "validation_risk": 0.04999596806709136,
+  "feasible": true,
+  "condition": "group_count_matched_preserve_label_mix",
+  "sampling_seed": 43,
+  "model_seed": 731,
+  "calibration": {
+    "slope": 1.081522787904716,
+    "intercept": 0.1750818303560511
+  },
+  "selected_on": "validation only",
+  "frozen_utc": "2026-10-22T12:19:43.437459+00:00",
+  "code_sha256": "f238c9362208cd75094a19007778f02699d99fb2c83d5f3bfd76d05df5f1780e",
+  "objective": "maximum approval count at common risk budget; ties kept complete",
+  "risk_budget": 0.05,
+  "minimum_approvals": 500
+}

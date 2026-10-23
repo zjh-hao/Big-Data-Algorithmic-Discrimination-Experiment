@@ -1,0 +1,62 @@
+{
+  "policy_id": "fairlearn_balanced_accuracy_score_tol0.01",
+  "library_version": "0.16.0.dev0",
+  "objective": "balanced_accuracy_score",
+  "epsilon": 0.01,
+  "constraints": "true_positive_rate_parity",
+  "favorable_label": "1-TARGET",
+  "interpolation": {
+    "0": {
+      "p0": 0.00935483870967677,
+      "operation0": "[>0.9270945472844067]",
+      "p1": 0.9906451612903232,
+      "operation1": "[>0.9214431357644899]"
+    },
+    "1": {
+      "p0": 0.8478682505399565,
+      "operation0": "[>0.9010552217908487]",
+      "p1": 0.15213174946004349,
+      "operation1": "[>0.8805896683452183]"
+    }
+  },
+  "frozen_utc": "2026-10-22T13:37:04.142333+00:00",
+  "validation_metrics": {
+    "records": 30751,
+    "approvals": 21647.65218442138,
+    "approval_rate": 0.7039657957276635,
+    "good_approved": 20796.506999999998,
+    "difficulty_count": 851.1451844213753,
+    "risk": 0.03931812915184851,
+    "expected_risk": 0.038952359248702384,
+    "approved_amount": 13417710346.744663,
+    "capital_fraction_used": 0.7307565161170024,
+    "amount_weighted_risk": 0.03943461393876387,
+    "utility": 16540.78107789312,
+    "expected_utility": 16588.289435750143,
+    "utility_per_1000_applicants": 537.8940872782388,
+    "amount_utility": 921867928.3753618,
+    "expected_amount_utility": 931410845.3357732,
+    "amount_utility_per_1000_applicants": 29978469.915624265,
+    "net_contribution_per_funded_unit": 0.06870530847306752,
+    "loss_ratio": 5.0,
+    "scenario_interest": 0.12,
+    "scenario_cost": 0.03,
+    "scenario_difficulty_loss": 0.41999999999999993,
+    "decision_type": "stochastic_expectation",
+    "thick_records": 22742,
+    "thick_normal_records": 21015,
+    "thick_approvals": 16100.695806451611,
+    "thick_good_approved": 15509.07,
+    "thick_difficulty_approved": 591.625806451613,
+    "thick_risk": 0.03674535644692736,
+    "thick_frr": 0.262,
+    "thin_records": 8009,
+    "thin_normal_records": 7253,
+    "thin_approvals": 5546.956377969763,
+    "thin_good_approved": 5287.437,
+    "thin_difficulty_approved": 259.51937796976244,
+    "thin_risk": 0.04678590569063551,
+    "thin_frr": 0.271,
+    "abs_frr_gap": 0.009000000000000008
+  }
+}

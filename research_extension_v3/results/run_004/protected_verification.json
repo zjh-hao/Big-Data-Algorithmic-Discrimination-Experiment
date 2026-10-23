@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "generated_utc": "2026-10-22T14:48:56.229476+00:00",
+  "verifier_source_sha256": "db7da415687da04e6401def3dfc9ec5942010423ccfa4daecd8cff037c1cf046",
+  "experiment_plan_sha256": "c3e03ae3fa6f8f9fcd9c981d5bae9eb44029cd26e304beb639bff7f4cc23d145",
+  "expected_jobs": 24,
+  "audited_jobs": 24,
+  "expected_policy_records": 297,
+  "actual_policy_records": 297,
+  "feasible_policies": 244,
+  "infeasible_policies": 53,
+  "numerical_solver_error_policies": 0,
+  "split_manifest_sha256": {
+    "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\split_manifest.parquet": "becf4665452be8884a9723e3786bc6e2b990c3f6f4f92ad453cffefdaa248583",
+    "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_001\\split_manifest.parquet": "becf4665452be8884a9723e3786bc6e2b990c3f6f4f92ad453cffefdaa248583",
+    "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress\\split_manifest.parquet": "becf4665452be8884a9723e3786bc6e2b990c3f6f4f92ad453cffefdaa248583"
+  },
+  "independent_checks": 37629,
+  "failed_checks": 0,
+  "failures": [],
+  "out_of_sample_constraint_observations": 2845,
+  "out_of_sample_constraint_violations": 236,
+  "test_violation_counts_by_constraint": {
+    "gap": 104,
+    "profit_floor": 2,
+    "protect_g0_income0": 16,
+    "protect_g0_income1": 102,
+    "protect_g1_income0": 5,
+    "protect_thick": 7
+  },
+  "scope": "Independent decision replay, metric arithmetic, actual validation constraints, hashes and finite-job completeness; no LP optimality certificate or infeasibility proof",
+  "decision_semantics": "Approval probabilities and expected counts; test breaches retained as observations, not hidden or refitted",
+  "files": {
+    "protected_verification_audit.csv": "cd277fc226fe16c6e64567fc8f54e0d03eb063c3aba07e46a5f5af15ae3e5fba",
+    "protected_test_constraint_observations.csv": "8540e5fa65544999b6d1ff312dec629718451d783326f0f8f2529d26ca6cf0fc",
+    "protected_independent_metrics.csv": "ec1a9a0ad7f96573c499875f57ff5cc04fb52f99996316d2bdef99521a042271"
+  }
+}

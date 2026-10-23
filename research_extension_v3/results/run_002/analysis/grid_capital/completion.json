@@ -1,0 +1,64 @@
+{
+  "phase": "grid_capital",
+  "analysis_source_sha256": "59fdf042a69d2294f265741c7d50aa803f17ba4e844cf866297ad2151c6b6b90",
+  "business_source_sha256": "f4bb23026e16851254dea2c7259aeac2cfd47520c6163c4da682450bb1b908e8",
+  "configuration_sha256": "ec6e24d52dccfadb035f888631f50338e525160bfbf43c31c0798b84cf773b91",
+  "predictions": {
+    "lightgbm_s731": {
+      "validation": "59c4d38ef3d8c8329b08a4f101a26b08d2c3884fe9777295ae96b1aded340a90",
+      "test": "0988f0b1615f8f6099f63988ddf780e49ffdf6ba08575192be5205f3a2fc8f82"
+    },
+    "lightgbm_s732": {
+      "validation": "86b56c9334f7a3f4bb1fd495c7e82f717c88352a7096e977c5792fe924053a99",
+      "test": "ccdae77d69ce7686fb7d07b37f55452303b51e18ea5a2ec489557742cc97655d"
+    },
+    "lightgbm_s733": {
+      "validation": "81945588a02278695eec1a2abee69ca13ff40567c3dc4f939b0fd6552513e6b2",
+      "test": "062d3afa382dc9c833b3666f43c290cdd1caae4d5a1e9ff3cfa8301af640ad2c"
+    },
+    "tabm_s731": {
+      "validation": "bfc69b77f25e309237c1139b5613a45e203ac5510717ac0fad8313c8dd7f98a4",
+      "test": "385a2b7e1160304c0faf2853e31d4797e41710db233dcbc96866d123fede1c38"
+    },
+    "tabm_s732": {
+      "validation": "91420dccedc673f6d6d0bb9944cc7a7ab4df88e257687281ceddc2a65cb7c38b",
+      "test": "ab221a158fc47492addd1eae847a65ec8fa7bb07a795d6f536fdecfb9e8f8408"
+    },
+    "tabm_s733": {
+      "validation": "db09c5426d3195055fb8bdd55cf4f907451d1d1d0936664d23a7e055239c2427",
+      "test": "ed98c38766aab064da3f62e07509c45127d35a28f69490b7924e2c13a910ceb5"
+    }
+  },
+  "models": [
+    "lightgbm",
+    "tabm"
+  ],
+  "seeds": [
+    731,
+    732,
+    733
+  ],
+  "selection_protocol": "validation-only threshold fitting; calibration parameters already frozen upstream",
+  "evaluation_protocol": "test replay only; historical holdout was previously inspected",
+  "economic_interpretation": "Scenario contribution, not observed bank profit; TARGET means repayment difficulty",
+  "status": "PASS",
+  "completed_utc": "2026-10-22T13:46:16.561623+00:00",
+  "policy_records": 690,
+  "grids": [
+    256,
+    513,
+    1025
+  ],
+  "capital_fractions": [
+    1.0,
+    0.8,
+    0.6,
+    0.4
+  ],
+  "infeasible_records": 70,
+  "sweep_protocol": "Grid x capital at primary risk/loss; risk/loss one-at-a-time only at grid513",
+  "hashes": {
+    "test_policy_metrics.csv": "4e370b241ea8ea2b1a9dd9f40434262158094ccfb8514cd8daf988115088ce8c",
+    "validation_policy_metrics.csv": "18f6822c969a8ea29d866c124d6611d76657899f94b5db30f8dd5404a5eb4b1b"
+  }
+}

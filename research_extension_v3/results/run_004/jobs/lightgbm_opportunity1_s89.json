@@ -1,0 +1,66 @@
+{
+  "job": "lightgbm_opportunity1_s89",
+  "model": "lightgbm_opportunity1",
+  "seed": 89,
+  "experiment": "stress",
+  "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress",
+  "policy_specs": [
+    {
+      "name": "adaptive_primary",
+      "mode": "adaptive_protected_minimax",
+      "protection": "six",
+      "minimax_scope": "six",
+      "beta": 0.01,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "robust": false,
+      "deterioration_slack": 0.001
+    },
+    {
+      "name": "adaptive_robust",
+      "mode": "adaptive_protected_minimax",
+      "protection": "six",
+      "minimax_scope": "six",
+      "beta": 0.01,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "robust": true,
+      "deterioration_slack": 0.001
+    },
+    {
+      "name": "lp_gap",
+      "mode": "profit_gap",
+      "epsilon": 0.02
+    },
+    {
+      "name": "minimax_six",
+      "mode": "budgeted_minimax",
+      "beta": 0.01,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "protection": "six",
+      "minimax_scope": "six"
+    },
+    {
+      "name": "adaptive_robust_beta_0.03",
+      "mode": "adaptive_protected_minimax",
+      "protection": "six",
+      "minimax_scope": "six",
+      "beta": 0.03,
+      "delta": 0.01,
+      "epsilon": 0.02,
+      "robust": true,
+      "deterioration_slack": 0.001
+    }
+  ],
+  "status": "PASS",
+  "finished": "2026-10-22T14:44:42.083100+00:00",
+  "seconds": 0.9035110999975586,
+  "source_prediction_sha256": {
+    "validation": "a422476b1fc3ee2abebd61250fd84204769fab002550aba692fa5166c5020090",
+    "test": "e94d4c402fe4359ef444ed322f6c7944c1be0c37486007a81f6eb14f8c44f581"
+  },
+  "frozen_sha256": "c7ea5ef461e68f48f2754e86c8c2444279ca70fc79918ea5c45531b275aeedfe",
+  "policies": 9,
+  "feasible": 6
+}

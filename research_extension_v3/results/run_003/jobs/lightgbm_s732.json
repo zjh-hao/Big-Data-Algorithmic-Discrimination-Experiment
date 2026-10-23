@@ -1,0 +1,17 @@
+{
+  "job": "lightgbm_s732",
+  "model": "lightgbm",
+  "seed": 732,
+  "experiment": "main",
+  "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002",
+  "status": "PASS",
+  "finished": "2026-10-22T14:34:55.840597+00:00",
+  "seconds": 1.3000424000019848,
+  "source_prediction_sha256": {
+    "validation": "86b56c9334f7a3f4bb1fd495c7e82f717c88352a7096e977c5792fe924053a99",
+    "test": "ccdae77d69ce7686fb7d07b37f55452303b51e18ea5a2ec489557742cc97655d"
+  },
+  "frozen_sha256": "5b8c7760717b8e00ac5e781e5a3cb91ff149bfd99098efc023cd9b419f645430",
+  "policies": 16,
+  "feasible": 5
+}

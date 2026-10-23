@@ -1,0 +1,9 @@
+{
+  "models_with_metrics": 6,
+  "model_seed_records": 18,
+  "policy_records": 1728,
+  "feasible_policy_records": 1471,
+  "infeasible_or_unfinished_policy_records": 257,
+  "matched_primary_comparisons": 18,
+  "completed_figures": 8
+}

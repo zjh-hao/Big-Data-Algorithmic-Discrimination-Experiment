@@ -1,0 +1,7 @@
+﻿job,policy,baseline,metric,lower,upper,bootstrap_mean,repetitions,uncertainty
+xgboost_s731,lp_gap,lp_profit_baseline,utility_per_1000_applicants,0.0,0.0,0.0,1000,paired applicant bootstrap of expected decisions
+xgboost_s731,lp_gap,lp_profit_baseline,abs_frr_gap,0.0,0.0,0.0,1000,paired applicant bootstrap of expected decisions
+xgboost_s731,lp_gap,lp_profit_baseline,worst_subgroup_frr,0.0,0.0,0.0,1000,paired applicant bootstrap of expected decisions
+xgboost_s731,minimax_six,lp_profit_baseline,utility_per_1000_applicants,-2.7352018816465686,-0.04892778221574523,-1.3251529290161879,1000,paired applicant bootstrap of expected decisions
+xgboost_s731,minimax_six,lp_profit_baseline,abs_frr_gap,-0.021077855392901978,0.005182322387368397,-0.007592402835892093,1000,paired applicant bootstrap of expected decisions
+xgboost_s731,minimax_six,lp_profit_baseline,worst_subgroup_frr,-0.019510776075177164,-0.0030672496206907824,-0.013672382012571573,1000,paired applicant bootstrap of expected decisions

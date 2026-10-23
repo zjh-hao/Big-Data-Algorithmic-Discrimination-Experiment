@@ -1,0 +1,20 @@
+{
+  "model": "lightgbm",
+  "seed": 731,
+  "train_seconds": 22.665056499998173,
+  "training_seconds": 22.66505749999851,
+  "reference_auc": 0.7697026001694496,
+  "parameters": {
+    "num_leaves": 31,
+    "min_child_samples": 150,
+    "learning_rate": 0.03,
+    "n_estimators": 2000,
+    "early_stopping_rounds": 60
+  },
+  "best_iteration": 479,
+  "input_features": 262,
+  "train_n": 153755,
+  "selection_split": "reference",
+  "library_version": "4.6.0",
+  "model_sha256": "f1575faa04518b6d3330cf76d90ad1d355ec5edae4e21a6675f5eae54d1ec844"
+}

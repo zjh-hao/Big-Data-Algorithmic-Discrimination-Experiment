@@ -1,0 +1,14 @@
+{
+  "model": "xgboost",
+  "seed": 732,
+  "status": "PASS",
+  "finished": "2026-10-23T07:21:26.121282+00:00",
+  "source_prediction_sha256": {
+    "validation": "990e9e1f704434e0476f0f22b40d5b81b0943ac5833561ec3f5e615699dad431",
+    "test": "665855e533108bd87a4289b807de8d171273ae6c4289bfa1e6f86aba448022f4"
+  },
+  "frozen_policy_sha256": "4d7458a0c623e2a2d348ac569eaa3d53afa34617f617ed554308a3aae53c637e",
+  "policy_rows": 8,
+  "checks": 553,
+  "seconds": 9.991047699993942
+}

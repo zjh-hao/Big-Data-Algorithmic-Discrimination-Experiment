@@ -1,0 +1,17 @@
+{
+  "job": "xgboost_s733",
+  "model": "xgboost",
+  "seed": 733,
+  "experiment": "main",
+  "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_001",
+  "status": "PASS",
+  "finished": "2026-10-22T14:35:06.943462+00:00",
+  "seconds": 1.3638491000019712,
+  "source_prediction_sha256": {
+    "validation": "314fbec20cf4981f7c725e5dd0b8bc44841e5f1b6de8c90dee76db220cab766e",
+    "test": "e3ad0176f92a84b8967456ac7110f86b22422930a8e0a46e3c96438025e302cb"
+  },
+  "frozen_sha256": "ac988d4074229016304361bc9333415553202619a5e3c79d735b1fc406c0c2eb",
+  "policies": 16,
+  "feasible": 7
+}

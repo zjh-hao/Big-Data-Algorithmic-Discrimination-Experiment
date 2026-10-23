@@ -1,0 +1,70 @@
+{
+  "model": "tabm",
+  "selection_split": "reference",
+  "selection_metric": "ROC AUC",
+  "seed": 731,
+  "parameters": {
+    "batch_size": 512,
+    "eval_batch_size": 2048,
+    "k": 16,
+    "d_block": 128,
+    "n_blocks": 3,
+    "max_epochs": 60,
+    "patience": 8,
+    "learning_rate": 0.002,
+    "weight_decay": 0.0003
+  },
+  "trials": [
+    {
+      "parameters": {
+        "batch_size": 512,
+        "eval_batch_size": 2048,
+        "k": 16,
+        "d_block": 128,
+        "n_blocks": 2,
+        "max_epochs": 60,
+        "patience": 8,
+        "learning_rate": 0.002,
+        "weight_decay": 0.0003
+      },
+      "reference_auc": 0.760349638555048,
+      "artifact": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_001\\checkpoints\\tabm_s731\\trial_00",
+      "training_seconds": 30.88226719999875
+    },
+    {
+      "parameters": {
+        "batch_size": 512,
+        "eval_batch_size": 2048,
+        "k": 16,
+        "d_block": 128,
+        "n_blocks": 3,
+        "max_epochs": 60,
+        "patience": 8,
+        "learning_rate": 0.002,
+        "weight_decay": 0.0003
+      },
+      "reference_auc": 0.7614234066872625,
+      "artifact": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_001\\checkpoints\\tabm_s731\\trial_01",
+      "training_seconds": 63.367918899999495
+    },
+    {
+      "parameters": {
+        "batch_size": 512,
+        "eval_batch_size": 2048,
+        "k": 16,
+        "d_block": 192,
+        "n_blocks": 3,
+        "max_epochs": 60,
+        "patience": 8,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0003
+      },
+      "reference_auc": 0.760341265274396,
+      "artifact": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_001\\checkpoints\\tabm_s731\\trial_02",
+      "training_seconds": 58.35489769999913
+    }
+  ],
+  "frozen_utc": "2026-10-22T12:33:06.929706+00:00",
+  "input_fingerprint": "b4b7a709b183a6ad45e1fe46a6b946d1d7d5eaad0ee765e19cfae8205e950374",
+  "guard_attestation": "Added after successful run; original selected parameters and trials preserved"
+}

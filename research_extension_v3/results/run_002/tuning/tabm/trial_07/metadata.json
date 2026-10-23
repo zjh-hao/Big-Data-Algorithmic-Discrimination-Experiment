@@ -1,0 +1,48 @@
+{
+  "algorithm": "TabM",
+  "official_source": {
+    "repository": "https://github.com/yandex-research/tabm",
+    "branch": "main",
+    "commit": "28e47ae301c92ec37787dde1ce923a0793f405b4"
+  },
+  "source_file": "D:\\workspace\\credit-fairness-baselines\\tabm\\tabm.py",
+  "source_sha256": "fc654af6a16bac53d893a8265c79d7af4ebddcb95ad0d600cc6b6bc6b7317ade",
+  "package_version": "0.0.3",
+  "torch_version": "2.7.0+cu128",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "peak_gpu_memory_bytes": 388402176,
+  "seed": 731,
+  "parameters": {
+    "n_num_features": 334,
+    "d_out": 1,
+    "k": 16,
+    "n_blocks": 3,
+    "d_block": 256,
+    "dropout": 0.1,
+    "arch_type": "tabm"
+  },
+  "training_config": {
+    "batch_size": 512,
+    "eval_batch_size": 1024,
+    "k": 16,
+    "d_block": 256,
+    "n_blocks": 3,
+    "max_epochs": 120,
+    "patience": 12,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0003
+  },
+  "preprocessing": "caller-imputed dense inputs; train-only QuantileTransformer(normal), continuous columns only; one-hot/binary indicators preserved",
+  "rank_normalized_columns": 85,
+  "label": "P(TARGET=1): repayment difficulty",
+  "loss": "mean binary cross-entropy over all objects and all ensemble members independently",
+  "inference": "mean of member sigmoid probabilities",
+  "selection": "reference/stop ROC AUC; no calibration/validation/test data",
+  "best_epoch": 11,
+  "epochs_run": 23,
+  "best_stop_auc": 0.7601005566157911,
+  "training_seconds": 43.611575700000685,
+  "model_artifact": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\tuning\\tabm\\trial_07\\best_checkpoint.pt",
+  "preprocessor_artifact": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\tuning\\tabm\\trial_07\\preprocessor.joblib"
+}

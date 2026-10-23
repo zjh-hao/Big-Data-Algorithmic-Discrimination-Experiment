@@ -1,0 +1,9 @@
+{
+  "caption": "Raw vs frozen Platt scores. Analytic threshold p<=1/(1+lambda) is not a risk-constrained method. Mean across completed requested seeds.",
+  "generated_utc": "2026-10-22T13:44:46.835388+00:00",
+  "input_csv_sha256": "0720381a518c561cb3aa4f718b0e2f201443ca49d3bed795be71da8b380b1724",
+  "output_sha256": {
+    "png": "8a9f3b423b9c539df2985aee0cd63f595d7f22f25a6d33eda881dc565e54a4bd",
+    "pdf": "cc592da854e594a8af1820fd5e26e4d1d48414a86ff5069b4938edaeb8b6e85e"
+  }
+}

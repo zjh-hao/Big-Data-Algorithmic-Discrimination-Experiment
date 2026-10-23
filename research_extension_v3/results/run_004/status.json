@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE",
+  "updated": "2026-10-22T14:44:43.330314+00:00",
+  "completed_jobs": 24,
+  "expected_jobs": 24,
+  "primary_policy": "adaptive_primary",
+  "source_sha256": {
+    "adaptive_run.py": "ae32dee70df93deafb9c09d7b21dd278238ea2e5c03fc195091ae6b7d0f4e923",
+    "protected_run.py": "7f0e6a76ed33558344052510596b969ffeeb0444fc3263f00cadf3914272ad98",
+    "protected_policy.py": "46463f67bb29ce9f23d55b83ec195bc83e84a6181c4ed9621e7212a0e95e8310",
+    "business.py": "f4bb23026e16851254dea2c7259aeac2cfd47520c6163c4da682450bb1b908e8"
+  }
+}

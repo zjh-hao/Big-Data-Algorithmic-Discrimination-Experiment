@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE",
+  "completed_utc": "2026-10-22T14:54:41.267882+00:00",
+  "jobs": 24,
+  "policy_rows": 297,
+  "unit_tests_passed": 35,
+  "independent_checks_passed": 37629,
+  "numerical_solver_errors": 0,
+  "report": "METHODS_RESULTS_CN.md",
+  "figures": 7,
+  "primary": "adaptive_primary",
+  "notes": "All finite extensions completed; out-of-sample violations and infeasibility retained, no new blind-test or SOTA claim",
+  "files_sha256": {
+    "policy_metrics.csv": "dae6b403a9486cc2e3067507738a79eb5f58245d18a4d65df9c009dc6e67c7d6",
+    "protected_verification.json": "a4b28ef0e264cf1674bb7c8632cac4c71ed3329b62d1cece1337e53ee18abc6d",
+    "METHODS_RESULTS_CN.md": "e1bd50f4b9a99f910bea301f0d3605ad91c54e50c3e630e0eb5e9c0ebd8eda9c",
+    "standard_method_summary.csv": "ccc264e7c5e400025b588e8638bb5cfb563bb4efef4ed088da54b3424354eaca",
+    "standard_method_comparison_manifest.json": "b1b322c50be416cecb427003f7ba907a1be020fb26f75d24c7cc55d7a9ac2385"
+  }
+}

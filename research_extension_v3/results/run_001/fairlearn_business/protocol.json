@@ -1,0 +1,26 @@
+{
+  "primary_loss_ratio": 5,
+  "cost_grid": [
+    3,
+    5,
+    7,
+    10,
+    15,
+    25
+  ],
+  "fairness_tolerances": [
+    0.0,
+    0.01,
+    0.02,
+    0.05
+  ],
+  "risk_budget": 0.05,
+  "validation_selection_only": true,
+  "standard_algorithm": "Unmodified Fairlearn ThresholdOptimizer",
+  "weighting_identity": "Expected weighted accuracy = (w*N_difficulty + good_approved - w*difficulty_approved) / (N_good+w*N_difficulty)",
+  "conditional_fairness_identity": "Only TARGET=1 is replicated; favorable TARGET=0 TPR within each group is unchanged",
+  "scope": "Cost-grid tuning under risk and minimum approvals; candidate-grid infeasibility is not global impossibility",
+  "favorable_label": "1-TARGET",
+  "config_sha256": "7ffbe4caf2cfa37dd4eb3a9e3cf95b6c3567e1366013d41c27475ae164f04baf",
+  "code_sha256": "7d96f698ac1b82d4b1a50165da13048c793243ae06e12f67a7fa48431bc2fb02"
+}

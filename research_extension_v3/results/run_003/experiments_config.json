@@ -1,0 +1,339 @@
+{
+  "config": {
+    "version": "3.2.0",
+    "grid": 256,
+    "minimum_approvals": 500,
+    "minimum_subgroup_normal": 100,
+    "primary_loss_ratio": 5,
+    "primary_risk_budget": 0.05,
+    "capital_fraction": 1.0,
+    "primary_epsilon": 0.02,
+    "primary_beta": 0.01,
+    "primary_delta": 0.01,
+    "scenario_interest": 0.12,
+    "scenario_cost": 0.03,
+    "policy_specs": [
+      {
+        "name": "lp_gap",
+        "mode": "profit_gap",
+        "protection": "none",
+        "robust": false,
+        "beta": 0.01,
+        "delta": 0.01,
+        "epsilon": 0.02,
+        "minimax_scope": "six"
+      },
+      {
+        "name": "lp_gap_macro_protected",
+        "mode": "profit_gap_protected",
+        "protection": "macro",
+        "robust": false,
+        "beta": 0.01,
+        "delta": 0.01,
+        "epsilon": 0.02,
+        "minimax_scope": "six"
+      },
+      {
+        "name": "minimax_macro",
+        "mode": "budgeted_minimax",
+        "protection": "macro",
+        "robust": false,
+        "beta": 0.01,
+        "delta": 0.01,
+        "epsilon": 0.02,
+        "minimax_scope": "six"
+      },
+      {
+        "name": "minimax_six",
+        "mode": "budgeted_minimax",
+        "protection": "six",
+        "robust": false,
+        "beta": 0.01,
+        "delta": 0.01,
+        "epsilon": 0.02,
+        "minimax_scope": "six"
+      },
+      {
+        "name": "minimax_six_robust",
+        "mode": "budgeted_minimax",
+        "protection": "six",
+        "robust": true,
+        "beta": 0.01,
+        "delta": 0.01,
+        "epsilon": 0.02,
+        "minimax_scope": "six"
+      },
+      {
+        "name": "minimax_six_beta_0",
+        "mode": "budgeted_minimax",
+        "protection": "six",
+        "robust": false,
+        "beta": 0,
+        "delta": 0.01,
+        "epsilon": 0.02,
+        "minimax_scope": "six"
+      },
+      {
+        "name": "minimax_six_beta_0.005",
+        "mode": "budgeted_minimax",
+        "protection": "six",
+        "robust": false,
+        "beta": 0.005,
+        "delta": 0.01,
+        "epsilon": 0.02,
+        "minimax_scope": "six"
+      },
+      {
+        "name": "minimax_six_beta_0.02",
+        "mode": "budgeted_minimax",
+        "protection": "six",
+        "robust": false,
+        "beta": 0.02,
+        "delta": 0.01,
+        "epsilon": 0.02,
+        "minimax_scope": "six"
+      },
+      {
+        "name": "minimax_six_beta_0.03",
+        "mode": "budgeted_minimax",
+        "protection": "six",
+        "robust": false,
+        "beta": 0.03,
+        "delta": 0.01,
+        "epsilon": 0.02,
+        "minimax_scope": "six"
+      },
+      {
+        "name": "minimax_six_delta_0",
+        "mode": "budgeted_minimax",
+        "protection": "six",
+        "robust": false,
+        "beta": 0.01,
+        "delta": 0,
+        "epsilon": 0.02,
+        "minimax_scope": "six"
+      },
+      {
+        "name": "minimax_six_delta_0.02",
+        "mode": "budgeted_minimax",
+        "protection": "six",
+        "robust": false,
+        "beta": 0.01,
+        "delta": 0.02,
+        "epsilon": 0.02,
+        "minimax_scope": "six"
+      },
+      {
+        "name": "minimax_six_epsilon_0.01",
+        "mode": "budgeted_minimax",
+        "protection": "six",
+        "robust": false,
+        "beta": 0.01,
+        "delta": 0.01,
+        "epsilon": 0.01,
+        "minimax_scope": "six"
+      }
+    ]
+  },
+  "jobs": [
+    {
+      "job": "lightgbm_s731",
+      "model": "lightgbm",
+      "seed": 731,
+      "experiment": "main",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002"
+    },
+    {
+      "job": "lightgbm_s732",
+      "model": "lightgbm",
+      "seed": 732,
+      "experiment": "main",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002"
+    },
+    {
+      "job": "lightgbm_s733",
+      "model": "lightgbm",
+      "seed": 733,
+      "experiment": "main",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002"
+    },
+    {
+      "job": "tabm_s731",
+      "model": "tabm",
+      "seed": 731,
+      "experiment": "main",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002"
+    },
+    {
+      "job": "tabm_s732",
+      "model": "tabm",
+      "seed": 732,
+      "experiment": "main",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002"
+    },
+    {
+      "job": "tabm_s733",
+      "model": "tabm",
+      "seed": 733,
+      "experiment": "main",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002"
+    },
+    {
+      "job": "xgboost_s731",
+      "model": "xgboost",
+      "seed": 731,
+      "experiment": "main",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_001"
+    },
+    {
+      "job": "xgboost_s732",
+      "model": "xgboost",
+      "seed": 732,
+      "experiment": "main",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_001"
+    },
+    {
+      "job": "xgboost_s733",
+      "model": "xgboost",
+      "seed": 733,
+      "experiment": "main",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_001"
+    },
+    {
+      "job": "lightgbm_biased_s17",
+      "model": "lightgbm_biased",
+      "seed": 17,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_biased_s29",
+      "model": "lightgbm_biased",
+      "seed": 29,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_biased_s43",
+      "model": "lightgbm_biased",
+      "seed": 43,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_biased_s61",
+      "model": "lightgbm_biased",
+      "seed": 61,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_biased_s89",
+      "model": "lightgbm_biased",
+      "seed": 89,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_corrected_s17",
+      "model": "lightgbm_corrected",
+      "seed": 17,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_corrected_s29",
+      "model": "lightgbm_corrected",
+      "seed": 29,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_corrected_s43",
+      "model": "lightgbm_corrected",
+      "seed": 43,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_corrected_s61",
+      "model": "lightgbm_corrected",
+      "seed": 61,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_corrected_s89",
+      "model": "lightgbm_corrected",
+      "seed": 89,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_opportunity1_s17",
+      "model": "lightgbm_opportunity1",
+      "seed": 17,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_opportunity1_s29",
+      "model": "lightgbm_opportunity1",
+      "seed": 29,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_opportunity1_s43",
+      "model": "lightgbm_opportunity1",
+      "seed": 43,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_opportunity1_s61",
+      "model": "lightgbm_opportunity1",
+      "seed": 61,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    },
+    {
+      "job": "lightgbm_opportunity1_s89",
+      "model": "lightgbm_opportunity1",
+      "seed": 89,
+      "experiment": "stress",
+      "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\bias_stress"
+    }
+  ],
+  "primary_policy": "minimax_six",
+  "report_expected_jobs": [
+    "lightgbm_s731",
+    "lightgbm_s732",
+    "lightgbm_s733",
+    "tabm_s731",
+    "tabm_s732",
+    "tabm_s733",
+    "xgboost_s731",
+    "xgboost_s732",
+    "xgboost_s733",
+    "lightgbm_biased_s17",
+    "lightgbm_biased_s29",
+    "lightgbm_biased_s43",
+    "lightgbm_biased_s61",
+    "lightgbm_biased_s89",
+    "lightgbm_corrected_s17",
+    "lightgbm_corrected_s29",
+    "lightgbm_corrected_s43",
+    "lightgbm_corrected_s61",
+    "lightgbm_corrected_s89",
+    "lightgbm_opportunity1_s17",
+    "lightgbm_opportunity1_s29",
+    "lightgbm_opportunity1_s43",
+    "lightgbm_opportunity1_s61",
+    "lightgbm_opportunity1_s89"
+  ],
+  "claim": "Course-project integration of existing LP randomized thresholds, profit floor and subgroup protection; no SOTA novelty claim",
+  "protocol": "Validation-only policy fit; fixed specification; historical test previously inspected; no fresh blind-test claim",
+  "economic_interpretation": "TARGET repayment difficulty; scenario contribution, not actual bank profit",
+  "uncertainty": "Expected randomized outcomes; applicant bootstrap and randomization replay are distinct"
+}

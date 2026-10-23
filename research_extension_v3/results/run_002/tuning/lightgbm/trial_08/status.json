@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "index": 8,
+  "model": "lightgbm",
+  "seed": 731,
+  "parameters": {
+    "num_leaves": 63,
+    "min_child_samples": 50,
+    "learning_rate": 0.03,
+    "n_estimators": 2000,
+    "early_stopping_rounds": 60
+  },
+  "reference_auc": 0.7708442310690244,
+  "artifact": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_002\\tuning\\lightgbm\\trial_08",
+  "input_fingerprint": "9726a529e4123b26b1be11269dd744a437d08da7dd2574df2f54987287d1a139",
+  "completed_utc": "2026-10-22T13:15:51.857250+00:00",
+  "checkpoint_sha256": {
+    "model.txt": "5791b1a3f15e6343f9455a5bb9d2cb2f7897ba1c9d1b5ecf27916775beda2fab",
+    "metadata.json": "0a91c34b92445a2ea01b790dac674a8586e7b3b3ce089e6a5eb5c633ccbdeadd"
+  },
+  "metadata": {
+    "model": "lightgbm",
+    "seed": 731,
+    "train_seconds": 24.950587800001813,
+    "training_seconds": 24.950588400002744,
+    "reference_auc": 0.7708442310690244,
+    "parameters": {
+      "num_leaves": 63,
+      "min_child_samples": 50,
+      "learning_rate": 0.03,
+      "n_estimators": 2000,
+      "early_stopping_rounds": 60
+    },
+    "best_iteration": 414,
+    "input_features": 262,
+    "train_n": 153755,
+    "selection_split": "reference",
+    "library_version": "4.6.0",
+    "model_sha256": "5791b1a3f15e6343f9455a5bb9d2cb2f7897ba1c9d1b5ecf27916775beda2fab"
+  }
+}

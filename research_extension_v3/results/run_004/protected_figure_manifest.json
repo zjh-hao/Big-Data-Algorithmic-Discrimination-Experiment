@@ -1,0 +1,140 @@
+{
+  "source": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_004\\policy_metrics.csv",
+  "input_sha256": "dae6b403a9486cc2e3067507738a79eb5f58245d18a4d65df9c009dc6e67c7d6",
+  "configuration_sha256": "82b1c25cfe8e3a7d88d54ee4f43e4cf30075bce66d0b1a3f8f77da45dc3cc170",
+  "script_sha256": "3c4cd12082138629770db09ba34fdcde4ec8390aafb9cfef6677f53c82d6dd26",
+  "figures": [
+    {
+      "name": "01_budget_and_worst_group",
+      "caption": "Means across all available seeds of each fixed method/budget; incomplete or infeasible jobs remain in coverage tables.",
+      "source_rows": 74,
+      "sha256": {
+        "figures\\protected_01_budget_and_worst_group.png": "c416fd824380b9384b862c33d6aa890ae3b044de8a7c35f3e4dbcfbb39576e49",
+        "figures\\protected_01_budget_and_worst_group.pdf": "67b7a052f312cee9ec5ee54b8721ad3afe96ed2ef6ba2da2265b4dfd698a1404",
+        "figure_data\\protected_01_budget_and_worst_group.csv": "5f21bf4cb29f762bc6274343ae270dd8cedd90cdef4667b624cd8d651183cd8d"
+      }
+    },
+    {
+      "name": "02_policy_space_feasibility",
+      "caption": "Registered finite primary-budget rules, including infeasible cases. A larger feasible set is an optimization-space change.",
+      "source_rows": 90,
+      "sha256": {
+        "figures\\protected_02_policy_space_feasibility.png": "a5559f24943582a89b802cec149069fcaaab897165bf940b2b491435aca32552",
+        "figures\\protected_02_policy_space_feasibility.pdf": "0c32144325b13ac1646e273c4e61bc4fb0e74f9c7349c4af756e4020e17f824b",
+        "figure_data\\protected_02_policy_space_feasibility.csv": "e35dfde5444cbe9da8b6ba254e1173b53ef1546b2a50aa7277764beb63fb64db"
+      }
+    },
+    {
+      "name": "03_six_group_changes",
+      "caption": "Fixed primary budget; six groups are credit-history group crossed with training-derived income terciles.",
+      "source_rows": 38,
+      "sha256": {
+        "figures\\protected_03_six_group_changes.png": "b8d5d5b58baa3783076657c1828aa3172540a67fa101252476aa9a232963774d",
+        "figures\\protected_03_six_group_changes.pdf": "2edfdf26cc4d1d329074188f62310dd24eb1acaf7f5c9413c1fb5defbdf5b54b",
+        "figure_data\\protected_03_six_group_changes.csv": "90c4dfa1812023e3f11739f639ece3218cc89e398430f40e0acde553755e02fa"
+      }
+    },
+    {
+      "name": "04_test_constraint_transfer",
+      "caption": "Descriptive checks of nominal and two-fold six-group minimax at the fixed primary budget, where available. Infeasible cases are tabulated separately.",
+      "source_rows": 69,
+      "sha256": {
+        "figures\\protected_04_test_constraint_transfer.png": "4c951d1cdbb551e51c744f2ee3b1c12e617f02d38e61277c03ae5e75cfeb1c66",
+        "figures\\protected_04_test_constraint_transfer.pdf": "1e5649d56c6260e71dcfb6661931febc77135532a868fabe8848ea400c6cc1bc",
+        "figure_data\\protected_04_test_constraint_transfer.csv": "0cb94eab3291683b98b643b5b8927e5198b7a0f2a0314504dd30b1f6741ca292"
+      }
+    },
+    {
+      "name": "05_same_space_tradeoffs",
+      "caption": "Every saved feasible LP point, including dominated points; no best-on-test model or budget selection.",
+      "source_rows": 110,
+      "sha256": {
+        "figures\\protected_05_same_space_tradeoffs.png": "80792b350114df3c1e4d04f347c6a2015b75fef330f6d8c789aa9225991033da",
+        "figures\\protected_05_same_space_tradeoffs.pdf": "7456989c0e826f478b70c9dc484fa53403d79e12343f5162a5b57535768ed4e0",
+        "figure_data\\protected_05_same_space_tradeoffs.csv": "752f44f9f9c1f4157498eca606d0262c5dd0b84feb275600e99abb4ae800c126"
+      }
+    },
+    {
+      "name": "06_minimum_required_harm",
+      "caption": "Primary fixed 1% profit budget. Validation first minimizes the necessary worst-subgroup deterioration; a prespecified 0.1pp slack is then added before worst-FRR/profit optimization.",
+      "source_rows": 9,
+      "sha256": {
+        "figures\\protected_06_minimum_required_harm.png": "b74c83174372afae7e637bc16764bb1a70fffd90b16c1a36975d185125d23c8c",
+        "figures\\protected_06_minimum_required_harm.pdf": "8d7761ef9cbfbbd47aa1bf8e6aa0fb8e7c26bc94a03dbad4d6eee85260a9d5ae",
+        "figure_data\\protected_06_minimum_required_harm.csv": "a6b6cd64acd68da4bdf02a319681870190c116c4efdbb7878589dcb1392e2b23"
+      }
+    },
+    {
+      "name": "07_standard_method_comparison",
+      "caption": "Existing validation-frozen cost-sensitive Fairlearn at tolerance 0.02; LP and deterministic rules retain their own decision spaces. Large markers are seed means, small markers are all seeds.",
+      "source_rows": 30,
+      "sha256": {
+        "figures\\protected_07_standard_method_comparison.png": "4b8d1e77cc6cb9829f2cd9dd11db77809d0483b8a01be54e76856de9d07b3083",
+        "figures\\protected_07_standard_method_comparison.pdf": "e0d3f862e8c4abca1bd7c42e7257b29505dda402e27cc3b52c8cbd34b006e066",
+        "figure_data\\protected_07_standard_method_comparison.csv": "dd32bc96ebbe725a2267c3cbbb2cef65f30a9d2da5f605931fd3e2bf72eb4413"
+      }
+    }
+  ],
+  "skipped": [],
+  "protocol": "Frozen validation-only choices; descriptive test replay, no test winner selection",
+  "additional_input_sha256": {
+    "standard_method_comparison.csv": "d871b4355251aa71f2c492457f75562a576fbe1b0d3bcc5bfc7d5cf809bec4d7",
+    "standard_method_paired_intervals.csv": "e098c08c6dddc81385633c77474de8f6970a899bd63a1a9f8adc8f4041a7c8ed",
+    "paired_intervals.csv": "d199862325fa6fe8d1324c521cff79545efb5377b7baf3096eb92834da982f2f",
+    "randomization_replays.csv": "4843ea9d866857ff21047f1dac432034ff7498ef9f6b6dc50bfaa022f4f86897"
+  },
+  "expected_jobs": [
+    "lightgbm_s731",
+    "lightgbm_s732",
+    "lightgbm_s733",
+    "tabm_s731",
+    "tabm_s732",
+    "tabm_s733",
+    "xgboost_s731",
+    "xgboost_s732",
+    "xgboost_s733",
+    "lightgbm_biased_s17",
+    "lightgbm_biased_s29",
+    "lightgbm_biased_s43",
+    "lightgbm_biased_s61",
+    "lightgbm_biased_s89",
+    "lightgbm_corrected_s17",
+    "lightgbm_corrected_s29",
+    "lightgbm_corrected_s43",
+    "lightgbm_corrected_s61",
+    "lightgbm_corrected_s89",
+    "lightgbm_opportunity1_s17",
+    "lightgbm_opportunity1_s29",
+    "lightgbm_opportunity1_s43",
+    "lightgbm_opportunity1_s61",
+    "lightgbm_opportunity1_s89"
+  ],
+  "observed_jobs": [
+    "lightgbm_biased_s17",
+    "lightgbm_biased_s29",
+    "lightgbm_biased_s43",
+    "lightgbm_biased_s61",
+    "lightgbm_biased_s89",
+    "lightgbm_corrected_s17",
+    "lightgbm_corrected_s29",
+    "lightgbm_corrected_s43",
+    "lightgbm_corrected_s61",
+    "lightgbm_corrected_s89",
+    "lightgbm_opportunity1_s17",
+    "lightgbm_opportunity1_s29",
+    "lightgbm_opportunity1_s43",
+    "lightgbm_opportunity1_s61",
+    "lightgbm_opportunity1_s89",
+    "lightgbm_s731",
+    "lightgbm_s732",
+    "lightgbm_s733",
+    "tabm_s731",
+    "tabm_s732",
+    "tabm_s733",
+    "xgboost_s731",
+    "xgboost_s732",
+    "xgboost_s733"
+  ],
+  "missing_jobs": [],
+  "final_complete": true
+}

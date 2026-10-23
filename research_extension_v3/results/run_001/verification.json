@@ -1,0 +1,1740 @@
+{
+  "status": "PASS",
+  "complete": true,
+  "run_directory": "D:\\workspace\\Big-Data-Algorithmic-Discrimination-Experiment\\research_extension_v3\\results\\run_001",
+  "audit_categories": 276,
+  "failed_categories": 0,
+  "checks": [
+    {
+      "name": "Partitions have unique nonmissing IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Partition labels/groups are binary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Train/validation/test partitions present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Split manifest matches recorded SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Each model/seed/policy has one saved result",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s731: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s731: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "lightgbm_s731: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s731: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "lightgbm_s731: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s731: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s731: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4352,
+        "errors": []
+      }
+    },
+    {
+      "name": "lightgbm_s731: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "lightgbm_s731: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "lightgbm_s731: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s731: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s731: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "lightgbm_s732: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s732: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "lightgbm_s732: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s732: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "lightgbm_s732: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s732: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s732: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4672,
+        "errors": []
+      }
+    },
+    {
+      "name": "lightgbm_s732: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "lightgbm_s732: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "lightgbm_s732: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s732: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s732: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "lightgbm_s733: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s733: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "lightgbm_s733: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s733: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "lightgbm_s733: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s733: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s733: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4416,
+        "errors": []
+      }
+    },
+    {
+      "name": "lightgbm_s733: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "lightgbm_s733: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "lightgbm_s733: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s733: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s733: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "logistic_s731: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s731: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "logistic_s731: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s731: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "logistic_s731: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s731: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s731: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4608,
+        "errors": []
+      }
+    },
+    {
+      "name": "logistic_s731: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "logistic_s731: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "logistic_s731: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s731: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s731: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "logistic_s732: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s732: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "logistic_s732: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s732: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "logistic_s732: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s732: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s732: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4608,
+        "errors": []
+      }
+    },
+    {
+      "name": "logistic_s732: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "logistic_s732: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "logistic_s732: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s732: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s732: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "logistic_s733: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s733: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "logistic_s733: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s733: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "logistic_s733: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s733: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s733: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4608,
+        "errors": []
+      }
+    },
+    {
+      "name": "logistic_s733: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "logistic_s733: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "logistic_s733: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s733: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s733: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_s731: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s731: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_s731: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s731: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_s731: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s731: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s731: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4352,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_s731: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_s731: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_s731: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s731: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s731: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_s732: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s732: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_s732: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s732: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_s732: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s732: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s732: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4352,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_s732: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_s732: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_s732: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s732: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s732: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_s733: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s733: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_s733: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s733: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_s733: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s733: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s733: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4352,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_s733: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_s733: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_s733: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s733: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s733: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_tuned_s731: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s731: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_tuned_s731: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s731: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_tuned_s731: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s731: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s731: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4416,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_tuned_s731: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_tuned_s731: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_tuned_s731: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s731: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s731: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_tuned_s732: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s732: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_tuned_s732: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s732: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_tuned_s732: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s732: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s732: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4416,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_tuned_s732: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_tuned_s732: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_tuned_s732: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s732: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s732: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_tuned_s733: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s733: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_tuned_s733: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s733: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_tuned_s733: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s733: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s733: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4416,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_tuned_s733: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_tuned_s733: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_tuned_s733: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s733: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s733: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "tabm_s731: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s731: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tabm_s731: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s731: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tabm_s731: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s731: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s731: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4224,
+        "errors": []
+      }
+    },
+    {
+      "name": "tabm_s731: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "tabm_s731: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tabm_s731: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s731: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s731: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "tabm_s732: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s732: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tabm_s732: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s732: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tabm_s732: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s732: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s732: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4224,
+        "errors": []
+      }
+    },
+    {
+      "name": "tabm_s732: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "tabm_s732: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tabm_s732: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s732: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s732: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "tabm_s733: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s733: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tabm_s733: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s733: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tabm_s733: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s733: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s733: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4672,
+        "errors": []
+      }
+    },
+    {
+      "name": "tabm_s733: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "tabm_s733: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tabm_s733: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s733: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s733: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "xgboost_s731: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s731: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "xgboost_s731: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s731: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "xgboost_s731: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s731: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s731: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4544,
+        "errors": []
+      }
+    },
+    {
+      "name": "xgboost_s731: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "xgboost_s731: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "xgboost_s731: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s731: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s731: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "xgboost_s732: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s732: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "xgboost_s732: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s732: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "xgboost_s732: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s732: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s732: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4672,
+        "errors": []
+      }
+    },
+    {
+      "name": "xgboost_s732: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "xgboost_s732: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "xgboost_s732: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s732: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s732: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "xgboost_s733: completed job frozen-policy SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s733: saved record identities and values",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "xgboost_s733: validation and test disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s733: saved calibration replay",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "xgboost_s733: policy fit split and validation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s733: independent frozen candidate grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s733: deterministic record-level validation/test metric replay",
+      "passed": true,
+      "detail": {
+        "metric_values": 4416,
+        "errors": []
+      }
+    },
+    {
+      "name": "xgboost_s733: finite-grid optimality and infeasibility",
+      "passed": true,
+      "detail": {
+        "policies": 84,
+        "errors": []
+      }
+    },
+    {
+      "name": "xgboost_s733: reported test constraint flags",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "xgboost_s733: one model metric row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s733: independent AUC and Brier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s733: randomized expected-outcome replay",
+      "passed": true,
+      "detail": {
+        "policies": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "lightgbm_s731: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s731: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "lightgbm_s731: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "lightgbm_s732: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s732: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "lightgbm_s732: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "lightgbm_s733: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lightgbm_s733: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "lightgbm_s733: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "logistic_s731: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s731: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "logistic_s731: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "logistic_s732: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s732: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "logistic_s732: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "logistic_s733: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logistic_s733: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "logistic_s733: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_s731: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s731: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_s731: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_s732: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s732: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_s732: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_s733: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_s733: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_s733: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_tuned_s731: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s731: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_tuned_s731: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_tuned_s732: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s732: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_tuned_s732: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "m2fgb_tuned_s733: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "m2fgb_tuned_s733: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "m2fgb_tuned_s733: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "tabm_s731: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s731: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tabm_s731: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "tabm_s732: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s732: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tabm_s732: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "tabm_s733: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tabm_s733: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tabm_s733: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "xgboost_s731: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s731: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "xgboost_s731: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "xgboost_s732: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s732: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "xgboost_s732: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "xgboost_s733: business Fairlearn source SHA-256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xgboost_s733: business Fairlearn validation-only cost selection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "xgboost_s733: business Fairlearn frozen mixture validation/test replay",
+      "passed": true,
+      "detail": {
+        "policies": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "All configured model/seed jobs and split manifest available",
+      "passed": true,
+      "detail": {
+        "missing": []
+      }
+    }
+  ],
+  "jobs": [
+    {
+      "model": "lightgbm",
+      "seed": 731,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4352,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "lightgbm",
+      "seed": 732,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4672,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "lightgbm",
+      "seed": 733,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4416,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "logistic",
+      "seed": 731,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4608,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "logistic",
+      "seed": 732,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4608,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "logistic",
+      "seed": 733,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4608,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "m2fgb",
+      "seed": 731,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4352,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "m2fgb",
+      "seed": 732,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4352,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "m2fgb",
+      "seed": 733,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4352,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "m2fgb_tuned",
+      "seed": 731,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4416,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "m2fgb_tuned",
+      "seed": 732,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4416,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "m2fgb_tuned",
+      "seed": 733,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4416,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "tabm",
+      "seed": 731,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4224,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "tabm",
+      "seed": 732,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4224,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "tabm",
+      "seed": 733,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4672,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "xgboost",
+      "seed": 731,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4544,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "xgboost",
+      "seed": 732,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4672,
+      "randomized_policies_reconstructed": 8
+    },
+    {
+      "model": "xgboost",
+      "seed": 733,
+      "frozen_policies": 84,
+      "metric_values_reconstructed": 4416,
+      "randomized_policies_reconstructed": 8
+    }
+  ],
+  "missing_configured_jobs": [],
+  "skipped": [],
+  "business_fairlearn_jobs_audited": 18,
+  "missing_business_fairlearn_jobs": [],
+  "scope": "Independent arithmetic and optimum on saved finite grids. Does not prove absence of all leakage, causal fairness, or future constraint guarantees."
+}
